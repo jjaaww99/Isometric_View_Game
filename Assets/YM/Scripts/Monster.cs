@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -17,6 +19,8 @@ public class Monster : MonoBehaviour
     [SerializeField] private Collider detectRange;      // 감지 범위 콜라이더
     [SerializeField] private Collider AtkRange;         // 공격 범위 콜라이더
 
+    Rigidbody rigid;
+
     [SerializeField] private MonsterDB MonsterDB;       // 몬스터 데이터베이스
 
     [SerializeField] private float Cooltime = 1f;       // 공격 쿨타임
@@ -28,6 +32,7 @@ public class Monster : MonoBehaviour
         ani = GetComponent<Animator>();
         nav = GetComponent<NavMeshAgent>();
         MonsterCollider = GetComponent<Collider>();
+        rigid = GetComponent<Rigidbody>();
         InitializeFromDB(0);
     }
 
@@ -43,6 +48,13 @@ public class Monster : MonoBehaviour
         {
             Move();
         }
+        FreezeVelocity();
+    }
+
+    private void FreezeVelocity()
+    {
+        rigid.velocity = Vector3.zero;
+        rigid.angularVelocity = Vector3.zero;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -83,7 +95,7 @@ public class Monster : MonoBehaviour
     {
         while (IsAttacking)
         {
-            ani.SetTrigger("Attack");
+            ani.SetBool("Attack", true);
             yield return new WaitForSeconds(Cooltime);
         }
     }
