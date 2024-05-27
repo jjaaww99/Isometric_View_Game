@@ -2710,6 +2710,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Y Bot
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f23bc7fd17e8dc8499d74c4714d3b36f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: f23bc7fd17e8dc8499d74c4714d3b36f,
         type: 3}
       propertyPath: m_Controller
@@ -3592,6 +3597,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2356889759575513641, guid: 19d418db1a65acf44bf25e95ed0a54b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.48999023
+      objectReference: {fileID: 0}
     - target: {fileID: 2486707658318041281, guid: 19d418db1a65acf44bf25e95ed0a54b6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3828,6 +3838,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8968411094114687497, guid: 19d418db1a65acf44bf25e95ed0a54b6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9199455559256017848, guid: 19d418db1a65acf44bf25e95ed0a54b6,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
