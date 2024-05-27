@@ -43,7 +43,7 @@ public class DefaultPlayerController : MonoBehaviour
             }
         }
 
-        if(Input.GetKeyDown(KeyCode.LeftShift))
+        if(Input.GetKey(KeyCode.LeftShift))
         {
             anim.SetTrigger("Evade");
         }
@@ -54,7 +54,7 @@ public class DefaultPlayerController : MonoBehaviour
         anim.SetBool("Move", IsMoving());
     }
 
-    public bool isMoving => IsMoving();
+    [SerializeField] private bool isMoving => IsMoving();
 
     private bool IsMoving()
     {
