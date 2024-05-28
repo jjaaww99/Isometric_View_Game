@@ -23,7 +23,7 @@ public class DefaultPlayerController : MonoBehaviour
     void Update()
     {
 
-        AnimationController();
+        AnimationControl();
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -49,7 +49,7 @@ public class DefaultPlayerController : MonoBehaviour
         }
     }
 
-    void AnimationController()
+    void AnimationControl()
     {
         anim.SetBool("Move", IsMoving());
     }
