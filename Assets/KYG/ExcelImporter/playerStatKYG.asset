@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 8
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1dd7bf662b5e6f4197a3993e7bea211, type: 3}
+  m_Name: playerStatKYG
+  m_EditorClassIdentifier: 
+  playerData:
+  - playerHp: 100
+    str: 100
+    dex: 10
+    playerRage: 100
+    maxExp: 50
+  - playerHp: 150
+    str: 150
+    dex: 20
+    playerRage: 105
+    maxExp: 100
+  - playerHp: 200
+    str: 200
+    dex: 30
+    playerRage: 110
+    maxExp: 150
+  - playerHp: 250
+    str: 250
+    dex: 40
+    playerRage: 115
+    maxExp: 200
+  - playerHp: 300
+    str: 300
+    dex: 50
+    playerRage: 120
+    maxExp: 250
+  - playerHp: 350
+    str: 350
+    dex: 60
+    playerRage: 125
+    maxExp: 300
