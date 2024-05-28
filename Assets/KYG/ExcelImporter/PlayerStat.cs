@@ -103,5 +103,5 @@ public class PlayerStat : MonoBehaviour
     private void Dead()
     {
 
-    }0
+    }
 }

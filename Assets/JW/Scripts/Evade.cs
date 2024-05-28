@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Timers;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Evade : StateMachineBehaviour
 {
@@ -9,14 +11,16 @@ public class Evade : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        player = animator.GetComponentInParent<JWPlayer>();
+        player = animator.GetComponent<JWPlayer>();
         cam = player.mainCamera;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        player.playerAgent.SetDestination(player.mousePosition);
+        player.playerAgent.ResetPath();
+
+        player.transform.Translate(player.transform.forward * Time.deltaTime * 5);
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
