@@ -10,73 +10,77 @@ public class JWPlayer : MonoBehaviour
     public StateMachine stateMachine;
 
 
-    #region
+    #region MoveData
     [Header("MoveData")]
     public Camera mainCamera;
     public NavMeshAgent playerAgent;
-    public LayerMask clickableLayer;
-    public Ray ray;
-    public RaycastHit hit;
     public Vector3 clickPosition;
     public Vector3 mousePosition;
     public Transform mousePointer;
     #endregion
 
-    public IdleState idle;
-    public MoveState move;
-    public EvadeState evade;
 
     public float distance;
-    public void Start()
+    public void Awake()
     {
         mainCamera = Camera.main;
         playerAgent = GetComponent<NavMeshAgent>();
-        anim = GetComponentInChildren<Animator>();
-        //stateMachine = new StateMachine();
-
-        //idle = new IdleState(this, "Idle");
-        //move = new MoveState(this, "Move");
-        //evade = new EvadeState(this, "Evade");
-
-        //stateMachine.Init(idle);
-        distance = 0;
+        anim = GetComponent<Animator>();
+        
+        clickPosition = transform.position;
     }
 
     private void Update()
     {
-        distance = Vector3.Distance(clickPosition, transform.position);
-
         anim.SetFloat("distance", distance);
 
         mousePosition = mousePointer.position;
-        
+
         if (Input.GetKey(KeyCode.Mouse0))
         {
             clickPosition = mousePointer.position;
         }
+        distance = Vector3.Distance(clickPosition, transform.position);
+
+
         playerAgent.SetDestination(clickPosition);
 
 
-        if(Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            anim.SetTrigger("Evade");
+        }
+
+        if (Input.GetKey(KeyCode.Space))
         {
             anim.SetTrigger("Attack");
         }
 
-        //ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+        Vector3 playerForward = transform.forward;
 
-        //stateMachine.currentState.Update();
+        Vector3 mousePos = mousePosition - transform.position;
 
-        //if (Input.GetKey(KeyCode.Space))
-        //{
-        //    anim.SetTrigger("Attack");
-        //}
+        float dotProduct = Vector3.Dot(playerForward, mousePos);
 
-        //if (Input.GetKey(KeyCode.LeftShift))
-        //{
-        //    anim.SetTrigger("Evade");
-            
-        //}
+        Vector3 crossProduct = Vector3.Cross(playerForward, mousePos);
 
+        if (dotProduct > 0)
+        {
+            Debug.Log("Cube is in front of the player.");
+        }
+        else
+        {
+            Debug.Log("Cube is behind the player.");
+        }
+
+        if (crossProduct.y > 0)
+        {
+            Debug.Log("Cube is to the right of the player.");
+        }
+        else
+        {
+            Debug.Log("Cube is to the left of the player.");
+        }
     }
 }
 

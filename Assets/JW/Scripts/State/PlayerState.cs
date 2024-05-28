@@ -27,7 +27,7 @@ public class PlayerState
     {
         if(Input.GetKey(KeyCode.Mouse0))
         {
-            machine.ChangeState(player.move);
+
         }
 
     }

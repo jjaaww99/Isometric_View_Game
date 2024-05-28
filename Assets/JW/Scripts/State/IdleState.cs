@@ -24,7 +24,7 @@ public class IdleState : PlayerState
 
         if(Input.GetKey(KeyCode.Mouse1)) 
         {
-            machine.ChangeState(player.move);
+
         }
     }
 }
