@@ -23,7 +23,7 @@ public class Monster : MonoBehaviour
     //public bool isInBoundary = false;
     //public bool isInAttackRange = false;
 
-    [SerializeField]private Animator ani;
+    [SerializeField] private Animator ani;
     [SerializeField] private MonsterDB monsterDB;
 
     private void Awake()
