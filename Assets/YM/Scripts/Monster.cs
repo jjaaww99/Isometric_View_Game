@@ -1,77 +1,73 @@
-using System;
 using System.Collections;
-using UnityEditor.Experimental.GraphView;
+using TreeEditor;
+using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class Monster : MonoBehaviour
 {
-    [SerializeField] private int MaxHp;   // 최대 체력
-    [SerializeField] private int Hp;      // 현재 체력
-    [SerializeField] private int Atk;     // 공격력
-    [SerializeField] private float Speed; // 이동속도
+    [SerializeField] private string monsterName;    // 개체 이름
+    [SerializeField] private int maxHp;             // 최대 체력
+    [SerializeField] private int currentHp;         // 현재 체력
+    [SerializeField] private float speed;           // 이동속도
+    [SerializeField] private float atk;             // 공격력
+    [SerializeField] private Transform target;      // 이동 목표
 
-    [SerializeField] private Animator ani;              // 거미의 애니메이션
-    [SerializeField] private NavMeshAgent nav;          // 거미의 네비게이션
-    [SerializeField] private Transform target;          // 이동 목표의 좌표
+    private NavMeshAgent nav;
+    private Rigidbody rigid;
+    [SerializeField]private Collider bodycollider;
+    public bool detected = false;
+    public bool attackRange = false;
 
-    [SerializeField] private Collider MonsterCollider;  // 거미 객체의 콜라이더
-    [SerializeField] private Collider detectRange;      // 감지 범위 콜라이더
-    [SerializeField] private Collider AtkRange;         // 공격 범위 콜라이더
+    //public bool isInBoundary = false;
+    //public bool isInAttackRange = false;
 
-    Rigidbody rigid;
-
-    [SerializeField] private MonsterDB MonsterDB;       // 몬스터 데이터베이스
-
-    [SerializeField] private float Cooltime = 1f;       // 공격 쿨타임
-    [SerializeField] private bool IsAttacking;          // 공격 유무 확인
-    [SerializeField] private bool IsChasing = false;    // 이동 유무 확인
+    [SerializeField] private Animator ani;
+    [SerializeField] private MonsterDB monsterDB;
 
     private void Awake()
     {
-        ani = GetComponent<Animator>();
+        bodycollider = GetComponent<Collider>();
         nav = GetComponent<NavMeshAgent>();
-        MonsterCollider = GetComponent<Collider>();
         rigid = GetComponent<Rigidbody>();
         InitializeFromDB(0);
     }
 
     private void Start()
     {
-        Hp = MaxHp;
-        nav.speed = Speed;
+        currentHp = maxHp;
+        nav.speed = speed;
     }
 
     private void FixedUpdate()
     {
-        if (IsChasing)
+        if (detected && !attackRange)
         {
-            Move();
+            nav.isStopped = false;
+            nav.SetDestination(target.position); // 몬스터 이동 명령
         }
-        FreezeVelocity();
+        else if(detected && attackRange)
+        {
+            nav.isStopped = true;
+            ani.SetBool("Walk", false);
+        }
+            
     }
 
-    private void FreezeVelocity()
+    private void Update()
     {
-        rigid.velocity = Vector3.zero;
-        rigid.angularVelocity = Vector3.zero;
+        if(detected)
+            transform.LookAt(target.position);
     }
+
+
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if(other.CompareTag("Player"))
         {
-            if (other == detectRange)
-            {
-                IsChasing = true;
-                IsAttacking = false;
-            }
-            else if (other == AtkRange)
-            {
-                IsChasing = false;
-                IsAttacking = true;
-                StartCoroutine(AttackCoroutine());
-            }
+            attackRange = true;
         }
     }
 
@@ -79,48 +75,23 @@ public class Monster : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (other == detectRange)
-            {
-                IsChasing = false;
-                ani.SetBool("Walk", false);
-            }
-            else if (other == AtkRange)
-            {
-                IsAttacking = false;
-            }
+            attackRange = false;
         }
     }
 
-    private IEnumerator AttackCoroutine() // 공격 쿨타임을 적용한 코루틴
-    {
-        while (IsAttacking)
-        {
-            ani.SetBool("Attack", true);
-            yield return new WaitForSeconds(Cooltime);
-        }
-    }
 
-    private void Move()
-    {
-        nav.SetDestination(target.position);
-        ani.SetBool("Walk", true);
-
-        // 목표에 도달했는지 확인하고 애니메이션 설정
-        if (nav.remainingDistance <= nav.stoppingDistance)
-        {
-            ani.SetBool("Walk", false);
-        }
-    }
 
     private void InitializeFromDB(int index) // 몬스터 데이터베이스에서 정보 불러오는 메서드
     {
-        if (index >= 0 && index < MonsterDB.Monster.Count)
+        if (monsterDB != null && index >= 0 && index < monsterDB.Monster.Count)
         {
-            MonsterEntity spiderData = MonsterDB.Monster[index];
-            name = spiderData.name;
-            MaxHp = spiderData.maxHp;
-            Speed = spiderData.speed;
-            Atk = spiderData.atk;
+            MonsterEntity monsterData = monsterDB.Monster[index];
+            monsterName = monsterData.name;
+            maxHp = monsterData.maxHp;
+            speed = monsterData.speed;
+            atk = monsterData.atk;
         }
     }
+
+
 }
