@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1dd7bf662b5e6f4197a3993e7bea211, type: 3}
+  m_Script: {fileID: 11500000, guid: 13471a62bf96cb54dadc3c6a21502ca5, type: 3}
   m_Name: playerStatKYG
   m_EditorClassIdentifier: 
   playerData:
@@ -18,28 +18,34 @@ MonoBehaviour:
     dex: 10
     playerRage: 100
     maxExp: 50
+    maxLv: 5
   - playerHp: 150
     str: 150
     dex: 20
     playerRage: 105
     maxExp: 100
+    maxLv: 0
   - playerHp: 200
     str: 200
     dex: 30
     playerRage: 110
     maxExp: 150
+    maxLv: 0
   - playerHp: 250
     str: 250
     dex: 40
     playerRage: 115
     maxExp: 200
+    maxLv: 0
   - playerHp: 300
     str: 300
     dex: 50
     playerRage: 120
     maxExp: 250
+    maxLv: 0
   - playerHp: 350
     str: 350
     dex: 60
     playerRage: 125
     maxExp: 300
+    maxLv: 0
