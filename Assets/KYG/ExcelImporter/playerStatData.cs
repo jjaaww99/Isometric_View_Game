@@ -1,11 +1,14 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-[ExcelAsset]
-public class playerStatData : ScriptableObject
+
+[Serializable]
+public class PlayerStatData
 {
-    public List<PlayerLevelStats> playerData;
-
+    public int playerHp;
+    public int str;
+    public int dex;
+    public int playerRage;
+    public int maxExp;
+    public int maxLv;
 }
+

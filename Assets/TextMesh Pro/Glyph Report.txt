@@ -1,0 +1,12 @@
+Font: Diablo  Style: Heavy
+Point Size: 2257   SP/PD Ratio: 0.2%
+
+Characters included: 11/11
+Missing characters: 0
+Excluded characters: 0
+
+Characters missing from font file:
+----------------------------------------
+
+Characters excluded from packing:
+----------------------------------------
