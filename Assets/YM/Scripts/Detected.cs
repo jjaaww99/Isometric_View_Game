@@ -29,15 +29,15 @@ public class Detected : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            monster.detected = true;
+            
         }
     }
 
-        private void OnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            monster.detected = false;
+
 
         }
     }
