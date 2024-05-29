@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
@@ -9,13 +10,11 @@ public class Monster : MonoBehaviour
     [SerializeField] private int currentHp;         // 현재 체력
     [SerializeField] private float speed;           // 이동속도
     [SerializeField] private float atk;             // 공격력
-    [SerializeField] private Transform target;      // 이동 목표
     [SerializeField] private BoxCollider attackArea;    //공격 범위
 
     private NavMeshAgent nav;
     private Rigidbody rigid;
-    private LayerMask playerLayerMask;
-    private bool atkbool;
+    //private LayerMask playerLayerMask;
 
     private Collider bodycollider;
     [SerializeField] private Animator ani;
@@ -28,39 +27,58 @@ public class Monster : MonoBehaviour
         bodycollider = GetComponent<Collider>();
         nav = GetComponent<NavMeshAgent>();
         rigid = GetComponent<Rigidbody>();
-        playerLayerMask = LayerMask.GetMask("Player"); //캐싱 성능 최적화
+        //playerLayerMask = LayerMask.GetMask("Player"); //캐싱 성능 최적화
         InitializeFromDB(0);
-        Invoke("ChaseStart", 2);
     }
 
     private void Start()
     {
         currentHp = maxHp;
         nav.speed = speed;
+        ChaseStart();
     }
 
     private void FixedUpdate()
     {
-        Targeting();
-        FreezeVelocity();
+       
+        FreezeVelocity();   //이동시 방향 고정
     }
 
-    private void Targeting()
+    private void Update()
     {
-        float targetRadius = 1.5f;
-        float targetRange = 2.5f;
-
-        RaycastHit[] rayHits = Physics.SphereCastAll(transform.position, targetRadius, transform.forward, targetRange, playerLayerMask);
-
-        if (rayHits.Length > 0 && !isAttack)
+        if (nav.enabled)
         {
-            atkbool = true; // 매번 공격할 때마다 atkbool을 true로 설정
-            StartCoroutine(Attack());
+            nav.SetDestination(GameManager.instance.player.transform.position);
+            nav.isStopped = !isChase;
+        }   //플레이어에게 이동 기능
+
+        if (currentHp <= 0)
+            Dead();
+    }
+
+
+    void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            if (!isAttack)
+            {
+                StartCoroutine(Attack());
+            }
         }
+    }
+
+
+    private void ChaseStart()   //추적 시작
+    {
+        isChase = true;
+        ani.SetBool("Walk", true);
     }
 
     private IEnumerator Attack()
     {
+        if (isAttack) yield break;
+
         isChase = false;
         isAttack = true;
         ani.SetBool("Attack", true);
@@ -75,26 +93,7 @@ public class Monster : MonoBehaviour
         isAttack = false;
         ani.SetBool("Attack", false);
 
-    }
-    //공격 코루틴
-
-    private void Update()
-    {
-        if (nav.enabled)
-        {
-            nav.SetDestination(target.position);
-            nav.isStopped = !isChase;
-        }
-
-        Dead(); //사망기능
-    }
-
-
-    private void ChaseStart()   //추적 시작
-    {
-        isChase = true;
-        ani.SetBool("Walk", true);
-    }
+    }//공격 코루틴
 
     private void FreezeVelocity()
     {
@@ -105,16 +104,32 @@ public class Monster : MonoBehaviour
         }
     }   //이동 중 방향 고정
 
+    void Damage(int index)
+    {
+        currentHp -= index;
+        Hit2();
+    } //피격 로직
+
+    private IEnumerator Hit2()
+    {
+        isChase = false;
+        ani.SetTrigger("TakeDamage");
+        yield return new WaitForSeconds(1.5f);
+        isChase = true;
+    } //피격시 코루틴
+
     private void Dead()
     {
-        if (currentHp <= 0)
-        {
-            ani.SetTrigger("Dead");
-            gameObject.SetActive(false);
-            isChase = false;
-            nav.enabled = false;
-        }
-    } //사망 기능
+        ani.SetTrigger("Dead");
+        isChase = false;
+        StartCoroutine(DeadDelay(3f));
+    }   //사망 로직
+
+    private IEnumerator DeadDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        gameObject.SetActive(false);
+    } //사망 딜레이(비활성화)
 
     private void InitializeFromDB(int index)
     {
