@@ -57,6 +57,15 @@ public class JWPlayer : MonoBehaviour
         }
 
         
+        if(Input.GetKeyDown(KeyCode.Q)) 
+        {
+            anim.SetBool("Attack2", true);
+        }
+        if(Input.GetKeyUp(KeyCode.Q))
+        {
+            anim.SetBool("Attack2", false);
+        }
+
         if (Input.GetKey(KeyCode.Space))
         {
             anim.SetTrigger("Attack");
