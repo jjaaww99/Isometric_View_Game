@@ -14,6 +14,7 @@ public class MousePointer : MonoBehaviour
     void Update()
     {
         Ray ray = mainCam.ScreenPointToRay(Input.mousePosition);
+
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Ground")))
