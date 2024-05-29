@@ -9,8 +9,6 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: ColbRed
   m_Shader: {fileID: 4800000, guid: 60d4df6c569fe014da60437af4ccc8e1, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -19,7 +17,6 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
-  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -69,19 +66,18 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Brightness: 48
+    - _Brightness: 12
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _FadeAreaHeight: 0.108
-    - _FillLevel: 1
+    - _FillLevel: 0.63
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _HotLineBrightness: 6
     - _HotLineHeight: 0.034
-    - _MaxFillLevel: 0
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
