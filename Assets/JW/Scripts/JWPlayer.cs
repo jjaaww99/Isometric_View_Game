@@ -16,6 +16,7 @@ public class JWPlayer : MonoBehaviour
     public NavMeshAgent playerAgent;
     public Vector3 clickPosition;
     public Vector3 mousePosition;
+    public Vector3 targetPosition;
     public Transform mousePointer;
     #endregion
 
@@ -27,6 +28,10 @@ public class JWPlayer : MonoBehaviour
         playerAgent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         
+    }
+
+    private void Start()
+    {
         clickPosition = transform.position;
     }
 
@@ -38,49 +43,25 @@ public class JWPlayer : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Mouse0))
         {
-            clickPosition = mousePointer.position;
+            clickPosition = mousePosition;
+
+            playerAgent.SetDestination(clickPosition);
         }
+
         distance = Vector3.Distance(clickPosition, transform.position);
-
-
-        playerAgent.SetDestination(clickPosition);
-
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
             anim.SetTrigger("Evade");
+            clickPosition = transform.position;
         }
 
+        
         if (Input.GetKey(KeyCode.Space))
         {
             anim.SetTrigger("Attack");
         }
 
-        Vector3 playerForward = transform.forward;
-
-        Vector3 mousePos = mousePosition - transform.position;
-
-        float dotProduct = Vector3.Dot(playerForward, mousePos);
-
-        Vector3 crossProduct = Vector3.Cross(playerForward, mousePos);
-
-        if (dotProduct > 0)
-        {
-            Debug.Log("Cube is in front of the player.");
-        }
-        else
-        {
-            Debug.Log("Cube is behind the player.");
-        }
-
-        if (crossProduct.y > 0)
-        {
-            Debug.Log("Cube is to the right of the player.");
-        }
-        else
-        {
-            Debug.Log("Cube is to the left of the player.");
-        }
     }
 }
 
