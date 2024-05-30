@@ -20,6 +20,9 @@ public class BasicAttackState : PlayerState
 
     public override void Update()
     {
-        base.Update();
+        if (Input.GetKey(KeyCode.Mouse1) && !player.isOnEnemy())
+        {
+            machine.ChangeState(player.idle);
+        }
     }
 }

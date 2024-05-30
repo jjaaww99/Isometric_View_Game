@@ -12,6 +12,9 @@ public class JWPlayer : MonoBehaviour
     public StateMachine stateMachine;
     public IdleState idle;
     public EvadeState evade;
+    public BasicAttackState basicAttack;
+
+    public TargetObject targetObject;
 
     #region MoveData
     [Header("MoveData")]
@@ -19,10 +22,14 @@ public class JWPlayer : MonoBehaviour
     public NavMeshAgent nav;
     public Vector3 clickPosition;
     public Vector3 mousePosition;
-    public Vector3 targetPosition;
-    public Transform mousePointer;
+    public MousePointer mousePointer;
     #endregion
 
+    #region PlayerData
+    public float attackRange = 1.5f;
+    #endregion
+
+    public bool isOnEnemy() => mousePointer.isOnEnemy;
 
     public float distance;
 
@@ -36,6 +43,7 @@ public class JWPlayer : MonoBehaviour
         stateMachine = new StateMachine();
         idle = new IdleState(this, "Idle");
         evade = new EvadeState(this, "Evade");
+        basicAttack = new BasicAttackState(this, "BasicAttack");
     }
 
     private void Start()
@@ -46,11 +54,12 @@ public class JWPlayer : MonoBehaviour
 
     private void Update()
     {
-        mousePosition = mousePointer.position;
+        mousePosition = mousePointer.transform.position;
         distance = Vector3.Distance(clickPosition, transform.position);
         anim.SetFloat("distance", distance);
 
         stateMachine.currentState.Update();
+        targetObject = mousePointer.target;
     }
 }
 

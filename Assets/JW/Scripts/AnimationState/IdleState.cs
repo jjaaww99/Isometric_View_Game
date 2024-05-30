@@ -28,11 +28,30 @@ public class IdleState : PlayerState
         }
 
 
-        if (Input.GetKey(KeyCode.Mouse1))
+        if (Input.GetKey(KeyCode.Mouse1) && !player.isOnEnemy())
         {
             player.clickPosition = player.mousePosition;
 
             player.nav.SetDestination(player.clickPosition);
+        }
+
+        if (Input.GetKey(KeyCode.Mouse1) && player.isOnEnemy())
+        {
+            player.clickPosition = player.mousePosition;
+
+            float distance = Vector3.Distance(player.transform.position , player.targetObject.transform.position);
+
+            Debug.Log(distance);
+
+            if(distance <= player.attackRange)
+            {
+                machine.ChangeState(player.basicAttack);
+            }
+
+            else
+            {
+                player.nav.SetDestination(player.clickPosition);
+            }
         }
 
 
