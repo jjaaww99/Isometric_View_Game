@@ -16,15 +16,29 @@ public class IdleState : PlayerState
     public override void Exit()
     {
         base.Exit();
+
+        player.nav.ResetPath();
     }
 
     public override void Update()
     {
         base.Update();
 
-        if(Input.GetKey(KeyCode.Mouse1)) 
+        if (Input.GetKey(KeyCode.Mouse1))
         {
+            player.clickPosition = player.mousePosition;
 
+            player.nav.SetDestination(player.clickPosition);
+        }
+
+        //if (player.distance <= 0.1)
+        //{
+        //    player.nav.ResetPath();
+        //}
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            machine.ChangeState(player.evade);
         }
     }
 }

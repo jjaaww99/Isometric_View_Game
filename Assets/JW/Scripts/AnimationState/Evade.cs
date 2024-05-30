@@ -14,15 +14,15 @@ public class Evade : StateMachineBehaviour
     {
         player = animator.GetComponent<JWPlayer>();
         
-        player.playerAgent.ResetPath();
+        player.nav.ResetPath();
 
         Vector3 direction = (player.mousePosition - player.transform.position).normalized;
 
         Vector3 targetPosition = player.mousePosition + direction;
 
-        player.playerAgent.SetDestination(targetPosition);
+        player.nav.SetDestination(targetPosition);
         
-        player.playerAgent.speed *= moveDistance;
+        player.nav.speed *= moveDistance;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -34,9 +34,9 @@ public class Evade : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        player.playerAgent.speed /= moveDistance;
+        player.nav.speed /= moveDistance;
         player.clickPosition = player.transform.position;
-        player.playerAgent.ResetPath();
+        player.nav.ResetPath();
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

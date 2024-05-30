@@ -12,7 +12,6 @@ public class MoveState : PlayerState
     public override void Enter()
     {
         base.Enter();
-        player.playerAgent.SetDestination(player.clickPosition);
     }
 
     public override void Exit()
@@ -24,6 +23,5 @@ public class MoveState : PlayerState
     {
         base.Update();
 
-        
     }
 }
