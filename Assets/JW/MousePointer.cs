@@ -27,14 +27,14 @@ public class MousePointer : MonoBehaviour
 
     public bool isOnEnemy;
 
-    public TargetObject target;
+    public ClickableObject target;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))
         {
             isOnEnemy = true;
-            target = other.GetComponent<TargetObject>();
+            target = other.GetComponent<ClickableObject>();
             target.Highlight();
         }
     }
@@ -44,8 +44,8 @@ public class MousePointer : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             isOnEnemy = false;
-            target = other.GetComponent<TargetObject>();
             target.Highlight();
+            target = null;
         }
     }
 }
