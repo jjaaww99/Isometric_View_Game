@@ -31,11 +31,6 @@ public class IdleState : PlayerState
             player.nav.SetDestination(player.clickPosition);
         }
 
-        //if (player.distance <= 0.1)
-        //{
-        //    player.nav.ResetPath();
-        //}
-
         if (Input.GetKey(KeyCode.LeftShift))
         {
             machine.ChangeState(player.evade);

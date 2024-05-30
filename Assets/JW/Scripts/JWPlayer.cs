@@ -51,38 +51,6 @@ public class JWPlayer : MonoBehaviour
         anim.SetFloat("distance", distance);
 
         stateMachine.currentState.Update();
-
-        //if (Input.GetKey(KeyCode.Mouse0))
-        //{
-        //    clickPosition = mousePosition;
-
-        //    playerAgent.SetDestination(clickPosition);
-        //}
-
-
-        //if (Input.GetKey(KeyCode.LeftShift))
-        //{
-        //    anim.SetTrigger("Evade");
-        //    clickPosition = transform.position;
-        //}
-
-
-        //if(Input.GetKeyDown(KeyCode.Q)) 
-        //{
-        //    anim.SetBool("Attack2", true);
-        //}
-        //if(Input.GetKeyUp(KeyCode.Q))
-        //{
-        //    anim.SetBool("Attack2", false);
-        //}
-
-        if (Input.GetKey(KeyCode.Space))
-        {
-            Vector3 targetPos = (mousePosition - transform.position).normalized;
-
-            rb.AddForce(targetPos * 10, ForceMode.Impulse);
-        }
-
     }
 }
 

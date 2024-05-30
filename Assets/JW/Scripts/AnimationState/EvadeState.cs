@@ -13,8 +13,6 @@ public class EvadeState : PlayerState
     {
         base.Enter();
 
-        //player.nav.enabled = false;
-
         targetPos = player.mousePosition - player.transform.position;
 
         targetDir = player.mousePosition - player.transform.forward;
@@ -30,7 +28,6 @@ public class EvadeState : PlayerState
     {
         base.Exit();
 
-        //player.nav.enabled = true;
     }
 
     public override void Update()
