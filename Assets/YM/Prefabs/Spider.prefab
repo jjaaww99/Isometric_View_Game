@@ -791,9 +791,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8494949596961520364}
   - component: {fileID: 8728420968050954601}
-  - component: {fileID: 5184669805072326143}
   - component: {fileID: 3203914124248252117}
   - component: {fileID: 3462181231805050985}
+  - component: {fileID: 4331152461932397527}
   m_Layer: 0
   m_Name: Spider
   m_TagString: Untagged
@@ -810,7 +810,7 @@ Transform:
   m_GameObject: {fileID: 1856320915685080962}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.107, z: 0}
+  m_LocalPosition: {x: -7.86, y: 2.107, z: 6.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -840,30 +840,6 @@ NavMeshAgent:
   m_BaseOffset: -0.3
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &5184669805072326143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1856320915685080962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e017434fc04be794eb0bc7ddcdbc4a85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monsterName: 
-  maxHp: 0
-  currentHp: 0
-  speed: 0
-  atk: 0
-  target: {fileID: 0}
-  attackArea: {fileID: 0}
-  bodycollider: {fileID: 3462181231805050985}
-  ani: {fileID: 7498794990587139097}
-  monsterDB: {fileID: 11400000, guid: 9b4e6a6ba7ae5cc41bf87c247119b0d3, type: 2}
-  isChase: 0
-  isAttack: 0
 --- !u!54 &3203914124248252117
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -912,6 +888,29 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.4508827, y: 2, z: 2.2777953}
   m_Center: {x: -0.0036941767, y: 1, z: -0.21703649}
+--- !u!114 &4331152461932397527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856320915685080962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddf55d1caa842a64cb3cb8297ee4eda8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterName: 
+  maxHp: 0
+  currentHp: 0
+  speed: 0
+  atk: 0
+  attackArea: {fileID: 0}
+  nav: {fileID: 0}
+  rigid: {fileID: 0}
+  bodyCollider: {fileID: 0}
+  ani: {fileID: 0}
+  monsterDB: {fileID: 0}
 --- !u!1 &1936702793720387450
 GameObject:
   m_ObjectHideFlags: 0
