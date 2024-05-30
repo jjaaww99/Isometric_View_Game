@@ -27,13 +27,11 @@ public class EvadeState : PlayerState
         base.Exit();
     }
 
-    float evadeForce = 5f;
-
     public override void Update()
     {
         base.Update();
         
-        player.rb.AddForce(targetPos.normalized * evadeForce, ForceMode.Impulse);
+        player.rb.AddForce(targetPos.normalized * player.evadeForce, ForceMode.Impulse);
 
         stateTimer -= Time.deltaTime;
 
