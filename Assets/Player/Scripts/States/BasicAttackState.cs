@@ -19,6 +19,8 @@ public class BasicAttackState : PlayerState
         }
 
         player.transform.LookAt(targetDir);
+
+        stateTimer = 0.8f;
     }
 
     public override void Exit()
@@ -28,10 +30,11 @@ public class BasicAttackState : PlayerState
 
     public override void Update()
     {
-        if (Input.GetKey(KeyCode.Mouse1) && !player.EnemyTargeted())
+        stateTimer -= Time.deltaTime;
+
+        if ((Input.GetKey(KeyCode.Mouse1) && !player.EnemyTargeted()) || stateTimer <= 0)
         {
             machine.ChangeState(player.idle);
         }
-        
     }
 }
