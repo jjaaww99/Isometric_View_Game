@@ -27,6 +27,8 @@ public class PlayerState
     {
         player.anim.SetBool(animName, false);
 
+        player.nav.ResetPath();
+
         player.clickPosition = player.transform.position;
     }
     public virtual void Update() 

@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
-public class MoveState : PlayerState
+public class BasicAttackState : PlayerState
 {
-    public MoveState(JWPlayer _player, string _animName) : base(_player, _animName)
+    public BasicAttackState(JWPlayer _player, string _animName) : base(_player, _animName)
     {
     }
 
@@ -22,6 +21,5 @@ public class MoveState : PlayerState
     public override void Update()
     {
         base.Update();
-
     }
 }

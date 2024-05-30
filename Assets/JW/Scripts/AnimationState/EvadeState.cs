@@ -17,8 +17,6 @@ public class EvadeState : PlayerState
 
         targetDir = player.mousePosition - player.transform.forward;
 
-        player.nav.ResetPath();
-
         stateTimer = 0.5f;
 
         player.transform.LookAt(targetDir);

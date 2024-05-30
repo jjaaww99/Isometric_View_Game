@@ -16,13 +16,17 @@ public class IdleState : PlayerState
     public override void Exit()
     {
         base.Exit();
-
-        player.nav.ResetPath();
     }
 
     public override void Update()
     {
         base.Update();
+
+        if(player.distance <= 0.1)
+        {
+            player.nav.ResetPath();
+        }
+
 
         if (Input.GetKey(KeyCode.Mouse1))
         {
@@ -30,6 +34,7 @@ public class IdleState : PlayerState
 
             player.nav.SetDestination(player.clickPosition);
         }
+
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
