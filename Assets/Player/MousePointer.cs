@@ -45,7 +45,6 @@ public class MousePointer : MonoBehaviour
         {
             isOnEnemy = false;
             target.Highlight();
-            target = null;
         }
     }
 }

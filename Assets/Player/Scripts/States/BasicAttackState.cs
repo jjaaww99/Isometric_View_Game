@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BasicAttackState : PlayerState
@@ -12,7 +13,10 @@ public class BasicAttackState : PlayerState
     {
         base.Enter();
 
-        targetDir = player.target.transform.position - player.transform.forward;
+        if(player.target != null)
+        {   
+            targetDir = player.target.transform.position - player.transform.forward;
+        }
 
         player.transform.LookAt(targetDir);
     }
@@ -20,14 +24,14 @@ public class BasicAttackState : PlayerState
     public override void Exit()
     {
         base.Exit();
-        player.nav.enabled = true;
     }
 
     public override void Update()
     {
-        if (Input.GetKey(KeyCode.Mouse1) && !player.isOnEnemy())
+        if (Input.GetKey(KeyCode.Mouse1) && !player.EnemyTargeted())
         {
             machine.ChangeState(player.idle);
         }
+        
     }
 }
