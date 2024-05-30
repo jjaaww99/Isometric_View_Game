@@ -34,5 +34,10 @@ public class MoveToTargetState : PlayerState
         {
             machine.ChangeState(player.idle);
         }
+
+        if (Input.GetKey(KeyCode.Mouse1) && player.EnemyTargeted())
+        {
+            machine.ChangeState(player.moveToTarget);
+        }
     }
 }
