@@ -6,7 +6,7 @@ public class MousePointer : MonoBehaviour
 {
     Camera mainCam;
 
-    private void Start()
+    private void Awake()
     {
         mainCam = Camera.main;
     }
@@ -22,6 +22,30 @@ public class MousePointer : MonoBehaviour
             Vector3 mouseWorldPos = hit.point;
 
             transform.position = mouseWorldPos;
+        }
+    }
+
+    public bool isOnEnemy;
+
+    public TargetObject target;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            isOnEnemy = true;
+            target = other.GetComponent<TargetObject>();
+            target.Highlight();
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            isOnEnemy = false;
+            target = other.GetComponent<TargetObject>();
+            target.Highlight();
         }
     }
 }

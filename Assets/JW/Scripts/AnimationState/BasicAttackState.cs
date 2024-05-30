@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IdleState : PlayerState
+public class BasicAttackState : PlayerState
 {
-    public IdleState(JWPlayer _player, string _animName) : base(_player, _animName)
+    public BasicAttackState(JWPlayer _player, string _animName) : base(_player, _animName)
     {
     }
 
@@ -20,11 +20,9 @@ public class IdleState : PlayerState
 
     public override void Update()
     {
-        base.Update();
-
-        if(Input.GetKey(KeyCode.Mouse1)) 
+        if (Input.GetKey(KeyCode.Mouse1) && !player.isOnEnemy())
         {
-
+            machine.ChangeState(player.idle);
         }
     }
 }

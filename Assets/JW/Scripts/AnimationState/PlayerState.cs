@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Timers;
 using UnityEngine;
 
 public class PlayerState
 {
-    public JWPlayer player;
-    public string animName;
-    public StateMachine machine;
+    protected JWPlayer player;
+    protected string animName;
+    protected StateMachine machine;
+    protected Vector3 targetPos;
+    protected Vector3 targetDir;
+    protected float stateTimer;
+
     public PlayerState (JWPlayer _player, string _animName)
     {
         player = _player;
@@ -14,7 +19,6 @@ public class PlayerState
         machine = player.stateMachine;
     }
 
-    Animator animator;
     public virtual void Enter()
     {
         player.anim.SetBool(animName, true);
@@ -22,13 +26,13 @@ public class PlayerState
     public virtual void Exit() 
     {
         player.anim.SetBool(animName, false);
+
+        player.nav.ResetPath();
+
+        player.clickPosition = player.transform.position;
     }
     public virtual void Update() 
     {
-        if(Input.GetKey(KeyCode.Mouse0))
-        {
-
-        }
 
     }
 }
