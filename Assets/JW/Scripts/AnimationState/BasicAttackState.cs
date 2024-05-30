@@ -11,11 +11,16 @@ public class BasicAttackState : PlayerState
     public override void Enter()
     {
         base.Enter();
+
+        targetDir = player.target.transform.position - player.transform.forward;
+
+        player.transform.LookAt(targetDir);
     }
 
     public override void Exit()
     {
         base.Exit();
+        player.nav.enabled = true;
     }
 
     public override void Update()

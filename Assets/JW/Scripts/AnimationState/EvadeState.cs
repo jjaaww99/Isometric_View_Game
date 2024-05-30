@@ -25,7 +25,6 @@ public class EvadeState : PlayerState
     public override void Exit()
     {
         base.Exit();
-
     }
 
     float evadeForce = 5f;

@@ -6,26 +6,26 @@ using UnityEngine;
 public class PlayerState
 {
     protected JWPlayer player;
-    protected string animName;
+    protected string animParameter;
     protected StateMachine machine;
     protected Vector3 targetPos;
     protected Vector3 targetDir;
     protected float stateTimer;
 
-    public PlayerState (JWPlayer _player, string _animName)
+    public PlayerState (JWPlayer _player, string _animParameter)
     {
         player = _player;
-        animName = _animName;
-        machine = player.stateMachine;
+        animParameter = _animParameter;
+        machine = player.machine;
     }
 
     public virtual void Enter()
     {
-        player.anim.SetBool(animName, true);
+        player.anim.SetBool(animParameter, true);
     }
     public virtual void Exit() 
     {
-        player.anim.SetBool(animName, false);
+        player.anim.SetBool(animParameter, false);
 
         player.nav.ResetPath();
 
