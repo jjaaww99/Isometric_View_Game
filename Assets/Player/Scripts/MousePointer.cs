@@ -35,7 +35,7 @@ public class MousePointer : MonoBehaviour
         {
             isOnEnemy = true;
             target = other.GetComponent<ClickableObject>();
-            target.Highlight();
+            target.isTargeted();
         }
     }
 
@@ -44,7 +44,7 @@ public class MousePointer : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             isOnEnemy = false;
-            target.Highlight();
+            target.isUntargeted();
         }
     }
 }

@@ -14,16 +14,14 @@ public class ClickableObject : MonoBehaviour
     }
 
 
-    public void Highlight()
+    public void isTargeted()
     {
-        if(ren.material.color == originalColor)
-        {
-            ren.material.color = Color.red;
-        }
-        else
-        {
-            ren.material.color = originalColor;
-        }
+        ren.material.color = Color.red;
+    }
+
+    public void isUntargeted()
+    {
+        ren.material.color = originalColor;
     }
 
 }

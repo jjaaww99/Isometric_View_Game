@@ -8,6 +8,10 @@ public class JWPlayer : MonoBehaviour
 {
     public Animator anim;
     public Rigidbody rb;
+    public Collider[] targetsInRange;
+    private int maxTargets = 10;
+    public LayerMask enemyLayer;
+    public float rbForce; 
 
     #region States
     public StateMachine machine;
@@ -18,11 +22,11 @@ public class JWPlayer : MonoBehaviour
     #endregion
     #region MoveData
     [Header("MoveData")]
-    public Camera mainCamera;
+    private Camera mainCamera;
+    public MousePointer mousePointer;
     public NavMeshAgent nav;
     public Vector3 clickPosition;
     public Vector3 mousePosition;
-    public MousePointer mousePointer;
     #endregion
     #region PlayerData
     public float attackRange = 2.3f;
@@ -35,19 +39,13 @@ public class JWPlayer : MonoBehaviour
 
     public bool EnemyTargeted() => mousePointer.isOnEnemy;
 
-    public float clickDistance;
-    public float targetDistance;
-
     public void Awake()
     {
         mainCamera = Camera.main;
         nav = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
-    }
 
-    private void Start()
-    {
         #region States
         machine = new StateMachine();
         idle = new IdleState(this, "Idle");
@@ -55,14 +53,27 @@ public class JWPlayer : MonoBehaviour
         evade = new EvadeState(this, "Evade");
         basicAttack = new BasicAttackState(this, "BasicAttack");
         #endregion
+    }
 
+    private void Start()
+    {
         machine.Init(idle);
-        
+        targetsInRange = new Collider[maxTargets];
         clickPosition = transform.position;
     }
 
+   
+
+    public float clickDistance;
+    public float targetDistance;
+
     private void Update()
     {
+        if(machine.currentState == null)
+        {
+            machine.Init(idle);
+        }
+
         mousePosition = mousePointer.transform.position;
         clickDistance = Vector3.Distance(clickPosition, transform.position);
         anim.SetFloat("distance", clickDistance);
@@ -74,6 +85,30 @@ public class JWPlayer : MonoBehaviour
         {
             targetDistance = Vector3.Distance(transform.position, target.transform.position);
         }
+
+        if(Input.GetKeyDown(KeyCode.Q))
+        {
+            anim.SetTrigger("JumpAttack");
+        }
+        if(Input.GetKeyDown(KeyCode.W))
+        {
+            anim.SetTrigger("WhirlWind");
+        }
     }
+
+    public Transform basicAttackPoint;
+    public float basicAttackRadius;
+    public float jumpAttackRadius;
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, jumpAttackRadius);
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(basicAttackPoint.position, basicAttackRadius);
+    }
+
+    public bool animationTrigger = false;
+    public void AnimationTrigger() => animationTrigger = !animationTrigger;
 }
 
