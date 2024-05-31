@@ -29,7 +29,7 @@ public class MousePointer : MonoBehaviour
 
     public ClickableObject target;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Enemy"))
         {

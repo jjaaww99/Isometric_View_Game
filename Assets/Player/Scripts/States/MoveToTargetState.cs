@@ -24,7 +24,6 @@ public class MoveToTargetState : PlayerState
     {
         base.Update();
 
-
         if (player.targetDistance <= player.attackRange)
         {
             machine.ChangeState(player.basicAttack);
@@ -33,6 +32,11 @@ public class MoveToTargetState : PlayerState
         if (Input.GetKey(KeyCode.Mouse1) && !player.EnemyTargeted())
         {
             machine.ChangeState(player.idle);
+        }
+
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            machine.ChangeState(player.evade);
         }
 
         if (Input.GetKey(KeyCode.Mouse1) && player.EnemyTargeted())

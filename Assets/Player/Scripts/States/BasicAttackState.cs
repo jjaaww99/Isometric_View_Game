@@ -20,7 +20,7 @@ public class BasicAttackState : PlayerState
 
         player.transform.LookAt(targetDir);
 
-        stateTimer = 0.8f;
+        stateTimer = 1f;
     }
 
     public override void Exit()
