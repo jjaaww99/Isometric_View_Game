@@ -1,13 +1,15 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MonsterAttackState : MonsterBasicState
 {
+    float attacktime;  //공격하는 시간
+    
     public override void EnterState(MonsterStateManager monster)
     {
-        Debug.Log("지금 상태는 공격 상태야");
         monster.ani.SetBool("Attack", true);
-        monster.nav.isStopped = true;
         monster.attackArea.enabled = true;
+        attacktime = 2f;
     }
 
     public override void UpdateState(MonsterStateManager monster)
@@ -23,16 +25,25 @@ public class MonsterAttackState : MonsterBasicState
 
     public override void OnTriggerEnter(MonsterStateManager monster, Collider collider)
     {
-       
+        //if (collider.CompareTag("PlayerAttack"))
+        //{
+        //    Debug.Log("플레이어의 공격에 맞음. 피격 상태로 전환");
+        //    monster.ChangeState(monster.hitState);
+        //}
+    }
+
+    public override void OnTriggerStay(MonsterStateManager monster, Collider collider)
+    {
+        
     }
 
     public override void OnTriggerExit(MonsterStateManager monster, Collider collider)
     {
-        GameObject other = collider.gameObject;
-        if(collider.CompareTag("Player"))
+        if (collider.CompareTag("Player"))
         {
             monster.ChangeState(monster.chaseState);
         }
     }
 
+    
 }

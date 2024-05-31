@@ -18,19 +18,24 @@ public class MonsterDeadState : MonsterBasicState
         }
         else
         {
-            Debug.Log("»ç¸Á »óÅÂ");
             GameObject gameObject = monster.gameObject;
             gameObject.SetActive(false);
         }
     }
+
     public override void ExitState(MonsterStateManager monster)
     {
-        
+
     }
 
     public override void OnTriggerEnter(MonsterStateManager monster, Collider collider)
     {
         
+    }
+
+    public override void OnTriggerStay(MonsterStateManager monster, Collider collider)
+    {
+
     }
 
     public override void OnTriggerExit(MonsterStateManager monster, Collider collider)
