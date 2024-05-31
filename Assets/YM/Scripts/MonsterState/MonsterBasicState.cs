@@ -14,6 +14,8 @@ public abstract class MonsterBasicState
 
     public abstract void OnTriggerEnter(MonsterStateManager monster,Collider collider);
 
+    public abstract void OnTriggerStay(MonsterStateManager monster, Collider collider);
+
     public abstract void OnTriggerExit(MonsterStateManager monster,Collider collider);
 
 

@@ -35,8 +35,7 @@ public class MonsterStateManager : MonoBehaviour
         rigid = GetComponent<Rigidbody>();
         InitializeFromDB(0);
     }
-
-    void Start()
+    void OnEnable()
     {
         currentHp = maxHp;
         nav.speed = speed;
@@ -44,10 +43,16 @@ public class MonsterStateManager : MonoBehaviour
         currentState.EnterState(this);
     }
 
+    void Start()
+    {
+       
+    }
+
 
     void Update()
     {
         currentState.UpdateState(this);
+        Debug.Log(currentState);
     }
 
 
@@ -63,7 +68,12 @@ public class MonsterStateManager : MonoBehaviour
         currentState.OnTriggerEnter(this, other);
     }
 
-    public void OnTriggerExit(Collider other)
+    void OnTriggerStay(Collider other)
+    {
+        currentState.OnTriggerStay(this, other);
+    }
+
+    void OnTriggerExit(Collider other)
     {
         currentState.OnTriggerExit(this, other);
     }
