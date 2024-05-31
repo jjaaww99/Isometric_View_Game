@@ -5,30 +5,29 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public Transform[] spawnPoint;
-
-    float timer;
+    private float spawnTimer;
 
     private void Awake()
     {
         spawnPoint = GetComponentsInChildren<Transform>();
     }
 
-    void Update()
+    private void Update()
     {
-        timer += Time.deltaTime;
-        if(timer > 0.5f)
+        spawnTimer += Time.deltaTime;
+        if (spawnTimer > 0.5f)
         {
-            timer = 0;
+            spawnTimer = 0;
             Spawn();
         }
     }
 
-    void Spawn()
+    private void Spawn()
     {
         GameObject enemy = GameManager.instance.pool.Get(0);
-        enemy.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].position;
-
+        if (enemy != null)
+        {
+            enemy.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].position;
+        }
     }
-
-
 }
