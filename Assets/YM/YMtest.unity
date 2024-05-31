@@ -5230,6 +5230,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 50631490}
+    - target: {fileID: 1763339024242907192, guid: bcce566a6571cdc4fad448f8a89bc9f1,
+        type: 3}
+      propertyPath: isChase
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2068310373989754056, guid: bcce566a6571cdc4fad448f8a89bc9f1,
         type: 3}
       propertyPath: m_Controller

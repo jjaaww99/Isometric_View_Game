@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class MonsterAttackState : MonsterBasicState
 {
-    float attacktime = 2f;  //공격하는 시간
+    float attacktime;  //공격하는 시간
     
     public override void EnterState(MonsterStateManager monster)
     {
@@ -15,11 +15,6 @@ public class MonsterAttackState : MonsterBasicState
     public override void UpdateState(MonsterStateManager monster)
     {
 
-        //attacktime -= Time.deltaTime;
-        //if (attacktime < 0)
-        //{
-        //    monster.ChangeState(monster.chaseState);
-        //}
     }
 
     public override void ExitState(MonsterStateManager monster)

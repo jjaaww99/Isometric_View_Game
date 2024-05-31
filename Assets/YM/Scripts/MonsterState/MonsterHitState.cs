@@ -19,7 +19,7 @@ public class MonsterHitState : MonsterBasicState
         {
             monster.ChangeState(monster.deadState);
         }
-        if (hittingtime < 0)
+        if (hittingtime <= 0)
         {
             monster.ChangeState(monster.idleState);
         }

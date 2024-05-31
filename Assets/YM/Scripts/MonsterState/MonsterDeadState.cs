@@ -7,7 +7,6 @@ public class MonsterDeadState : MonsterBasicState
     public override void EnterState(MonsterStateManager monster)
     {
         monster.ani.SetBool("Dead", true);
-        monster.nav.isStopped = true;
     }
 
 
@@ -23,6 +22,7 @@ public class MonsterDeadState : MonsterBasicState
             gameObject.SetActive(false);
         }
     }
+
     public override void ExitState(MonsterStateManager monster)
     {
 
