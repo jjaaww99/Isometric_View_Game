@@ -58,9 +58,7 @@ public class JWPlayer : MonoBehaviour
     private void Start()
     {
         machine.Init(idle);
-        
         targetsInRange = new Collider[maxTargets];
-        
         clickPosition = transform.position;
     }
 
@@ -105,8 +103,9 @@ public class JWPlayer : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-
         Gizmos.DrawWireSphere(transform.position, jumpAttackRadius);
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(basicAttackPoint.position, basicAttackRadius);
     }
 
     public bool animationTrigger = false;

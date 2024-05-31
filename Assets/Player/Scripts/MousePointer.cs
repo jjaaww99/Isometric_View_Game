@@ -29,13 +29,13 @@ public class MousePointer : MonoBehaviour
 
     public ClickableObject target;
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))
         {
             isOnEnemy = true;
             target = other.GetComponent<ClickableObject>();
-            target.Highlight();
+            target.isTargeted();
         }
     }
 
@@ -44,7 +44,7 @@ public class MousePointer : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             isOnEnemy = false;
-            target.Highlight();
+            target.isUntargeted();
         }
     }
 }
