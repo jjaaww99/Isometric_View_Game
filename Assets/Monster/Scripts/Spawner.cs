@@ -24,7 +24,7 @@ public class Spawner : MonoBehaviour
 
     private void Spawn()
     {
-        GameObject enemy = GameManager.instance.pool.Get(0);
+        UnityEngine.GameObject enemy = GameManager.instance.pool.Get(0);
         if (enemy != null)
         {
             enemy.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].position;

@@ -10,9 +10,9 @@ public class AnimPhysicsBase : StateMachineBehaviour
     {
         player = animator.GetComponent<JWPlayer>();
         
-        if(player.animationTrigger)
+        if(player.damageTrigger)
         {
-            player.AnimationTrigger();
+            player.DamageTrigger();
         }
     }
 
@@ -23,9 +23,9 @@ public class AnimPhysicsBase : StateMachineBehaviour
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (player.animationTrigger)
+        if (player.damageTrigger)
         {
-            player.AnimationTrigger();
+            player.DamageTrigger();
         }
     }
 

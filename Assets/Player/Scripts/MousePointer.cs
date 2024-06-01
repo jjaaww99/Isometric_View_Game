@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class MousePointer : MonoBehaviour
 {
+    public JWPlayer player;
     Camera mainCam;
-
+    public bool isOnEnemy = false;
     private void Awake()
     {
         mainCam = Camera.main;
@@ -22,29 +23,26 @@ public class MousePointer : MonoBehaviour
             Vector3 mouseWorldPos = hit.point;
 
             transform.position = mouseWorldPos;
-        }
-    }
 
-    public bool isOnEnemy;
-
-    public ClickableObject target;
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Enemy"))
-        {
-            isOnEnemy = true;
-            target = other.GetComponent<ClickableObject>();
-            target.isTargeted();
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Enemy"))
-        {
             isOnEnemy = false;
-            target.isUntargeted();
+        }
+
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Enemy")))
+        {
+            Vector3 mouseWorldPos = hit.point;
+
+            transform.position = mouseWorldPos;
+
+            isOnEnemy = true;
+
+            player.pointedTarget = hit.transform.gameObject;
+
+            if(Input.GetMouseButtonDown(1))
+            {
+                player.clickedTarget = hit.transform.gameObject;
+            }
         }
     }
+
+
 }

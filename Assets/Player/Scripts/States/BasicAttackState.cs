@@ -13,14 +13,17 @@ public class BasicAttackState : PlayerState
     {
         base.Enter();
 
-        if(player.target != null)
+        if(player.clickedTarget != null)
         {   
-            targetDir = player.target.transform.position - player.transform.forward;
+            targetDir = player.clickedTarget.transform.position - player.transform.forward;
         }
 
         player.transform.LookAt(targetDir);
-
-        stateTimer = 1f;
+        
+        if(player.animTrigger)
+        {
+            player.AnimTrigger();
+        }
     }
 
     public override void Exit()
@@ -30,9 +33,8 @@ public class BasicAttackState : PlayerState
 
     public override void Update()
     {
-        stateTimer -= Time.deltaTime;
 
-        if ((Input.GetKey(KeyCode.Mouse1) && !player.EnemyTargeted()) || stateTimer <= 0)
+        if ((Input.GetKey(KeyCode.Mouse1) && !player.isMouseOnEnemy()) || player.animTrigger)
         {
             machine.ChangeState(player.idle);
         }

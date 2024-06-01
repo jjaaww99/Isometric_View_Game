@@ -11,7 +11,6 @@ public class JWPlayer : MonoBehaviour
     public Collider[] targetsInRange;
     private int maxTargets = 10;
     public LayerMask enemyLayer;
-    public float rbForce; 
 
     #region States
     public StateMachine machine;
@@ -20,28 +19,30 @@ public class JWPlayer : MonoBehaviour
     public EvadeState evade;
     public BasicAttackState basicAttack;
     #endregion
+
     #region MoveData
     [Header("MoveData")]
-    private Camera mainCamera;
     public MousePointer mousePointer;
     public NavMeshAgent nav;
     public Vector3 clickPosition;
     public Vector3 mousePosition;
     #endregion
+
     #region PlayerData
     public float attackRange = 2.3f;
+    public float rbForce = 2f; 
     public float evadeForce = 6f;
     #endregion
 
 #nullable enable
-    public ClickableObject? target;
+    public GameObject? pointedTarget;
+    public GameObject? clickedTarget;
 #nullable disable
 
-    public bool EnemyTargeted() => mousePointer.isOnEnemy;
+    public bool isMouseOnEnemy() => mousePointer.isOnEnemy;
 
     public void Awake()
     {
-        mainCamera = Camera.main;
         nav = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
@@ -69,21 +70,16 @@ public class JWPlayer : MonoBehaviour
 
     private void Update()
     {
-        if(machine.currentState == null)
-        {
-            machine.Init(idle);
-        }
-
         mousePosition = mousePointer.transform.position;
+
         clickDistance = Vector3.Distance(clickPosition, transform.position);
         anim.SetFloat("distance", clickDistance);
-        target = mousePointer.target;
 
         machine.currentState.Update();
 
-        if(target != null)
+        if(pointedTarget != null)
         {
-            targetDistance = Vector3.Distance(transform.position, target.transform.position);
+            targetDistance = Vector3.Distance(transform.position, pointedTarget.transform.position);
         }
 
         if(Input.GetKeyDown(KeyCode.Q))
@@ -108,7 +104,10 @@ public class JWPlayer : MonoBehaviour
         Gizmos.DrawWireSphere(basicAttackPoint.position, basicAttackRadius);
     }
 
-    public bool animationTrigger = false;
-    public void AnimationTrigger() => animationTrigger = !animationTrigger;
+    public bool damageTrigger = false;
+    public bool animTrigger = false;
+
+    public void DamageTrigger() => damageTrigger = !damageTrigger;
+    public void AnimTrigger() => animTrigger = !animTrigger;
 }
 
