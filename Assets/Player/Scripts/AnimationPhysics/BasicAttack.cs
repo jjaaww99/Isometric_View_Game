@@ -8,7 +8,7 @@ public class BasicAttack : AnimPhysicsBase
     {
         player.targetsInRange = Physics.OverlapSphere(player.basicAttackPoint.position, player.basicAttackRadius, player.enemyLayer);
         
-        if (player.animationTrigger)
+        if (player.damageTrigger)
         {
             Action();
         }

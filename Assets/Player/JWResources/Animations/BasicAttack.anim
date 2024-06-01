@@ -103687,7 +103687,14 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 1.6
-    functionName: AnimationTrigger
+    functionName: DamageTrigger
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 3.7
+    functionName: AnimTrigger
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

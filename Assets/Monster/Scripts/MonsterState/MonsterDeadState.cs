@@ -18,7 +18,7 @@ public class MonsterDeadState : MonsterBasicState
         }
         else
         {
-            GameObject gameObject = monster.gameObject;
+            UnityEngine.GameObject gameObject = monster.gameObject;
             gameObject.SetActive(false);
         }
     }
