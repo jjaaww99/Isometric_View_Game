@@ -11,22 +11,23 @@ public class JumpAttack : AnimPhysicsBase
 
         if (player.damageTrigger)
         {
-            Action();
+            Effect();
         }
     }
 
-    protected override void Action()
+    protected override void Effect()
     {
         foreach (var target in player.targetsInRange)
         {
             Rigidbody rb = target.GetComponent<Rigidbody>();
 
-            Vector3 direction = (target.transform.position - player.transform.position).normalized;
+            Vector3 direction = (target.transform.position - player.transform.position);
 
             if (rb != null)
             {
-                rb.AddForce((direction + target.transform.up * 10).normalized);
+                rb.AddForce((target.transform.up * player.rbForce).normalized, ForceMode.VelocityChange);
             }
+            Debug.Log("Action");
         }
     }
 }

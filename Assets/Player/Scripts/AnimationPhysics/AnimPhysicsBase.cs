@@ -29,7 +29,7 @@ public class AnimPhysicsBase : StateMachineBehaviour
         }
     }
 
-    protected virtual void Action()
+    protected virtual void Effect()
     {
         
     }

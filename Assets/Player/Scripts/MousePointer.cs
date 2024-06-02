@@ -6,7 +6,6 @@ public class MousePointer : MonoBehaviour
 {
     public JWPlayer player;
     Camera mainCam;
-    public bool isOnEnemy = false;
     private void Awake()
     {
         mainCam = Camera.main;
@@ -24,7 +23,7 @@ public class MousePointer : MonoBehaviour
 
             transform.position = mouseWorldPos;
 
-            isOnEnemy = false;
+            player.isMouseOnEnemy = false;
         }
 
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Enemy")))
@@ -33,7 +32,7 @@ public class MousePointer : MonoBehaviour
 
             transform.position = mouseWorldPos;
 
-            isOnEnemy = true;
+            player.isMouseOnEnemy = true;
 
             player.pointedTarget = hit.transform.gameObject;
 

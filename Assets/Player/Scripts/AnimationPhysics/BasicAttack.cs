@@ -10,11 +10,11 @@ public class BasicAttack : AnimPhysicsBase
         
         if (player.damageTrigger)
         {
-            Action();
+            Effect();
         }
     }
 
-    protected override void Action()
+    protected override void Effect()
     {
         foreach (var target in player.targetsInRange)
         {
