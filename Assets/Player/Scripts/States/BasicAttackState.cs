@@ -33,10 +33,38 @@ public class BasicAttackState : PlayerState
 
     public override void Update()
     {
+        base.Update();
 
-        if ((Input.GetKey(KeyCode.Mouse1) && !player.isMouseOnEnemy()) || player.animTrigger)
+        if ((Input.GetKey(KeyCode.Mouse1) && !player.isMouseOnEnemy) || player.animTrigger)
         {
             machine.ChangeState(player.idle);
+        }
+    }
+
+    public override void FixedUpdate()
+    {
+        base.FixedUpdate();
+
+        player.targetsInRange = Physics.OverlapSphere(player.basicAttackPoint.position, player.basicAttackRadius, player.enemyLayer);
+
+        if (player.damageTrigger)
+        {
+            Effect();
+        }
+    }
+
+    protected void Effect()
+    {
+        foreach (var target in player.targetsInRange)
+        {
+            Vector3 direction = target.transform.position - player.transform.position;
+
+            Rigidbody rb = target.GetComponent<Rigidbody>();
+
+            if (target != null)
+            {
+                rb.AddForce(direction.normalized * player.rbForce, ForceMode.VelocityChange);
+            }
         }
     }
 }

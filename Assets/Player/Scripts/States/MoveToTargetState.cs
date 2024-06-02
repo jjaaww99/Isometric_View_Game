@@ -14,7 +14,10 @@ public class MoveToTargetState : PlayerState
     {
         base.Enter();
 
-        target = player.clickedTarget;
+        if(player.clickedTarget != null)
+        {
+            target = player.clickedTarget;
+        }
 
         player.nav.SetDestination(target.transform.position);
     }
@@ -30,7 +33,7 @@ public class MoveToTargetState : PlayerState
 
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
-            if(!player.isMouseOnEnemy())
+            if(!player.isMouseOnEnemy)
             {
                 machine.ChangeState(player.idle);
             }

@@ -39,7 +39,7 @@ public class JWPlayer : MonoBehaviour
     public GameObject? clickedTarget;
 #nullable disable
 
-    public bool isMouseOnEnemy() => mousePointer.isOnEnemy;
+    public bool isMouseOnEnemy;
 
     public void Awake()
     {
@@ -62,8 +62,6 @@ public class JWPlayer : MonoBehaviour
         targetsInRange = new Collider[maxTargets];
         clickPosition = transform.position;
     }
-
-   
 
     public float clickDistance;
     public float targetDistance;
@@ -90,6 +88,11 @@ public class JWPlayer : MonoBehaviour
         {
             anim.SetTrigger("WhirlWind");
         }
+    }
+
+    private void FixedUpdate()
+    {
+        machine.currentState.FixedUpdate();
     }
 
     public Transform basicAttackPoint;

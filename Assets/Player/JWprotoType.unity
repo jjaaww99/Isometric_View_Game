@@ -1819,7 +1819,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 345339684}
   serializedVersion: 4
-  m_Mass: 5
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -6119,7 +6119,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1624175543}
-  isOnEnemy: 0
 --- !u!4 &1516162743
 Transform:
   m_ObjectHideFlags: 0
@@ -6695,15 +6694,16 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
-  rbForce: 2
   mousePointer: {fileID: 1516162740}
   nav: {fileID: 0}
   clickPosition: {x: 0, y: 0, z: 0}
   mousePosition: {x: 0, y: 0, z: 0}
-  attackRange: 2.3
+  attackRange: 2
+  rbForce: 0.5
   evadeForce: 3
   pointedTarget: {fileID: 0}
   clickedTarget: {fileID: 0}
+  isMouseOnEnemy: 0
   clickDistance: 0
   targetDistance: 0
   basicAttackPoint: {fileID: 697627260}
