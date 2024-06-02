@@ -6,6 +6,8 @@ public class PoolManager : MonoBehaviour
     public UnityEngine.GameObject[] prefabs;
     public List<UnityEngine.GameObject>[] pools;
     public int maxPoolSize = 20;
+    int Active = 0;
+    public int maxActive = 50;
 
     private void Awake()
     {
@@ -19,13 +21,20 @@ public class PoolManager : MonoBehaviour
     public UnityEngine.GameObject Get(int index)
     {
         UnityEngine.GameObject select = null;
+
         foreach (UnityEngine.GameObject item in pools[index])
         {
             if (!item.activeSelf)
             {
+                Active++;
                 select = item;
                 select.SetActive(true);
                 return select;
+            }
+
+            if (Active >= maxActive)
+            {
+                break;
             }
         }
 
