@@ -32,6 +32,15 @@ public class PlayerState
 
         player.clickPosition = player.transform.position;
 
+        if (player.damageTrigger)
+        {
+            player.DamageTrigger();
+        }
+
+        if (player.animTrigger)
+        {
+            player.AnimTrigger();
+        }
     }
     public virtual void Update() 
     {

@@ -35,7 +35,7 @@ public class BasicAttackState : SkillState
     {
         base.Update();
 
-        if ((Input.GetKey(KeyCode.Mouse1) && !player.isMouseOnEnemy) || player.animTrigger)
+        if ((Input.GetMouseButton(1) && !player.isPointerOnEnemy) || player.animTrigger)
         {
             machine.ChangeState(player.idle);
         }
@@ -58,16 +58,20 @@ public class BasicAttackState : SkillState
         foreach (var target in player.targetsInRange)
         {
             Vector3 direction = target.transform.position - player.transform.position;
-
-            enemy = target.GetComponent<MonsterStateManager>();
-
+            
             Rigidbody rb = target.GetComponent<Rigidbody>();
+
+            if(target.TryGetComponent<MonsterStateManager>(out MonsterStateManager monster))
+            {
+                enemy = monster;
+
+                monster.MonsterDead();
+            }
 
             if (target != null)
             {
                 rb.AddForce(direction.normalized * player.rbForce, ForceMode.VelocityChange);
             }
-
         }
     }
 }

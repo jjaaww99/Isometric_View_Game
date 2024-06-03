@@ -39,7 +39,7 @@ public class JWPlayer : MonoBehaviour
     public GameObject? clickedTarget;
 #nullable disable
 
-    public bool isMouseOnEnemy;
+    public bool isPointerOnEnemy;
 
     public void Awake()
     {

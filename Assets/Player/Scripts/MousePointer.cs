@@ -23,7 +23,7 @@ public class MousePointer : MonoBehaviour
 
             transform.position = mouseWorldPos;
 
-            player.isMouseOnEnemy = false;
+            player.isPointerOnEnemy = false;
         }
 
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Enemy")))
@@ -32,7 +32,7 @@ public class MousePointer : MonoBehaviour
 
             transform.position = mouseWorldPos;
 
-            player.isMouseOnEnemy = true;
+            player.isPointerOnEnemy = true;
 
             player.pointedTarget = hit.transform.gameObject;
 

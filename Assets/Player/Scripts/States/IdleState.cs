@@ -28,16 +28,16 @@ public class IdleState : PlayerState
         }
 
       
-        if (Input.GetKey(KeyCode.Mouse1))
+        if (Input.GetMouseButton(1))
         {
-            if(!player.isMouseOnEnemy)
+            if(!player.isPointerOnEnemy)
             {
                 player.clickPosition = player.mousePosition;
 
                 player.nav.SetDestination(player.clickPosition);
             }
 
-            else if(player.isMouseOnEnemy)
+            else if(player.isPointerOnEnemy)
             {
                 if (player.targetDistance <= player.attackRange)
                 {

@@ -17,8 +17,6 @@ public class EvadeState : PlayerState
 
         targetDir = player.mousePosition - player.transform.forward;
 
-        stateTimer = 0.5f;
-
         player.transform.LookAt(targetDir);
     }
 
@@ -33,9 +31,7 @@ public class EvadeState : PlayerState
         
         player.rb.AddForce(targetPos.normalized * player.evadeForce, ForceMode.Impulse);
 
-        stateTimer -= Time.deltaTime;
-
-        if(stateTimer <= 0)
+        if(player.animTrigger)
         {
             machine.ChangeState(player.idle);
         }

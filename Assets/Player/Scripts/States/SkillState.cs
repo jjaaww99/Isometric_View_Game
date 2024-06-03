@@ -15,12 +15,7 @@ public class SkillState : PlayerState
 
     public override void Exit()
     {
-        base.Exit();
-
-        if (player.damageTrigger)
-        {
-            player.DamageTrigger();
-        }
+        base.Exit();   
     }
 
 
