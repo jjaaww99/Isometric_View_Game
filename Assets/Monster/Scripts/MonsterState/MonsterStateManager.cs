@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -71,20 +72,20 @@ public class MonsterStateManager : ClickableObject
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player"))
         {
             ChangeState(attackState);
         }
     }
 
-    void OnTriggerStay(Collider other)
-    {
-        
-    }
-
     void OnTriggerExit(Collider other)
     {
-       
+        ChangeState(chaseState);
     }
 
     private void InitializeFromDB(int index)
