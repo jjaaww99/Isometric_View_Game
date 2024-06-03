@@ -18,7 +18,7 @@ public class AnimPhysicsBase : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        player.targetsInRange = Physics.OverlapSphere(player.basicAttackPoint.position, player.basicAttackRadius, player.enemyLayer);
+        player.targetsInRange = Physics.OverlapSphere(player.basicAttackBase.position, player.basicAttackRadius, player.enemyLayer);
     }
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

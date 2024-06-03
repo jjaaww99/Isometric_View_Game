@@ -4,7 +4,7 @@ public class MonsterDeadState : MonsterBasicState
 {
     public override void EnterState(MonsterStateManager monster)
     {
-        monster.ani.SetBool("Dead", monster.dead);
+        monster.ani.SetBool("Dead", true);
     }
 
 

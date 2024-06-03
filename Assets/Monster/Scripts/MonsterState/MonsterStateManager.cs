@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class MonsterStateManager : MonoBehaviour
+public class MonsterStateManager : ClickableObject
 {
     MonsterBasicState currentState;
     public MonsterIdleState idleState = new MonsterIdleState();
@@ -53,14 +53,12 @@ public class MonsterStateManager : MonoBehaviour
        
     }
 
-
     void Update()
     {
         currentState.UpdateState(this);
         Debug.Log(currentState);
         if (dead)
             MonsterDead();
-        
     }
 
 

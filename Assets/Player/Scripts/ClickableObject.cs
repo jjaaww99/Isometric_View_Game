@@ -7,17 +7,17 @@ public class ClickableObject : MonoBehaviour, IPointerClickHandler, IPointerExit
 {
     Renderer ren;
     Color originalColor;
-
+    
     private void Awake()
     {
-        ren = GetComponent<Renderer>();
-        originalColor = ren.material.color;
+        //ren = GetComponent<Renderer>();
+        //originalColor = ren.material.color;
     }
 
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        ren.material.color = Color.red;
+        //ren.material.color = Color.red;
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -27,7 +27,7 @@ public class ClickableObject : MonoBehaviour, IPointerClickHandler, IPointerExit
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        ren.material.color = originalColor;
+        //ren.material.color = originalColor;
     }
 
 }

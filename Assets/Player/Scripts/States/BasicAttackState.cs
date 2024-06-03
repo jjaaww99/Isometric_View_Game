@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class BasicAttackState : SkillState
+public class BasicAttackState : PlayerState
 {
     public BasicAttackState(JWPlayer _player, string _animName) : base(_player, _animName)
     {
@@ -20,10 +20,6 @@ public class BasicAttackState : SkillState
 
         player.transform.LookAt(targetDir);
         
-        if(player.animTrigger)
-        {
-            player.AnimTrigger();
-        }
     }
 
     public override void Exit()
@@ -45,7 +41,7 @@ public class BasicAttackState : SkillState
     {
         base.FixedUpdate();
 
-        player.targetsInRange = Physics.OverlapSphere(player.basicAttackPoint.position, player.basicAttackRadius, player.enemyLayer);
+        player.targetsInRange = Physics.OverlapSphere(player.basicAttackBase.position, player.basicAttackRadius, player.enemyLayer);
 
         if (player.damageTrigger)
         {

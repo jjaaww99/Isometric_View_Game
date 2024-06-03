@@ -8,7 +8,6 @@ public class EvadeState : PlayerState
     {
     }
 
-
     public override void Enter()
     {
         base.Enter();
@@ -29,11 +28,16 @@ public class EvadeState : PlayerState
     {
         base.Update();
         
-        player.rb.AddForce(targetPos.normalized * player.evadeForce, ForceMode.Impulse);
-
         if(player.animTrigger)
         {
             machine.ChangeState(player.idle);
         }
+    }
+
+    public override void FixedUpdate()
+    {
+        base.FixedUpdate();
+        
+        player.rb.AddForce(targetPos.normalized * player.evadeForce, ForceMode.Impulse);
     }
 }

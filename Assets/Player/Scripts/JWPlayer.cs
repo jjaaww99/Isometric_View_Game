@@ -71,6 +71,7 @@ public class JWPlayer : MonoBehaviour
         mousePosition = mousePointer.transform.position;
 
         clickDistance = Vector3.Distance(clickPosition, transform.position);
+        
         anim.SetFloat("distance", clickDistance);
 
         machine.currentState.Update();
@@ -95,7 +96,7 @@ public class JWPlayer : MonoBehaviour
         machine.currentState.FixedUpdate();
     }
 
-    public Transform basicAttackPoint;
+    public Transform basicAttackBase;
     public float basicAttackRadius;
     public float jumpAttackRadius;
 
@@ -104,7 +105,7 @@ public class JWPlayer : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, jumpAttackRadius);
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(basicAttackPoint.position, basicAttackRadius);
+        Gizmos.DrawWireSphere(basicAttackBase.position, basicAttackRadius);
     }
 
     public bool damageTrigger = false;
