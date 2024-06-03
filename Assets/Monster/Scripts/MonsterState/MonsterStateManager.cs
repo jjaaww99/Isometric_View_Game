@@ -90,5 +90,20 @@ public class MonsterStateManager : MonoBehaviour
         }
     }//엑셀데이터 불러오는 메서드
 
+    public void MonsterDead()
+    {
+        float deadCount = 3;
+        if(deadCount > 0)
+        {
+            deadCount -= Time.deltaTime;
+            ani.SetBool("Death", true);
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
+        
+    }
+
 }
 
