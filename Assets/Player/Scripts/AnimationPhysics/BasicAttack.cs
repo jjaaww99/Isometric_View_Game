@@ -24,6 +24,7 @@ public class BasicAttack : AnimPhysicsBase
 
             if (target != null)
             {
+
                 rb.AddForce(direction.normalized * player.rbForce, ForceMode.Impulse);
             }
         }

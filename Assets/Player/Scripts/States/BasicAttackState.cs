@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class BasicAttackState : PlayerState
+public class BasicAttackState : SkillState
 {
     public BasicAttackState(JWPlayer _player, string _animName) : base(_player, _animName)
     {
@@ -59,12 +59,15 @@ public class BasicAttackState : PlayerState
         {
             Vector3 direction = target.transform.position - player.transform.position;
 
+            enemy = target.GetComponent<MonsterStateManager>();
+
             Rigidbody rb = target.GetComponent<Rigidbody>();
 
             if (target != null)
             {
                 rb.AddForce(direction.normalized * player.rbForce, ForceMode.VelocityChange);
             }
+
         }
     }
 }
