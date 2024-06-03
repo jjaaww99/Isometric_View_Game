@@ -5,6 +5,7 @@ public class MonsterDeadState : MonsterBasicState
     public override void EnterState(MonsterStateManager monster)
     {
         monster.ani.SetBool("Dead", true);
+        monster.isDead = true;
     }
 
 
@@ -12,7 +13,6 @@ public class MonsterDeadState : MonsterBasicState
     {
         if(monster.deadCount > 0)
         {
-            Debug.Log(monster.deadCount);
             monster.deadCount -= Time.deltaTime;
         }
         else

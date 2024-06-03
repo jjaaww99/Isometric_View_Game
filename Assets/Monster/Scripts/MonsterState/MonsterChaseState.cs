@@ -13,10 +13,7 @@ public class MonsterChaseState : MonsterBasicState
 
     public override void UpdateState(MonsterStateManager monster)
     {
-        //   monster.nav.SetDestination(GameManager.instance.player.transform.position);
-
-        JWPlayer player = GameObject.FindGameObjectWithTag("Player").GetComponent<JWPlayer>();
-        monster.nav.SetDestination(player.transform.position);
+        monster.nav.SetDestination(monster.target.position);
         monster.rigid.velocity = Vector3.zero;
         monster.rigid.angularVelocity = Vector3.zero;
         if(monster.isChase==false)

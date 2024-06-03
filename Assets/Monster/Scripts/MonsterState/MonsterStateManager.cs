@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class MonsterStateManager : ClickableObject
+public class MonsterStateManager : MonoBehaviour
 {
     MonsterBasicState currentState;
     public MonsterIdleState idleState = new MonsterIdleState();
@@ -18,12 +18,14 @@ public class MonsterStateManager : ClickableObject
     public int currentHp;         // 현재 체력
     public float speed;           // 이동속도
     public int atk;               // 공격력
-    public bool dead;   //사망 버튼
     public bool hit;
     public float deadCount = 3; //사망후 사라지는 시간
 
     public Transform target;
     public bool isChase;
+    public bool isDead;
+
+    public float targetDistance;
 
     public BoxCollider attackArea;    //공격 범위
     public NavMeshAgent nav;
@@ -41,12 +43,13 @@ public class MonsterStateManager : ClickableObject
     }
     void OnEnable()
     {
+        rigid.velocity = Vector3.zero;
         deadCount = 3;
         currentHp = maxHp;
         nav.speed = speed;
         currentState = idleState;
         currentState.EnterState(this);
-        dead = false;
+        isDead = false;
     }
 
     void Start()
@@ -54,11 +57,30 @@ public class MonsterStateManager : ClickableObject
        
     }
 
+
     void Update()
     {
         currentState.UpdateState(this);
         Debug.Log(currentState);
-        
+
+        //몬스터와 타겟(플레이어 거리 체크)
+        targetDistance = Vector3.Distance(transform.position, target.position);
+        ani.SetFloat("targetDistance", targetDistance);
+
+        if (targetDistance <= 2 && isDead == false)
+        {
+            ChangeState(attackState);
+        }
+        else if (targetDistance > 2 && targetDistance < 15 && isDead == false)
+        {
+            ChangeState(chaseState);
+        }
+        else if (isDead == false)
+        {
+            ChangeState(idleState);
+        }
+
+
     }
 
 
@@ -76,18 +98,12 @@ public class MonsterStateManager : ClickableObject
 
     void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            ChangeState(attackState);
-        }
+
     }
 
     void OnTriggerExit(Collider other)
     {
-        if(other.CompareTag("Player"))
-        {
-            ChangeState(chaseState);
-        }
+
     }
 
     private void InitializeFromDB(int index)
@@ -105,7 +121,6 @@ public class MonsterStateManager : ClickableObject
     public void MonsterDead()
     {
         ChangeState(deadState);
-        Debug.Log("호출");
     }
 
     public void MonsterHit()
