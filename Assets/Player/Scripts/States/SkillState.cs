@@ -28,7 +28,7 @@ public class SkillState : PlayerState
     {
         base.Update();
     }
-    public virtual void FixedUpdate()
+    public override void FixedUpdate()
     {
 
     }
