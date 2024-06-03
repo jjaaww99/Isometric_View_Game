@@ -5,7 +5,7 @@ using UnityEngine.Pool;
 
 public class HpBar : MonoBehaviour
 {
-    private GameObject targetObject;
+    private UnityEngine.GameObject targetObject;
 
     private Camera _MainCamera;
 
@@ -25,7 +25,7 @@ public class HpBar : MonoBehaviour
         _ManagedPool = pool;
     }
 
-    public void OnTarget(GameObject target)
+    public void OnTarget(UnityEngine.GameObject target)
     {
         targetObject = target;
 

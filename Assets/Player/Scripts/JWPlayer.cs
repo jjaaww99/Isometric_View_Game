@@ -8,6 +8,9 @@ public class JWPlayer : MonoBehaviour
 {
     public Animator anim;
     public Rigidbody rb;
+    public Collider[] targetsInRange;
+    private int maxTargets = 10;
+    public LayerMask enemyLayer;
 
     #region States
     public StateMachine machine;
@@ -16,38 +19,34 @@ public class JWPlayer : MonoBehaviour
     public EvadeState evade;
     public BasicAttackState basicAttack;
     #endregion
+
     #region MoveData
     [Header("MoveData")]
-    public Camera mainCamera;
+    public MousePointer mousePointer;
     public NavMeshAgent nav;
     public Vector3 clickPosition;
     public Vector3 mousePosition;
-    public MousePointer mousePointer;
     #endregion
+
     #region PlayerData
     public float attackRange = 2.3f;
+    public float rbForce = 2f; 
     public float evadeForce = 6f;
     #endregion
 
 #nullable enable
-    public ClickableObject? target;
+    public GameObject? pointedTarget;
+    public GameObject? clickedTarget;
 #nullable disable
 
-    public bool EnemyTargeted() => mousePointer.isOnEnemy;
-
-    public float clickDistance;
-    public float targetDistance;
+    public bool isMouseOnEnemy;
 
     public void Awake()
     {
-        mainCamera = Camera.main;
         nav = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
-    }
 
-    private void Start()
-    {
         #region States
         machine = new StateMachine();
         idle = new IdleState(this, "Idle");
@@ -55,25 +54,63 @@ public class JWPlayer : MonoBehaviour
         evade = new EvadeState(this, "Evade");
         basicAttack = new BasicAttackState(this, "BasicAttack");
         #endregion
+    }
 
+    private void Start()
+    {
         machine.Init(idle);
-        
+        targetsInRange = new Collider[maxTargets];
         clickPosition = transform.position;
     }
+
+    public float clickDistance;
+    public float targetDistance;
 
     private void Update()
     {
         mousePosition = mousePointer.transform.position;
+
         clickDistance = Vector3.Distance(clickPosition, transform.position);
         anim.SetFloat("distance", clickDistance);
-        target = mousePointer.target;
 
         machine.currentState.Update();
 
-        if(target != null)
+        if(pointedTarget != null)
         {
-            targetDistance = Vector3.Distance(transform.position, target.transform.position);
+            targetDistance = Vector3.Distance(transform.position, pointedTarget.transform.position);
+        }
+
+        if(Input.GetKeyDown(KeyCode.Q))
+        {
+            anim.SetTrigger("JumpAttack");
+        }
+        if(Input.GetKeyDown(KeyCode.W))
+        {
+            anim.SetTrigger("WhirlWind");
         }
     }
+
+    private void FixedUpdate()
+    {
+        machine.currentState.FixedUpdate();
+    }
+
+    public Transform basicAttackPoint;
+    public float basicAttackRadius;
+    public float jumpAttackRadius;
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, jumpAttackRadius);
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(basicAttackPoint.position, basicAttackRadius);
+    }
+
+    public bool damageTrigger = false;
+    public bool animTrigger = false;
+
+    public void DamageTrigger() => damageTrigger = !damageTrigger;
+    public void AnimTrigger() => animTrigger = !animTrigger;
 }
 

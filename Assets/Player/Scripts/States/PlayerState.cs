@@ -30,9 +30,17 @@ public class PlayerState
         player.nav.ResetPath();
 
         player.clickPosition = player.transform.position;
+
+        if(player.damageTrigger)
+        {
+            player.DamageTrigger();
+        }
     }
     public virtual void Update() 
     {
+    }
 
+    public virtual void FixedUpdate()
+    {
     }
 }

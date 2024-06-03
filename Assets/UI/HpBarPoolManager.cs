@@ -6,14 +6,14 @@ using UnityEngine.Pool;
 public class HpBarPoolManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject hpBarPrefab;
+    private UnityEngine.GameObject hpBarPrefab;
 
     [SerializeField]
     private Transform parentTransform;
 
     private IObjectPool<HpBar> pool;
 
-    List<GameObject> targetObject = new List<GameObject>();
+    List<UnityEngine.GameObject> targetObject = new List<UnityEngine.GameObject>();
 
     private void Awake()
     {
@@ -22,7 +22,7 @@ public class HpBarPoolManager : MonoBehaviour
 
     private void Start()
     {
-        GameObject[] tObjects = GameObject.FindGameObjectsWithTag("Enemy");
+        UnityEngine.GameObject[] tObjects = UnityEngine.GameObject.FindGameObjectsWithTag("Enemy");
         for(int i = 0; i < tObjects.Length; i++)
         {
             targetObject.Add(tObjects[i]);

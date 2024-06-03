@@ -8,11 +8,18 @@ public class MoveToTargetState : PlayerState
     {
     }
 
+    GameObject target;
+
     public override void Enter()
     {
         base.Enter();
 
-        player.nav.SetDestination(player.target.transform.position);
+        if(player.clickedTarget != null)
+        {
+            target = player.clickedTarget;
+        }
+
+        player.nav.SetDestination(target.transform.position);
     }
 
     public override void Exit()
@@ -24,20 +31,32 @@ public class MoveToTargetState : PlayerState
     {
         base.Update();
 
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            if(!player.isMouseOnEnemy)
+            {
+                machine.ChangeState(player.idle);
+            }
+
+            if(player.clickedTarget != target)
+            {
+                machine.ChangeState(player.moveToTarget);
+            }
+
+            if(player.clickedTarget == target)
+            {
+                return;
+            }
+        }
 
         if (player.targetDistance <= player.attackRange)
         {
             machine.ChangeState(player.basicAttack);
         }
 
-        if (Input.GetKey(KeyCode.Mouse1) && !player.EnemyTargeted())
+        if(Input.GetKeyDown(KeyCode.LeftShift))
         {
-            machine.ChangeState(player.idle);
-        }
-
-        if (Input.GetKey(KeyCode.Mouse1) && player.EnemyTargeted())
-        {
-            machine.ChangeState(player.moveToTarget);
+            machine.ChangeState(player.evade);
         }
     }
 }
