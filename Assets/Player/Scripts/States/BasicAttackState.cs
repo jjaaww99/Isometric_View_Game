@@ -13,23 +13,30 @@ public class BasicAttackState : PlayerState
     {
         base.Enter();
 
-        if(player.clickedTarget != null)
+        if (player.clickedTarget != null)
         {   
             targetDir = player.clickedTarget.transform.position - player.transform.forward;
         }
 
         player.transform.LookAt(targetDir);
-        
+
     }
 
     public override void Exit()
     {
         base.Exit();
+
+        player.effects[0].SetActive(false);
     }
 
     public override void Update()
     {
         base.Update();
+
+        if(player.effectTrigger)
+        {
+            player.effects[0].SetActive(true);
+        }
 
         if ((Input.GetMouseButton(1) && !player.isPointerOnEnemy) || player.animTrigger)
         {

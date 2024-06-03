@@ -58,8 +58,7 @@ public class MonsterStateManager : ClickableObject
     {
         currentState.UpdateState(this);
         Debug.Log(currentState);
-        if (dead)
-            MonsterDead();
+        
     }
 
 
@@ -85,7 +84,10 @@ public class MonsterStateManager : ClickableObject
 
     void OnTriggerExit(Collider other)
     {
-        ChangeState(chaseState);
+        if(other.CompareTag("Player"))
+        {
+            ChangeState(chaseState);
+        }
     }
 
     private void InitializeFromDB(int index)
@@ -103,6 +105,7 @@ public class MonsterStateManager : ClickableObject
     public void MonsterDead()
     {
         ChangeState(deadState);
+        Debug.Log("»£√‚");
     }
 
     public void MonsterHit()

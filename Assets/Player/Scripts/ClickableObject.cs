@@ -29,5 +29,5 @@ public class ClickableObject : MonoBehaviour, IPointerClickHandler, IPointerExit
     {
         //ren.material.color = originalColor;
     }
-
+        
 }

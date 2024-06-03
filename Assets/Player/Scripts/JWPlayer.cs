@@ -12,6 +12,8 @@ public class JWPlayer : MonoBehaviour
     private int maxTargets = 10;
     public LayerMask enemyLayer;
 
+    public GameObject[] effects;
+
     #region States
     public StateMachine machine;
     public IdleState idle;
@@ -58,8 +60,13 @@ public class JWPlayer : MonoBehaviour
 
     private void Start()
     {
+        foreach (var effect in effects)
+        {
+            effect.SetActive(false);
+        }
+
         machine.Init(idle);
-        targetsInRange = new Collider[maxTargets];
+        //targetsInRange = new Collider[maxTargets];
         clickPosition = transform.position;
     }
 
@@ -71,15 +78,16 @@ public class JWPlayer : MonoBehaviour
         mousePosition = mousePointer.transform.position;
 
         clickDistance = Vector3.Distance(clickPosition, transform.position);
-        
-        anim.SetFloat("distance", clickDistance);
-
-        machine.currentState.Update();
 
         if(pointedTarget != null)
         {
             targetDistance = Vector3.Distance(transform.position, pointedTarget.transform.position);
         }
+        
+        anim.SetFloat("ClickDistance", clickDistance);
+        anim.SetFloat("TargetDistance", targetDistance);
+
+        machine.currentState.Update();
 
         if(Input.GetKeyDown(KeyCode.Q))
         {
@@ -110,8 +118,9 @@ public class JWPlayer : MonoBehaviour
 
     public bool damageTrigger = false;
     public bool animTrigger = false;
-
+    public bool effectTrigger = false;
     public void DamageTrigger() => damageTrigger = !damageTrigger;
     public void AnimTrigger() => animTrigger = !animTrigger;
+    public void EffectTrigger() => effectTrigger = !effectTrigger;
 }
 

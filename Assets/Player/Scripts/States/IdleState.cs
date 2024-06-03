@@ -43,7 +43,7 @@ public class IdleState : PlayerState
                     machine.ChangeState(player.basicAttack);
                 }
 
-                else 
+                else
                 {
                     machine.ChangeState(player.moveToTarget);
                 }
