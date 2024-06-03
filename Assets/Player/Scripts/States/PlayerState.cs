@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerState
 {
     protected JWPlayer player;
+    protected MonsterStateManager enemy;
     protected string animParameter;
     protected StateMachine machine;
     protected Vector3 targetPos;
@@ -31,16 +32,13 @@ public class PlayerState
 
         player.clickPosition = player.transform.position;
 
-        if(player.damageTrigger)
-        {
-            player.DamageTrigger();
-        }
     }
     public virtual void Update() 
     {
-    }
 
+    }
     public virtual void FixedUpdate()
     {
+
     }
 }
