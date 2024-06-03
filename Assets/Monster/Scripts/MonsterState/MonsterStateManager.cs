@@ -17,9 +17,12 @@ public class MonsterStateManager : MonoBehaviour
     public int currentHp;         // 현재 체력
     public float speed;           // 이동속도
     public int atk;               // 공격력
+    public bool dead;   //사망 버튼
+    public bool hit;
+    public float deadCount = 3; //사망후 사라지는 시간
 
     public Transform target;
-    public bool isChase = false;
+    public bool isChase;
 
     public BoxCollider attackArea;    //공격 범위
     public NavMeshAgent nav;
@@ -37,10 +40,12 @@ public class MonsterStateManager : MonoBehaviour
     }
     void OnEnable()
     {
+        deadCount = 3;
         currentHp = maxHp;
         nav.speed = speed;
         currentState = idleState;
         currentState.EnterState(this);
+        dead = false;
     }
 
     void Start()
@@ -53,6 +58,9 @@ public class MonsterStateManager : MonoBehaviour
     {
         currentState.UpdateState(this);
         Debug.Log(currentState);
+        if (dead)
+            MonsterDead();
+        
     }
 
 
@@ -65,17 +73,20 @@ public class MonsterStateManager : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        currentState.OnTriggerEnter(this, other);
+        if(other.CompareTag("Player"))
+        {
+            ChangeState(attackState);
+        }
     }
 
     void OnTriggerStay(Collider other)
     {
-        currentState.OnTriggerStay(this, other);
+        
     }
 
     void OnTriggerExit(Collider other)
     {
-        currentState.OnTriggerExit(this, other);
+       
     }
 
     private void InitializeFromDB(int index)
@@ -92,18 +103,15 @@ public class MonsterStateManager : MonoBehaviour
 
     public void MonsterDead()
     {
-        float deadCount = 3;
-        if(deadCount > 0)
-        {
-            deadCount -= Time.deltaTime;
-            ani.SetBool("Death", true);
-        }
-        else
-        {
-            gameObject.SetActive(false);
-        }
-        
+        ChangeState(deadState);
     }
+
+    public void MonsterHit()
+    {
+        ChangeState(hitState);
+    }
+
+
 
 }
 

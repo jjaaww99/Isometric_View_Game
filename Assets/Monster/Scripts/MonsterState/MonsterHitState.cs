@@ -9,12 +9,10 @@ public class MonsterHitState : MonsterBasicState
     {
         monster.ani.SetTrigger("Hit");
         monster.nav.isStopped = true;
-        hittingtime = 1.5f;
     }
 
     public override void UpdateState(MonsterStateManager monster)
     {
-        hittingtime -= Time.deltaTime;
         if (monster.currentHp <= 0)
         {
             monster.ChangeState(monster.deadState);
@@ -29,20 +27,6 @@ public class MonsterHitState : MonsterBasicState
        
     }
 
-    public override void OnTriggerEnter(MonsterStateManager monster, Collider collider)
-    {
-    
-    }
-
-    public override void OnTriggerStay(MonsterStateManager monster, Collider collider)
-    {
-
-    }
-
-    public override void OnTriggerExit(MonsterStateManager monster, Collider collider)
-    {
-      
-    }
 
     
 }

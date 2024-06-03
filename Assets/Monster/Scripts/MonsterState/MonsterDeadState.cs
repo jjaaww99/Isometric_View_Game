@@ -2,19 +2,18 @@ using UnityEngine;
 
 public class MonsterDeadState : MonsterBasicState
 {
-    float DestroyCount = 3.0f; //사망 후 사라지는 시간
-    
     public override void EnterState(MonsterStateManager monster)
     {
-        monster.ani.SetBool("Dead", true);
+        monster.ani.SetBool("Dead", monster.dead);
     }
 
 
     public override void UpdateState(MonsterStateManager monster)
     {
-        if(DestroyCount > 0)
+        if(monster.deadCount > 0)
         {
-            DestroyCount -= Time.deltaTime;
+            Debug.Log(monster.deadCount);
+            monster.deadCount -= Time.deltaTime;
         }
         else
         {
@@ -26,21 +25,6 @@ public class MonsterDeadState : MonsterBasicState
     public override void ExitState(MonsterStateManager monster)
     {
 
-    }
-
-    public override void OnTriggerEnter(MonsterStateManager monster, Collider collider)
-    {
-        
-    }
-
-    public override void OnTriggerStay(MonsterStateManager monster, Collider collider)
-    {
-
-    }
-
-    public override void OnTriggerExit(MonsterStateManager monster, Collider collider)
-    {
-       
     }
 
     
