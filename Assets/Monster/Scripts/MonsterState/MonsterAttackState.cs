@@ -23,27 +23,4 @@ public class MonsterAttackState : MonsterBasicState
         monster.attackArea.enabled = false;
     }
 
-    public override void OnTriggerEnter(MonsterStateManager monster, Collider collider)
-    {
-        //if (collider.CompareTag("PlayerAttack"))
-        //{
-        //    Debug.Log("플레이어의 공격에 맞음. 피격 상태로 전환");
-        //    monster.ChangeState(monster.hitState);
-        //}
-    }
-
-    public override void OnTriggerStay(MonsterStateManager monster, Collider collider)
-    {
-        
-    }
-
-    public override void OnTriggerExit(MonsterStateManager monster, Collider collider)
-    {
-        if (collider.CompareTag("Player"))
-        {
-            monster.ChangeState(monster.chaseState);
-        }
-    }
-
-    
 }
