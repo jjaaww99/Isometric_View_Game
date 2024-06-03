@@ -22,7 +22,17 @@ public class IdleState : PlayerState
     {
         base.Update();
 
-        if(player.clickDistance <= 0.1)
+        if(Input.GetKey(KeyCode.Q))
+        {
+            machine.ChangeState(player.Qskill);
+        }
+
+        if(Input.GetKey(KeyCode.W))
+        {
+            machine.ChangeState(player.Wskill);
+        }
+
+        if (player.clickDistance <= 0.1)
         {
             player.nav.ResetPath();
         }

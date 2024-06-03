@@ -20,6 +20,8 @@ public class JWPlayer : MonoBehaviour
     public MoveToTargetState moveToTarget;
     public EvadeState evade;
     public BasicAttackState basicAttack;
+    public QSkillState Qskill;
+    public WSkillState Wskill;
     #endregion
 
     #region MoveData
@@ -43,18 +45,25 @@ public class JWPlayer : MonoBehaviour
 
     public bool isPointerOnEnemy;
 
+    public KeyCode[] keyCodes = { KeyCode.Q, KeyCode.W, KeyCode.E, KeyCode.R };
+    public string[] skillNames = { "JumpAttack", "WhirlWind", "JumpAttack", "WhirlWind" };
+
+    public Dictionary<KeyCode, string> skillDictionary;
+
     public void Awake()
     {
         nav = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
-
+        targetsInRange = new Collider[maxTargets];
         #region States
         machine = new StateMachine();
         idle = new IdleState(this, "Idle");
         moveToTarget = new MoveToTargetState(this, "ToTarget");
         evade = new EvadeState(this, "Evade");
         basicAttack = new BasicAttackState(this, "BasicAttack");
+        Qskill = new QSkillState(this, "Skill");
+        Wskill = new WSkillState(this, "Skill");
         #endregion
     }
 
