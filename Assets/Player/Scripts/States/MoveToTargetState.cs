@@ -31,9 +31,9 @@ public class MoveToTargetState : PlayerState
     {
         base.Update();
 
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetMouseButton(1))
         {
-            if(!player.isMouseOnEnemy)
+            if(!player.isPointerOnEnemy)
             {
                 machine.ChangeState(player.idle);
             }
