@@ -22,6 +22,7 @@ public class MonsterHitState : MonsterBasicState
             monster.ChangeState(monster.idleState);
         }
     }
+
     public override void ExitState(MonsterStateManager monster)
     {
        
