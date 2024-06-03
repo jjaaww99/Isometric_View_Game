@@ -14,7 +14,7 @@ public class BasicAttackState : PlayerState
         base.Enter();
 
         if (player.clickedTarget != null)
-        {   
+        {
             targetDir = player.clickedTarget.transform.position - player.transform.forward;
         }
 
@@ -33,7 +33,7 @@ public class BasicAttackState : PlayerState
     {
         base.Update();
 
-        if(player.effectTrigger)
+        if (player.effectTrigger)
         {
             player.effects[0].SetActive(true);
         }
@@ -44,11 +44,13 @@ public class BasicAttackState : PlayerState
         }
     }
 
+    int targets;
+
     public override void FixedUpdate()
     {
         base.FixedUpdate();
 
-        player.targetsInRange = Physics.OverlapSphere(player.basicAttackBase.position, player.basicAttackRadius, player.enemyLayer);
+        targets = Physics.OverlapSphereNonAlloc(player.basicAttackBase.position, player.basicAttackRadius, player.targetsInRange);
 
         if (player.damageTrigger)
         {
@@ -58,21 +60,38 @@ public class BasicAttackState : PlayerState
 
     protected void Effect()
     {
-        foreach (var target in player.targetsInRange)
+        //foreach (var target in player.targetsInRange)
+        //{
+        //    Vector3 direction = target.transform.position - player.transform.position;
+
+        //    Rigidbody rb = target.GetComponent<Rigidbody>();
+
+        //    if(target.TryGetComponent<MonsterStateManager>(out MonsterStateManager monster))
+        //    {
+        //        enemy = monster;
+
+        //        monster.MonsterDead();
+        //    }
+
+        //    if (target != null)
+        //    {
+        //        rb.AddForce(direction.normalized * player.rbForce, ForceMode.VelocityChange);
+        //    }
+        //}
+
+        for (int i = 0; i < targets; i++)
         {
-            Vector3 direction = target.transform.position - player.transform.position;
-            
-            Rigidbody rb = target.GetComponent<Rigidbody>();
+            Vector3 direction = player.targetsInRange[i].transform.position - player.transform.position;
 
-            if(target.TryGetComponent<MonsterStateManager>(out MonsterStateManager monster))
+            if (player.targetsInRange[i].TryGetComponent<Rigidbody>(out Rigidbody rb))
             {
-                enemy = monster;
+                if (player.targetsInRange[i].TryGetComponent<MonsterStateManager>(out MonsterStateManager monster))
+                {
+                    enemy = monster;
 
-                monster.MonsterDead();
-            }
+                    monster.MonsterDead();
+                }
 
-            if (target != null)
-            {
                 rb.AddForce(direction.normalized * player.rbForce, ForceMode.VelocityChange);
             }
         }

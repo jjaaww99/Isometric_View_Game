@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Timers;
 using UnityEngine;
 
@@ -12,6 +13,13 @@ public class PlayerState
     protected Vector3 targetPos;
     protected Vector3 targetDir;
     protected float stateTimer;
+
+    protected KeyCode[] keyCodes = { KeyCode.Q, KeyCode.W, KeyCode.E, KeyCode.R };
+    protected string[] skillName = { "JumpAttack", "WhirlWind", "JumpAttack", "WhirlWind" };
+
+    protected Dictionary<KeyCode, string> skillDictionary;
+
+    protected int index;
 
     public PlayerState (JWPlayer _player, string _animParameter)
     {

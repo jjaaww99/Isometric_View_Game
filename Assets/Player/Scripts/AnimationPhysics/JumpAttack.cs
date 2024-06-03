@@ -7,12 +7,12 @@ public class JumpAttack : AnimPhysicsBase
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        player.targetsInRange = Physics.OverlapSphere(player.transform.position, player.jumpAttackRadius, player.enemyLayer);
+        //player.targetsInRange = Physics.OverlapSphere(player.transform.position, player.jumpAttackRadius, player.enemyLayer);
 
-        if (player.damageTrigger)
-        {
-            Effect();
-        }
+        //if (player.damageTrigger)
+        //{
+        //    Effect();
+        //}
     }
 
     protected override void Effect()

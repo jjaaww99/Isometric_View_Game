@@ -16,10 +16,9 @@ public class MoveToTargetState : PlayerState
 
         if(player.clickedTarget != null)
         {
-            target = player.clickedTarget;
+            player.nav.SetDestination(player.clickedTarget.transform.position);
         }
 
-        player.nav.SetDestination(target.transform.position);
     }
 
     public override void Exit()
@@ -38,7 +37,7 @@ public class MoveToTargetState : PlayerState
                 machine.ChangeState(player.idle);
             }
 
-            if(player.clickedTarget != target)
+            else if(player.clickedTarget != target)
             {
                 machine.ChangeState(player.moveToTarget);
             }
