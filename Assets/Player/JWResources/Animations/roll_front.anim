@@ -61278,8 +61278,8 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.73333335
-    functionName: AnimTrigger
+  - time: 0.6666667
+    functionName: ToggleAnimTrigger
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

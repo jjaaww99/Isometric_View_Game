@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class PlayerState
 {
-    protected JWPlayer player;
+    protected JWPlayerController player;
     protected MonsterStateManager enemy;
     protected string animParameter;
     protected StateMachine machine;
@@ -14,35 +14,27 @@ public class PlayerState
     protected Vector3 targetDir;
     protected float stateTimer;
 
-    protected KeyCode[] keyCodes = { KeyCode.Q, KeyCode.W, KeyCode.E, KeyCode.R };
-    protected string[] skillName = { "JumpAttack", "WhirlWind", "JumpAttack", "WhirlWind" };
-
-    protected Dictionary<KeyCode, string> skillDictionary;
-
-    protected int index;
-
-    public PlayerState (JWPlayer _player, string _animParameter)
+    public PlayerState (JWPlayerController _player, string _animParameter)
     {
         player = _player;
         animParameter = _animParameter;
-        machine = player.machine;
+        machine = player.stateMachine;
     }
 
     public virtual void Enter()
     {
-        player.anim.SetBool(animParameter, true);
-    }
-    public virtual void Exit() 
-    {
-        player.anim.SetBool(animParameter, false);
-
-        player.nav.ResetPath();
-
-        player.clickPosition = player.transform.position;
-
+        player.animator.SetBool(animParameter, true);
         player.damageTrigger = false;
         player.effectTrigger = false;
         player.animTrigger = false;
+    }
+    public virtual void Exit() 
+    {
+        player.animator.SetBool(animParameter, false);
+
+        player.nav.ResetPath();
+
+        player.targetPosition = player.transform.position;
     }
     public virtual void Update() 
     {

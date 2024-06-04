@@ -257,7 +257,7 @@ Transform:
   m_GameObject: {fileID: 79587861}
   serializedVersion: 2
   m_LocalRotation: {x: 0.4639228, y: -0.16836762, z: 0.09029141, w: 0.86502916}
-  m_LocalPosition: {x: 5.7150936, y: 8.6301775, z: 0.24144061}
+  m_LocalPosition: {x: 3.0750933, y: 8.390178, z: -4.1285596}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1556,7 +1556,7 @@ Transform:
   m_GameObject: {fileID: 280264999}
   serializedVersion: 2
   m_LocalRotation: {x: 0.4639228, y: -0.16836762, z: 0.09029141, w: 0.86502916}
-  m_LocalPosition: {x: 5.7150936, y: 8.6301775, z: 0.24144061}
+  m_LocalPosition: {x: 3.0750933, y: 8.390178, z: -4.1285596}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2947,7 +2947,7 @@ GameObject:
   - component: {fileID: 767698417}
   - component: {fileID: 767698416}
   m_Layer: 0
-  m_Name: Effect
+  m_Name: BasicAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6723,7 +6723,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ced89b78c8c87b64b82224c1f9c06dda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1624175543}
+  pointedPosition: {x: 0, y: 0, z: 0}
+  pointedObject: {fileID: 0}
+  clickedObject: {fileID: 0}
+  isPointerOnTarget: 0
 --- !u!4 &1516162743
 Transform:
   m_ObjectHideFlags: 0
@@ -7230,7 +7233,7 @@ Transform:
   m_GameObject: {fileID: 1624175537}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.64, y: 0.3, z: 5.37}
+  m_LocalPosition: {x: 1, y: 0.06, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7269,36 +7272,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 1624175537}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95726009258ee4c428f0045672f78cb9, type: 3}
+  m_Script: {fileID: 11500000, guid: 25c90df693312a94db1d8bfa72c64723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
-  rb: {fileID: 0}
-  targetsInRange: []
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  effects:
+  animator: {fileID: 0}
+  playerRigidbody: {fileID: 0}
+  targetsInAttackRange: []
+  skillVFXs:
   - {fileID: 767698415}
-  mousePointer: {fileID: 1516162740}
+  pointer: {fileID: 1516162740}
   nav: {fileID: 0}
-  clickPosition: {x: 0, y: 0, z: 0}
-  mousePosition: {x: 0, y: 0, z: 0}
+  targetPosition: {x: 0, y: 0, z: 0}
+  pointerPosition: {x: 0, y: 0, z: 0}
+  clickedTarget: {fileID: 0}
   attackRange: 2
   rbForce: 0.5
   evadeForce: 10
-  pointedTarget: {fileID: 0}
-  clickedTarget: {fileID: 0}
-  isPointerOnEnemy: 0
-  skillName:
+  skillKeyCodes: 71000000770000006500000072000000
+  skillNames:
   - JumpAttack
   - WhirlWind
   - JumpAttack
   - WhirlWind
-  clickDistance: 0
+  moveDistance: 0
   targetDistance: 0
   basicAttackBase: {fileID: 697627260}
-  basicAttackRadius: 0.5
+  basicAttackRadius: 1
   jumpAttackRadius: 5
   damageTrigger: 0
   animTrigger: 0

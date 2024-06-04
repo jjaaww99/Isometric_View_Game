@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveToTargetState : PlayerState
 {
-    public MoveToTargetState(JWPlayer _player, string _animParameter) : base(_player, _animParameter)
+    public MoveToTargetState(JWPlayerController _player, string _animParameter) : base(_player, _animParameter)
     {
     }
 
