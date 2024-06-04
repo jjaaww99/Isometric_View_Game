@@ -15,16 +15,23 @@ public class WhirlWind : StateMachineBehaviour
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         player.transform.rotation = originalRot;
-        
-        if(Input.GetMouseButton(1))
+
+        if (player.effectTrigger)
         {
-            player.nav.SetDestination(player.targetPosition);
+            player.skillVFXs[1].SetActive(true);
+            player.animator.SetBool("WhirlWind", false);
         }
 
         if(player.animTrigger)
         {
-            player.stateMachine.ChangeState(player.idle);
+            Debug.Log("Exit");
+            player.skillVFXs[1].SetActive(false);
+        }
+
+        if (Input.GetMouseButton(1))
+        {
+            player.nav.SetDestination(player.targetPosition);
         }
     }
-   
+
 }
