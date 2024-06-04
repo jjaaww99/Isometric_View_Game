@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class IdleState : PlayerState
 {
-    public IdleState(JWPlayer _player, string _animName) : base(_player, _animName)
+    public IdleState(JWPlayerController _player, string _animName) : base(_player, _animName)
     {
     }
 
@@ -22,17 +22,17 @@ public class IdleState : PlayerState
     {
         base.Update();
 
-        if(Input.GetKey(KeyCode.Q))
+            
+        for(int i = 0; i < player.skillKeyCodes.Length; i++)
         {
-            machine.ChangeState(player.Qskill);
+            if (Input.GetKey(player.skillKeyCodes[i]))
+            {
+                machine.ChangeState(player.skill);
+            }
         }
 
-        if(Input.GetKey(KeyCode.W))
-        {
-            machine.ChangeState(player.Wskill);
-        }
 
-        if (player.clickDistance <= 0.1)
+        if (player.moveDistance <= 0.1f)
         {
             player.nav.ResetPath();
         }
@@ -41,9 +41,9 @@ public class IdleState : PlayerState
         {
             if(!player.isPointerOnEnemy)
             {
-                player.clickPosition = player.mousePosition;
+                player.targetPosition = player.pointerPosition;
 
-                player.nav.SetDestination(player.clickPosition);
+                player.nav.SetDestination(player.targetPosition);
             }
 
             else if(player.isPointerOnEnemy)

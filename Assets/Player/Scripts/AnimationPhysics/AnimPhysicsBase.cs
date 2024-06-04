@@ -4,28 +4,27 @@ using UnityEngine;
 
 public class AnimPhysicsBase : StateMachineBehaviour
 {
-    protected JWPlayer player;
+    protected JWPlayerController player;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        player = animator.GetComponent<JWPlayer>();
+        player = animator.GetComponent<JWPlayerController>();
         
         if(player.damageTrigger)
         {
-            player.DamageTrigger();
+            player.ToggleDamageTrigger();
         }
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        player.targetsInRange = Physics.OverlapSphere(player.basicAttackBase.position, player.basicAttackRadius, player.enemyLayer);
     }
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         if (player.damageTrigger)
         {
-            player.DamageTrigger();
+            player.ToggleDamageTrigger();
         }
     }
 

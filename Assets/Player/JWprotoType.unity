@@ -257,7 +257,7 @@ Transform:
   m_GameObject: {fileID: 79587861}
   serializedVersion: 2
   m_LocalRotation: {x: 0.4639228, y: -0.16836762, z: 0.09029141, w: 0.86502916}
-  m_LocalPosition: {x: 5.7150936, y: 8.6301775, z: 0.24144061}
+  m_LocalPosition: {x: 2.0750933, y: 8.330178, z: -5.1285596}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1556,7 +1556,7 @@ Transform:
   m_GameObject: {fileID: 280264999}
   serializedVersion: 2
   m_LocalRotation: {x: 0.4639228, y: -0.16836762, z: 0.09029141, w: 0.86502916}
-  m_LocalPosition: {x: 5.7150936, y: 8.6301775, z: 0.24144061}
+  m_LocalPosition: {x: 2.0750933, y: 8.330178, z: -5.1285596}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2947,7 +2947,7 @@ GameObject:
   - component: {fileID: 767698417}
   - component: {fileID: 767698416}
   m_Layer: 0
-  m_Name: Effect
+  m_Name: BasicAttackVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4864,6 +4864,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 767698418}
+    - targetCorrespondingSourceObject: {fileID: -1125082312241937299, guid: 9b7f3323a3c2eac45b69d9542b486355,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1179331969}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b7f3323a3c2eac45b69d9542b486355, type: 3}
 --- !u!4 &983891907 stripped
@@ -5554,6 +5558,87 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1030972340, guid: abc00000000014669708564932170506,
     type: 3}
   m_PrefabInstance: {fileID: 1161458707}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1179331967
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 682303731}
+    m_Modifications:
+    - target: {fileID: 3841384982787575142, guid: 9960880598e6ebb4ab06cfceede64c9c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.204
+      objectReference: {fileID: 0}
+    - target: {fileID: 3841384982787575142, guid: 9960880598e6ebb4ab06cfceede64c9c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.015
+      objectReference: {fileID: 0}
+    - target: {fileID: 3841384982787575142, guid: 9960880598e6ebb4ab06cfceede64c9c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.112
+      objectReference: {fileID: 0}
+    - target: {fileID: 3841384982787575142, guid: 9960880598e6ebb4ab06cfceede64c9c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3841384982787575142, guid: 9960880598e6ebb4ab06cfceede64c9c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3841384982787575142, guid: 9960880598e6ebb4ab06cfceede64c9c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3841384982787575142, guid: 9960880598e6ebb4ab06cfceede64c9c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3841384982787575142, guid: 9960880598e6ebb4ab06cfceede64c9c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3841384982787575142, guid: 9960880598e6ebb4ab06cfceede64c9c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3841384982787575142, guid: 9960880598e6ebb4ab06cfceede64c9c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8782145736878327818, guid: 9960880598e6ebb4ab06cfceede64c9c,
+        type: 3}
+      propertyPath: m_Name
+      value: WhirlWindVFX
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 2743503367066904597, guid: 9960880598e6ebb4ab06cfceede64c9c, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9960880598e6ebb4ab06cfceede64c9c, type: 3}
+--- !u!1 &1179331968 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8782145736878327818, guid: 9960880598e6ebb4ab06cfceede64c9c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1179331967}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1179331969 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3841384982787575142, guid: 9960880598e6ebb4ab06cfceede64c9c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1179331967}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1199628402
 PrefabInstance:
@@ -6723,7 +6808,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ced89b78c8c87b64b82224c1f9c06dda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1624175543}
+  pointedPosition: {x: 0, y: 0, z: 0}
+  pointedObject: {fileID: 0}
+  clickedObject: {fileID: 0}
+  isPointerOnTarget: 0
 --- !u!4 &1516162743
 Transform:
   m_ObjectHideFlags: 0
@@ -7230,7 +7318,7 @@ Transform:
   m_GameObject: {fileID: 1624175537}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.64, y: 0.3, z: 5.37}
+  m_LocalPosition: {x: 1, y: 0.06, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7269,36 +7357,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 1624175537}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95726009258ee4c428f0045672f78cb9, type: 3}
+  m_Script: {fileID: 11500000, guid: 25c90df693312a94db1d8bfa72c64723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
-  rb: {fileID: 0}
-  targetsInRange: []
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  effects:
+  animator: {fileID: 0}
+  playerRigidbody: {fileID: 0}
+  targetsInAttackRange: []
+  skillVFXs:
   - {fileID: 767698415}
-  mousePointer: {fileID: 1516162740}
+  - {fileID: 1179331968}
+  pointer: {fileID: 1516162740}
   nav: {fileID: 0}
-  clickPosition: {x: 0, y: 0, z: 0}
-  mousePosition: {x: 0, y: 0, z: 0}
+  targetPosition: {x: 0, y: 0, z: 0}
+  pointerPosition: {x: 0, y: 0, z: 0}
+  clickedTarget: {fileID: 0}
   attackRange: 2
   rbForce: 0.5
   evadeForce: 10
-  pointedTarget: {fileID: 0}
-  clickedTarget: {fileID: 0}
-  isPointerOnEnemy: 0
-  skillName:
+  skillKeyCodes: 71000000770000006500000072000000
+  skillNames:
   - JumpAttack
   - WhirlWind
   - JumpAttack
   - WhirlWind
-  clickDistance: 0
+  moveDistance: 0
   targetDistance: 0
   basicAttackBase: {fileID: 697627260}
-  basicAttackRadius: 0.5
+  basicAttackRadius: 1
   jumpAttackRadius: 5
   damageTrigger: 0
   animTrigger: 0

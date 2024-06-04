@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EvadeState : PlayerState
 {
-    public EvadeState(JWPlayer _player, string _animName) : base(_player, _animName)
+    public EvadeState(JWPlayerController _player, string _animName) : base(_player, _animName)
     {
     }
 
@@ -12,9 +12,9 @@ public class EvadeState : PlayerState
     {
         base.Enter();
 
-        targetPos = player.mousePosition - player.transform.position;
+        targetPos = player.pointerPosition - player.transform.position;
 
-        targetDir = player.mousePosition - player.transform.forward;
+        targetDir = player.pointerPosition - player.transform.forward;
 
         player.transform.LookAt(targetDir);
     }
@@ -38,6 +38,6 @@ public class EvadeState : PlayerState
     {
         base.FixedUpdate();
         
-        player.rb.AddForce(targetPos.normalized * player.evadeForce, ForceMode.Impulse);
+        player.playerRigidbody.AddForce(targetPos.normalized * player.evadeForce, ForceMode.Impulse);
     }
 }
