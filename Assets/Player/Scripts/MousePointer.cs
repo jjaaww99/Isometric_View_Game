@@ -4,8 +4,17 @@ using UnityEngine;
 
 public class MousePointer : MonoBehaviour
 {
-    public JWPlayer player;
     Camera mainCam;
+
+    public Vector3 pointedPosition;
+
+#nullable enable
+    public GameObject? pointedObject;
+    public GameObject? clickedObject;
+#nullable disable
+
+    public bool isPointerOnTarget = false;
+
     private void Awake()
     {
         mainCam = Camera.main;
@@ -23,7 +32,9 @@ public class MousePointer : MonoBehaviour
 
             transform.position = mouseWorldPos;
 
-            player.isPointerOnEnemy = false;
+            pointedPosition = transform.position;
+
+            isPointerOnTarget = false;
         }
 
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Enemy")))
@@ -32,14 +43,9 @@ public class MousePointer : MonoBehaviour
 
             transform.position = mouseWorldPos;
 
-            player.isPointerOnEnemy = true;
+            pointedObject = hit.transform.gameObject;
 
-            player.pointedTarget = hit.transform.gameObject;
-
-            if(Input.GetMouseButtonDown(1))
-            {
-                player.clickedTarget = hit.transform.gameObject;
-            }
+            isPointerOnTarget = true;
         }
     }
 

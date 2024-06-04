@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class BasicAttackState : PlayerState
 {
-    public BasicAttackState(JWPlayer _player, string _animName) : base(_player, _animName)
+    public BasicAttackState(JWPlayerController _player, string _animName) : base(_player, _animName)
     {
     }
 
@@ -19,14 +19,13 @@ public class BasicAttackState : PlayerState
         }
 
         player.transform.LookAt(targetDir);
-
     }
 
     public override void Exit()
     {
         base.Exit();
 
-        player.effects[0].SetActive(false);
+        player.skillVFXs[0].SetActive(false);
     }
 
     public override void Update()
@@ -35,7 +34,7 @@ public class BasicAttackState : PlayerState
 
         if (player.effectTrigger)
         {
-            player.effects[0].SetActive(true);
+            player.skillVFXs[0].SetActive(true);
         }
 
         if ((Input.GetMouseButton(1) && !player.isPointerOnEnemy) || player.animTrigger)
@@ -44,13 +43,10 @@ public class BasicAttackState : PlayerState
         }
     }
 
-    int targets;
-
     public override void FixedUpdate()
     {
         base.FixedUpdate();
 
-        targets = Physics.OverlapSphereNonAlloc(player.basicAttackBase.position, player.basicAttackRadius, player.targetsInRange);
 
         if (player.damageTrigger)
         {
@@ -60,32 +56,15 @@ public class BasicAttackState : PlayerState
 
     protected void Effect()
     {
-        //foreach (var target in player.targetsInRange)
-        //{
-        //    Vector3 direction = target.transform.position - player.transform.position;
-
-        //    Rigidbody rb = target.GetComponent<Rigidbody>();
-
-        //    if(target.TryGetComponent<MonsterStateManager>(out MonsterStateManager monster))
-        //    {
-        //        enemy = monster;
-
-        //        monster.MonsterDead();
-        //    }
-
-        //    if (target != null)
-        //    {
-        //        rb.AddForce(direction.normalized * player.rbForce, ForceMode.VelocityChange);
-        //    }
-        //}
-
+        int targets = Physics.OverlapSphereNonAlloc(player.basicAttackBase.position, player.basicAttackRadius, player.targetsInAttackRange);
+        
         for (int i = 0; i < targets; i++)
         {
-            Vector3 direction = player.targetsInRange[i].transform.position - player.transform.position;
+            Vector3 direction = player.targetsInAttackRange[i].transform.position - player.transform.position;
 
-            if (player.targetsInRange[i].TryGetComponent<Rigidbody>(out Rigidbody rb))
+            if (player.targetsInAttackRange[i].TryGetComponent<Rigidbody>(out Rigidbody rb))
             {
-                if (player.targetsInRange[i].TryGetComponent<MonsterStateManager>(out MonsterStateManager monster))
+                if (player.targetsInAttackRange[i].TryGetComponent<MonsterStateManager>(out MonsterStateManager monster))
                 {
                     enemy = monster;
 
