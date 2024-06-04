@@ -114,6 +114,7 @@ public class JWPlayerController : MonoBehaviour
     }
 
     public Transform basicAttackBase;
+    public Transform whirlWindBase;
     public float basicAttackRadius;
     public float jumpAttackRadius;
 
@@ -123,6 +124,8 @@ public class JWPlayerController : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, jumpAttackRadius);
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(basicAttackBase.position, basicAttackRadius);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(whirlWindBase.position, 0.5f);
     }
 
     public bool damageTrigger = false;
