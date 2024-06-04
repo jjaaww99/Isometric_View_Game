@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -12,45 +13,54 @@ public class MonsterStateManager : MonoBehaviour
     public MonsterAttackState attackState = new MonsterAttackState();
     public MonsterHitState hitState = new MonsterHitState();
     public MonsterDeadState deadState = new MonsterDeadState();
+    public RagDoll ragdoll;
 
-    public string monsterName;    // 개체 이름
-    public int maxHp;             // 최대 체력
+    [SerializeField] private int excelDBNumber;     //엑셀에서 불러올 데이터 번호
+    [SerializeField] private string monsterName;    // 개체 이름
+    [SerializeField] private int maxHp;             // 최대 체력
     public int currentHp;         // 현재 체력
-    public float speed;           // 이동속도
-    public int atk;               // 공격력
-    public bool hit;
-    public float deadCount = 3; //사망후 사라지는 시간
+    [SerializeField] private float speed;           // 이동속도
+    [SerializeField] private int atk;               // 공격력
+    public Transform target;                        // 플레이어의 위치(임시)
 
-    public Transform target;
+    public float deadCount; //사망후 사라지는 시간
+
     public bool isChase;
-    public bool isDead;
-
+    public bool isDead;                 //사망 상태 확인
+    public bool hit;
     public float targetDistance;
 
-    public BoxCollider attackArea;    //공격 범위
+    public BoxCollider attackArea;      //공격 범위
+    [SerializeField] private MonsterDB monsterDB;
     public NavMeshAgent nav;
     public Rigidbody rigid;
     public Collider bodyCollider;
     public Animator ani;
-    public MonsterDB monsterDB;
+    
 
     void Awake()
     {
         bodyCollider = GetComponent<Collider>();
         nav = GetComponent<NavMeshAgent>();
-        rigid = GetComponent<Rigidbody>();
-        InitializeFromDB(0);
+        InitializeFromDB(excelDBNumber);
     }
     void OnEnable()
     {
         rigid.velocity = Vector3.zero;
-        deadCount = 3;
+        deadCount = 20;
         currentHp = maxHp;
         nav.speed = speed;
         currentState = idleState;
         currentState.EnterState(this);
         isDead = false;
+        gameObject.SetActive(true);
+        ani.enabled = true;
+        ragdoll.SetRagdollActive(false);
+        rigid.isKinematic = false;
+        bodyCollider.enabled = true;
+        nav.enabled = true;
     }
+
 
     void Start()
     {
@@ -61,7 +71,7 @@ public class MonsterStateManager : MonoBehaviour
     void Update()
     {
         currentState.UpdateState(this);
-        Debug.Log(currentState);
+        //Debug.Log(currentState);
 
         //몬스터와 타겟(플레이어 거리 체크)
         targetDistance = Vector3.Distance(transform.position, target.position);
@@ -79,7 +89,10 @@ public class MonsterStateManager : MonoBehaviour
         {
             ChangeState(idleState);
         }
-
+        else if(isDead == true)
+        {
+            ChangeState(deadState);
+        }
 
     }
 
@@ -128,6 +141,7 @@ public class MonsterStateManager : MonoBehaviour
         ChangeState(hitState);
     }
 
+    
 
 
 }

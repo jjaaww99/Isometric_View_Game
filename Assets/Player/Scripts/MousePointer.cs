@@ -43,5 +43,8 @@ public class MousePointer : MonoBehaviour
         }
     }
 
-
+    private void OnTriggerStay(Collider other)
+    {
+        Debug.Log(other.name);
+    }
 }

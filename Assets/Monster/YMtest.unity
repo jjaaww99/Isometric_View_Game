@@ -381,8 +381,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 74204557}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.43310747, y: -0.29613277, z: 0.15316053, w: -0.83741575}
-  m_LocalPosition: {x: -15.129652, y: 33.263783, z: -8.473622}
+  m_LocalRotation: {x: -0.27890214, y: -0.5418594, z: 0.19673982, w: -0.76804656}
+  m_LocalPosition: {x: -11.365598, y: 13.631794, z: 6.023959}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -550,6 +550,79 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1001 &271724450
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4951667587289518940, guid: 4a063840c776acd41a371b5f9dc80e9b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951667587289518940, guid: 4a063840c776acd41a371b5f9dc80e9b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951667587289518940, guid: 4a063840c776acd41a371b5f9dc80e9b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951667587289518940, guid: 4a063840c776acd41a371b5f9dc80e9b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951667587289518940, guid: 4a063840c776acd41a371b5f9dc80e9b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951667587289518940, guid: 4a063840c776acd41a371b5f9dc80e9b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951667587289518940, guid: 4a063840c776acd41a371b5f9dc80e9b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951667587289518940, guid: 4a063840c776acd41a371b5f9dc80e9b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951667587289518940, guid: 4a063840c776acd41a371b5f9dc80e9b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951667587289518940, guid: 4a063840c776acd41a371b5f9dc80e9b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985016809437686573, guid: 4a063840c776acd41a371b5f9dc80e9b,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 50631490}
+    - target: {fileID: 5763494555685308902, guid: 4a063840c776acd41a371b5f9dc80e9b,
+        type: 3}
+      propertyPath: m_Name
+      value: Zombiegirl W Kurniawan
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4a063840c776acd41a371b5f9dc80e9b, type: 3}
 --- !u!1 &678302029
 GameObject:
   m_ObjectHideFlags: 0
@@ -1268,6 +1341,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spider
       objectReference: {fileID: 0}
+    - target: {fileID: 3022286486210107789, guid: bcce566a6571cdc4fad448f8a89bc9f1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3163902340808009443, guid: bcce566a6571cdc4fad448f8a89bc9f1,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1894,3 +1972,4 @@ SceneRoots:
   - {fileID: 1118243505}
   - {fileID: 1000914739}
   - {fileID: 8564129411815443422}
+  - {fileID: 271724450}

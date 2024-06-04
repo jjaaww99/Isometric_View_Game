@@ -7,7 +7,7 @@ public class MonsterChaseState : MonsterBasicState
     public override void EnterState(MonsterStateManager monster)
     {
         monster.nav.isStopped = false;
-        monster.ani.SetBool("Walk", true);
+        monster.ani.SetBool("Chase", true);
     }
 
 
@@ -25,7 +25,7 @@ public class MonsterChaseState : MonsterBasicState
     public override void ExitState(MonsterStateManager monster)
     {
         monster.nav.isStopped = true;
-        monster.ani.SetBool("Walk", false);
+        monster.ani.SetBool("Chase", false);
     }
 
     
