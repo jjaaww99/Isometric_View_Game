@@ -52,7 +52,7 @@ public class JWPlayerController : MonoBehaviour
 
     public void Initialized()
     {
-        #region States
+        #region StatesInitialize
         stateMachine = new StateMachine();
         idle = new IdleState(this, "Idle");
         moveToTarget = new MoveToTargetState(this, "ToTarget");
@@ -60,6 +60,7 @@ public class JWPlayerController : MonoBehaviour
         basicAttack = new BasicAttackState(this, "BasicAttack");
         skill = new SkillState(this, "Skill");
         #endregion
+
         nav = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         playerRigidbody = GetComponent<Rigidbody>();

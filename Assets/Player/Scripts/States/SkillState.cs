@@ -14,7 +14,7 @@ public class SkillState : PlayerState
 
         for (int i = 0; i < player.skillKeyCodes.Length; i++)
         {
-            if (Input.GetKey(player.skillKeyCodes[i]))
+            if (Input.GetKeyDown(player.skillKeyCodes[i]))
             {
                 index = i;
                 player.animator.SetBool(player.skillNames[i], true);
