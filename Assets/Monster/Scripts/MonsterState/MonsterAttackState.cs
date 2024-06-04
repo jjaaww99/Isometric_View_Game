@@ -9,7 +9,6 @@ public class MonsterAttackState : MonsterBasicState
     {
         monster.ani.SetBool("Attack", true);
         monster.attackArea.enabled = true;
-        attacktime = 2f;
     }
 
     public override void UpdateState(MonsterStateManager monster)
