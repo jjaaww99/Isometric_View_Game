@@ -7,7 +7,6 @@ using UnityEngine;
 public class PlayerState
 {
     protected JWPlayerController player;
-    protected MonsterStateManager enemy;
     protected string animParameter;
     protected StateMachine machine;
     protected Vector3 targetPos;
@@ -24,15 +23,18 @@ public class PlayerState
     public virtual void Enter()
     {
         player.animator.SetBool(animParameter, true);
-        player.damageTrigger = false;
-        player.effectTrigger = false;
-        player.animTrigger = false;
+
+        player.nav.ResetPath();
     }
     public virtual void Exit() 
     {
-        player.animator.SetBool(animParameter, false);
+        player.damageTrigger = false;
+        player.effectTrigger = false;
+        player.animTrigger = false;
 
         player.nav.ResetPath();
+
+        player.animator.SetBool(animParameter, false);
 
         player.targetPosition = player.transform.position;
     }

@@ -137,6 +137,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_RockSide_A359
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
       value: 7744
@@ -180,6 +184,26 @@ PrefabInstance:
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.00354
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -276,6 +300,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_RockSide_A353
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
       value: 7750
@@ -320,6 +348,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.033035997
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -342,6 +390,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A427
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -387,6 +439,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.006270999
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -409,6 +481,10 @@ PrefabInstance:
     - target: {fileID: 1030972073, guid: abc00000000000350607712256441774, type: 3}
       propertyPath: m_Name
       value: SM_Rock_Side-A250
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972073, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972074, guid: abc00000000000350607712256441774, type: 3}
       propertyPath: m_RootOrder
@@ -454,6 +530,22 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.0046869996
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972076, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972080, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972084, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972088, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -476,6 +568,10 @@ PrefabInstance:
     - target: {fileID: 1030972073, guid: abc00000000000350607712256441774, type: 3}
       propertyPath: m_Name
       value: SM_Rock_Side-A249_420
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972073, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972074, guid: abc00000000000350607712256441774, type: 3}
       propertyPath: m_RootOrder
@@ -521,6 +617,22 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.095148034
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972076, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972080, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972084, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972088, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -543,6 +655,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A351
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -588,6 +704,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.026063994
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -610,6 +746,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A206
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -667,6 +807,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 1.671
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -678,130 +838,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 224355247}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &233847709
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 233847712}
-  - component: {fileID: 233847711}
-  - component: {fileID: 233847710}
-  - component: {fileID: 233847713}
-  m_Layer: 3
-  m_Name: Terrain
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!154 &233847710
-TerrainCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 233847709}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_TerrainData: {fileID: 15600000, guid: a0213652e7d27c54093f7b525e7929c4, type: 2}
-  m_EnableTreeColliders: 1
---- !u!218 &233847711
-Terrain:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 233847709}
-  m_Enabled: 1
-  serializedVersion: 6
-  m_TerrainData: {fileID: 15600000, guid: a0213652e7d27c54093f7b525e7929c4, type: 2}
-  m_TreeDistance: 5000
-  m_TreeBillboardDistance: 50
-  m_TreeCrossFadeLength: 5
-  m_TreeMaximumFullLODCount: 50
-  m_DetailObjectDistance: 80
-  m_DetailObjectDensity: 1
-  m_HeightmapPixelError: 5
-  m_SplatMapDistance: 1000
-  m_HeightmapMaximumLOD: 0
-  m_ShadowCastingMode: 2
-  m_DrawHeightmap: 1
-  m_DrawInstanced: 0
-  m_DrawTreesAndFoliage: 1
-  m_StaticShadowCaster: 0
-  m_IgnoreQualitySettings: 0
-  m_ReflectionProbeUsage: 1
-  m_MaterialTemplate: {fileID: 2100000, guid: 594ea882c5a793440b60ff72d896021e, type: 2}
-  m_BakeLightProbesForTrees: 1
-  m_PreserveTreePrototypeLayers: 0
-  m_DeringLightProbesForTrees: 1
-  m_ReceiveGI: 1
-  m_ScaleInLightmap: 0.0256
-  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
-  m_GroupingID: 0
-  m_RenderingLayerMask: 1
-  m_AllowAutoConnect: 1
-  m_EnableHeightmapRayTracing: 1
-  m_EnableTreesAndDetailsRayTracing: 0
-  m_TreeMotionVectorModeOverride: 3
---- !u!4 &233847712
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 233847709}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.7, y: -1, z: -17.98}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &233847713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 233847709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 8
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 1
-  m_TileSize: 256
-  m_OverrideVoxelSize: 1
-  m_VoxelSize: 0.1667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 003ddd88617c3854c8cd0576c010356e, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!1001 &236408108
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -813,6 +849,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A354
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -858,6 +898,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.052494
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -880,6 +940,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A367_6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -925,6 +989,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.017664995
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -947,6 +1031,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A360
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -992,6 +1080,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.013864995
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1014,6 +1122,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A433
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -1058,6 +1170,26 @@ PrefabInstance:
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.49885604
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1170,6 +1302,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Rock_Side-A234
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972073, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1030972074, guid: abc00000000000350607712256441774, type: 3}
       propertyPath: m_RootOrder
       value: 7792
@@ -1213,6 +1349,22 @@ PrefabInstance:
     - target: {fileID: 1030972074, guid: abc00000000000350607712256441774, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.18982303
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972076, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972080, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972084, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972088, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1318,6 +1470,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d7d9e427cd6233e46961600c443c3c0e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -1344,6 +1501,10 @@ PrefabInstance:
     - target: {fileID: 1030972073, guid: abc00000000000350607712256441774, type: 3}
       propertyPath: m_Name
       value: SM_Rock_Side-A238
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972073, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972074, guid: abc00000000000350607712256441774, type: 3}
       propertyPath: m_RootOrder
@@ -1389,6 +1550,22 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.4814332
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972076, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972080, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972084, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972088, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1411,6 +1588,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A326
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -1455,6 +1636,26 @@ PrefabInstance:
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.02059401
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1668,6 +1869,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_RockSide_A327_368
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
       value: 7788
@@ -1711,6 +1916,26 @@ PrefabInstance:
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.9839484
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2148,6 +2373,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_RockSide_A462 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
       value: 7614
@@ -2191,6 +2420,26 @@ PrefabInstance:
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.032077
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2628,6 +2877,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_RockSide_A424
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
       value: 7659
@@ -2672,6 +2925,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.037530992
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2694,6 +2967,10 @@ PrefabInstance:
     - target: {fileID: 1030972073, guid: abc00000000000350607712256441774, type: 3}
       propertyPath: m_Name
       value: SM_Rock_Side-A262
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972073, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972074, guid: abc00000000000350607712256441774, type: 3}
       propertyPath: m_RootOrder
@@ -2751,6 +3028,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -179.389
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972076, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972080, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972084, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972088, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2773,6 +3066,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A362
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -2817,6 +3114,26 @@ PrefabInstance:
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.20842093
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3254,6 +3571,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_RockSide_A431
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
       value: 7652
@@ -3297,6 +3618,26 @@ PrefabInstance:
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.052494
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4147,6 +4488,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Rock_Side-A254
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972073, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1030972074, guid: abc00000000000350607712256441774, type: 3}
       propertyPath: m_RootOrder
       value: 7727
@@ -4191,6 +4536,22 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.036442008
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972076, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972080, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972084, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972088, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4213,6 +4574,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A355
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -4258,6 +4623,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.02059401
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4280,6 +4665,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A320
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -4324,6 +4713,26 @@ PrefabInstance:
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.040448
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4761,6 +5170,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_RockSide_A323
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
       value: 7795
@@ -4804,6 +5217,26 @@ PrefabInstance:
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.02424901
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5654,6 +6087,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_RockSide_A333
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
       value: 7781
@@ -5697,6 +6134,26 @@ PrefabInstance:
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.22621809
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6171,6 +6628,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_RockSide_A365
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
       value: 7735
@@ -6215,6 +6676,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.017855998
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6237,6 +6718,10 @@ PrefabInstance:
     - target: {fileID: 1030972073, guid: abc00000000000350607712256441774, type: 3}
       propertyPath: m_Name
       value: SM_Rock_Side-A245 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972073, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972074, guid: abc00000000000350607712256441774, type: 3}
       propertyPath: m_RootOrder
@@ -6282,6 +6767,22 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.8382081
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972076, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972080, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972084, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972088, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6304,6 +6805,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -6348,6 +6853,26 @@ PrefabInstance:
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.005474001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6483,6 +7008,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Rock_Side-A235
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972073, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1030972074, guid: abc00000000000350607712256441774, type: 3}
       propertyPath: m_RootOrder
       value: 7789
@@ -6527,6 +7056,22 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.13772006
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972076, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972080, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972084, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972088, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6549,6 +7094,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A356
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -6594,6 +7143,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.02700002
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6616,6 +7185,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A461
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -6660,6 +7233,26 @@ PrefabInstance:
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.044172987
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6733,6 +7326,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_RockSide_A174
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
       value: 8042
@@ -6789,6 +7386,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 1.671
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6811,6 +7428,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A428
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -6856,6 +7477,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.008009002
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6878,6 +7519,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A473_20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -6922,6 +7567,26 @@ PrefabInstance:
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.04238002
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8450,6 +9115,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_RockSide_A321
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
       value: 7798
@@ -8493,6 +9162,26 @@ PrefabInstance:
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.04238002
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8585,6 +9274,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_RockSide_A357
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
       value: 7746
@@ -8629,6 +9322,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.66324675
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8651,6 +9364,10 @@ PrefabInstance:
     - target: {fileID: 1030972073, guid: abc00000000000350607712256441774, type: 3}
       propertyPath: m_Name
       value: SM_Rock_Side-A152
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972073, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972074, guid: abc00000000000350607712256441774, type: 3}
       propertyPath: m_RootOrder
@@ -8708,6 +9425,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.125
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972076, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972080, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972084, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972088, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8730,6 +9463,10 @@ PrefabInstance:
     - target: {fileID: 1030975048, guid: abc00000000011613144671283470337, type: 3}
       propertyPath: m_Name
       value: SM_Small_Rock_1_FromFoliage_1149
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030975048, guid: abc00000000011613144671283470337, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030975049, guid: abc00000000011613144671283470337, type: 3}
       propertyPath: m_RootOrder
@@ -8775,6 +9512,22 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.16757506
       objectReference: {fileID: 0}
+    - target: {fileID: 1030975051, guid: abc00000000011613144671283470337, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030975055, guid: abc00000000011613144671283470337, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030975059, guid: abc00000000011613144671283470337, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030975063, guid: abc00000000011613144671283470337, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8797,6 +9550,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A297
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -8842,6 +9599,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.87939405
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8864,6 +9641,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A324
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -8909,6 +9690,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.017213996
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8931,6 +9732,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A330
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -8976,6 +9781,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.017553002
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8998,6 +9823,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A199
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -9043,6 +9872,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.039525006
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9065,6 +9914,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A332
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -9109,6 +9962,26 @@ PrefabInstance:
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.06338299
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9219,6 +10092,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_RockSide_A383
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
       value: 7709
@@ -9263,6 +10140,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.06338299
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9285,6 +10182,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A300
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -9330,6 +10231,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.04874699
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9352,6 +10273,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A322
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -9397,6 +10322,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.018753
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1030972343, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_LocalPosition.x
       value: -33.27
@@ -9437,6 +10366,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -7.989
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9459,6 +10404,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A361
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -9504,6 +10453,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.012658998
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9526,6 +10495,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A318
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -9574,6 +10547,22 @@ PrefabInstance:
     - target: {fileID: 1030972341, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_LODs.Array.data[1].renderers.Array.data[0].renderer
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -9717,6 +10706,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_RockSide_A207
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
       value: 7985
@@ -9773,6 +10766,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 1.671
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9800,7 +10813,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!154 &1309064333
 TerrainCollider:
@@ -9889,6 +10902,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_RockSide_A317
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
       value: 7802
@@ -9933,6 +10950,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.595159
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9955,6 +10992,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A329
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -9999,6 +11040,26 @@ PrefabInstance:
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.024217991
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10436,6 +11497,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_RockSide_A298
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
       value: 7828
@@ -10480,6 +11545,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.064946994
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10502,6 +11587,10 @@ PrefabInstance:
     - target: {fileID: 1030972073, guid: abc00000000000350607712256441774, type: 3}
       propertyPath: m_Name
       value: SM_Rock_Side-A227
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972073, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972074, guid: abc00000000000350607712256441774, type: 3}
       propertyPath: m_RootOrder
@@ -10547,6 +11636,22 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.8886182
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972076, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972080, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972084, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972088, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10569,6 +11674,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A299
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -10614,6 +11723,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.016041992
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10636,6 +11765,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A363
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -10681,6 +11814,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.06338299
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10703,6 +11856,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A358
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -10747,6 +11904,26 @@ PrefabInstance:
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.020567
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10822,8 +11999,8 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
 --- !u!4 &1563094195
 Transform:
   m_ObjectHideFlags: 0
@@ -10833,7 +12010,7 @@ Transform:
   m_GameObject: {fileID: 1563094194}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 73.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10883,6 +12060,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Rock_Side-A233
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972073, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1030972074, guid: abc00000000000350607712256441774, type: 3}
       propertyPath: m_RootOrder
       value: 7793
@@ -10927,6 +12108,22 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.8886186
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972076, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972080, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972084, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972088, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10949,6 +12146,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A222
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -10993,6 +12194,26 @@ PrefabInstance:
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.055196013
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11430,6 +12651,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_RockSide_A426
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
       value: 7657
@@ -11474,6 +12699,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.037530992
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11496,6 +12741,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A325
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -11541,6 +12790,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.017553002
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11563,6 +12832,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A458 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -11619,6 +12892,26 @@ PrefabInstance:
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -170.246
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11764,7 +13057,7 @@ MonoBehaviour:
   targetPosition: {x: 0, y: 0, z: 0}
   pointerPosition: {x: 0, y: 0, z: 0}
   clickedTarget: {fileID: 0}
-  attackRange: 2
+  attackRange: 2.5
   rbForce: 5
   evadeForce: 10
   skillKeyCodes: 71000000770000006500000072000000
@@ -11826,6 +13119,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_RockSide_A462
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
       value: 7614
@@ -11870,6 +13167,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.032077
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11892,6 +13209,10 @@ PrefabInstance:
     - target: {fileID: 1030972073, guid: abc00000000000350607712256441774, type: 3}
       propertyPath: m_Name
       value: SM_Rock_Side-A251
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972073, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972074, guid: abc00000000000350607712256441774, type: 3}
       propertyPath: m_RootOrder
@@ -11937,6 +13258,22 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.02718099
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972076, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972080, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972084, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972088, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11959,6 +13296,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A390
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -12004,6 +13345,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.006495998
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12026,6 +13387,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A364
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -12071,6 +13436,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.06338299
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12093,6 +13478,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A369
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -12138,6 +13527,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.003489001
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12160,6 +13569,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A432
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -12205,6 +13618,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.017144004
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12227,6 +13660,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A378
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -12272,6 +13709,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.0030300005
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12294,6 +13751,10 @@ PrefabInstance:
     - target: {fileID: 1030972073, guid: abc00000000000350607712256441774, type: 3}
       propertyPath: m_Name
       value: SM_Rock_Side-A231
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972073, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972074, guid: abc00000000000350607712256441774, type: 3}
       propertyPath: m_RootOrder
@@ -12339,6 +13800,22 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.49992877
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972076, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972080, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972084, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972088, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12361,6 +13838,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A430
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -12406,6 +13887,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.0076209963
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12428,6 +13929,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A192
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -12473,6 +13978,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.012694997
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12495,6 +14020,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A404
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -12540,6 +14069,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.042411998
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12562,6 +14111,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A190
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -12607,6 +14160,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.033254005
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12632,7 +14205,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1884170928
 Transform:
@@ -12745,6 +14318,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Rock_Side-A245
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972073, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1030972074, guid: abc00000000000350607712256441774, type: 3}
       propertyPath: m_RootOrder
       value: 7762
@@ -12789,6 +14366,22 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.8382081
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972076, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972080, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972084, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972088, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12811,6 +14404,10 @@ PrefabInstance:
     - target: {fileID: 1030972073, guid: abc00000000000350607712256441774, type: 3}
       propertyPath: m_Name
       value: SM_Rock_Side-A237
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972073, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972074, guid: abc00000000000350607712256441774, type: 3}
       propertyPath: m_RootOrder
@@ -12855,6 +14452,22 @@ PrefabInstance:
     - target: {fileID: 1030972074, guid: abc00000000000350607712256441774, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.8886186
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972076, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972080, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972084, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972088, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13292,6 +14905,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_RockSide_A328
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
       value: 7787
@@ -13336,6 +14953,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.4800439
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13358,6 +14995,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A186
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -13403,6 +15044,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.033254005
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13425,6 +15086,10 @@ PrefabInstance:
     - target: {fileID: 1030972073, guid: abc00000000000350607712256441774, type: 3}
       propertyPath: m_Name
       value: SM_Rock_Side-A236
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972073, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972074, guid: abc00000000000350607712256441774, type: 3}
       propertyPath: m_RootOrder
@@ -13469,6 +15134,22 @@ PrefabInstance:
     - target: {fileID: 1030972074, guid: abc00000000000350607712256441774, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.022231998
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972076, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972080, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972084, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972088, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13906,6 +15587,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_RockSide_A429
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
       value: 7654
@@ -13949,6 +15634,26 @@ PrefabInstance:
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.0029840013
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14386,6 +16091,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_RockSide_A400
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
       value: 7687
@@ -14430,6 +16139,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.028740002
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14452,6 +16181,10 @@ PrefabInstance:
     - target: {fileID: 1030972073, guid: abc00000000000350607712256441774, type: 3}
       propertyPath: m_Name
       value: SM_Rock_Side-A161
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972073, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972074, guid: abc00000000000350607712256441774, type: 3}
       propertyPath: m_RootOrder
@@ -14497,6 +16230,22 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.685841
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972076, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972080, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972084, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972088, guid: abc00000000000350607712256441774, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14519,6 +16268,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A331
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -14563,6 +16316,26 @@ PrefabInstance:
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.037068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14618,6 +16391,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_RockSide_A398
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
       value: 7691
@@ -14662,6 +16439,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.005620001
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14684,6 +16481,10 @@ PrefabInstance:
     - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_Name
       value: SM_RockSide_A458
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972339, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1030972340, guid: abc00000000014669708564932170506, type: 3}
       propertyPath: m_RootOrder
@@ -14741,6 +16542,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -6.749
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972342, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972346, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972350, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972354, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972358, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14762,7 +16583,6 @@ SceneRoots:
   - {fileID: 1563094195}
   - {fileID: 79587863}
   - {fileID: 1624175540}
-  - {fileID: 233847712}
   - {fileID: 1516162743}
   - {fileID: 1002577406}
   - {fileID: 994924578}

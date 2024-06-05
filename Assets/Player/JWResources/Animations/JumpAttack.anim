@@ -122262,7 +122262,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 2.3
+  - time: 2.0666666
     functionName: ToggleDamageTrigger
     data: 
     objectReferenceParameter: {fileID: 0}

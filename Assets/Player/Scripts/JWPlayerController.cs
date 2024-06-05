@@ -8,7 +8,7 @@ public class JWPlayerController : MonoBehaviour
     public Animator animator;
     public Rigidbody playerRigidbody;
     public Collider[] targetsInAttackRange;
-    private const int maxTargetNum = 10;
+    private const int maxTargetNum = 20;
     public GameObject[] skillVFXs;
     public MousePointer pointer;
 
@@ -33,15 +33,18 @@ public class JWPlayerController : MonoBehaviour
 #nullable disable
 
     #region PlayerData
-    public float attackRange = 2.3f;
-    public float rbForce = 2f; 
-    public float evadeForce = 6f;
+    [Header ("PlayerData")]
+    [SerializeField] public float attackRange = 2.3f;
+    [SerializeField] public float rbForce = 2f;
+    [SerializeField] public float evadeForce = 6f;
     #endregion
 
     public bool isPointerOnEnemy => pointer.isPointerOnTarget;
 
     public KeyCode[] skillKeyCodes = { KeyCode.Q, KeyCode.W, KeyCode.E, KeyCode.R };
     public string[] skillNames = { "JumpAttack", "WhirlWind", "JumpAttack", "WhirlWind" };
+    public Transform[] skillBases;
+    public float[] skillRangeRadiuses = { 5f, 2f, 5f, 2f };
 
     public Dictionary<KeyCode, string> skillDictionary;
 
@@ -85,7 +88,9 @@ public class JWPlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButton(1))
+        CheckNull();
+
+        if (Input.GetMouseButtonDown(1))
         { 
             targetPosition = pointer.pointedPosition;
             clickedTarget = pointer.pointedObject;
@@ -117,6 +122,15 @@ public class JWPlayerController : MonoBehaviour
     public Transform whirlWindBase;
     public float basicAttackRadius;
     public float jumpAttackRadius;
+    public float whirlWindRadius;
+
+    void CheckNull()
+    {
+        if (null == stateMachine.currentState)
+        {
+            Initialized();
+        }
+    }
 
     private void OnDrawGizmos()
     {
@@ -125,7 +139,7 @@ public class JWPlayerController : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(basicAttackBase.position, basicAttackRadius);
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(whirlWindBase.position, 0.5f);
+        Gizmos.DrawWireSphere(whirlWindBase.position, whirlWindRadius);
     }
 
     public bool damageTrigger = false;
