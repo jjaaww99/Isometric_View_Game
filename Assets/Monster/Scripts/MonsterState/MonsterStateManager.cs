@@ -46,7 +46,6 @@ public class MonsterStateManager : MonoBehaviour
     }
     void OnEnable()
     {
-        rigid.velocity = Vector3.zero;
         deadCount = 10;
         currentHp = maxHp;
         nav.speed = speed;
