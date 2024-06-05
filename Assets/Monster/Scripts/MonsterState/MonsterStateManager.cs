@@ -25,7 +25,6 @@ public class MonsterStateManager : MonoBehaviour
 
     public float deadCount; //사망후 사라지는 시간
 
-    public bool isChase;
     public bool isDead;                 //사망 상태 확인
     public bool hit;
     public float targetDistance;
@@ -36,6 +35,7 @@ public class MonsterStateManager : MonoBehaviour
     public Rigidbody rigid;
     public Collider bodyCollider;
     public Animator ani;
+    public BoxCollider detectArea;      //식별 범위
     
 
     void Awake()
@@ -47,18 +47,17 @@ public class MonsterStateManager : MonoBehaviour
     void OnEnable()
     {
         rigid.velocity = Vector3.zero;
-        deadCount = 20;
+        deadCount = 10;
         currentHp = maxHp;
         nav.speed = speed;
-        currentState = idleState;
-        currentState.EnterState(this);
         isDead = false;
         gameObject.SetActive(true);
         ani.enabled = true;
         ragdoll.SetRagdollActive(false);
         rigid.isKinematic = false;
         bodyCollider.enabled = true;
-        nav.enabled = true;
+        currentState = idleState;
+        currentState.EnterState(this);
     }
 
 
@@ -71,12 +70,17 @@ public class MonsterStateManager : MonoBehaviour
     void Update()
     {
         currentState.UpdateState(this);
-        //Debug.Log(currentState);
+        Debug.Log(currentState);
 
         //몬스터와 타겟(플레이어 거리 체크)
-        targetDistance = Vector3.Distance(transform.position, target.position);
-        ani.SetFloat("targetDistance", targetDistance);
-
+        if (target != null)
+        {
+            nav.enabled = true;
+            targetDistance = Vector3.Distance(transform.position, target.position);
+            ani.SetFloat("targetDistance", targetDistance);
+        }
+        
+        
         if (targetDistance <= 2 && isDead == false)
         {
             ChangeState(attackState);
@@ -106,7 +110,11 @@ public class MonsterStateManager : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+            JWPlayerController player = other.GetComponent<JWPlayerController>();
+            target = player.transform;
+        }
     }
 
     void OnTriggerStay(Collider other)

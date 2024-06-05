@@ -16,10 +16,6 @@ public class MonsterChaseState : MonsterBasicState
         monster.nav.SetDestination(monster.target.position);
         monster.rigid.velocity = Vector3.zero;
         monster.rigid.angularVelocity = Vector3.zero;
-        if(monster.isChase==false)
-        {
-            monster.ChangeState(monster.idleState);
-        }
     }
 
     public override void ExitState(MonsterStateManager monster)
