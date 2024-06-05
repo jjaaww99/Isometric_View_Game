@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class SkillState : PlayerState
 {
     public SkillState(JWPlayerController _player, string _animParameter) : base(_player, _animParameter)
     {
     }
+
     int index;
+
     public override void Enter()
     {
         base.Enter();
@@ -39,6 +42,24 @@ public class SkillState : PlayerState
     }
     public override void FixedUpdate()
     {
+        if (player.damageTrigger)
+        {
+            int targets = Physics.OverlapSphereNonAlloc(player.skillBases[index].position, player.skillRangeRadiuses[index], player.targetsInAttackRange, LayerMask.GetMask("Enemy"));
 
+            for (int i = 0; i < targets; i++)
+            {
+                Vector3 direction = player.targetsInAttackRange[i].transform.position - player.transform.position;
+
+                if (player.targetsInAttackRange[i].TryGetComponent<Rigidbody>(out Rigidbody rigidBody))
+                {
+                    rigidBody.AddForce(direction.normalized * player.rbForce, ForceMode.VelocityChange);
+
+                    if (player.targetsInAttackRange[i].TryGetComponent<MonsterStateManager>(out MonsterStateManager monster))
+                    {
+                        monster.MonsterDead();
+                    }
+                }
+            }
+        }
     }
 }

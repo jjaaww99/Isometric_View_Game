@@ -18,6 +18,7 @@ public class WhirlWindRepeat : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         player.transform.rotation = rotation;
+        player.damageTrigger = true;
 
         if(Input.GetKeyDown(KeyCode.W)) 
         {
@@ -27,13 +28,13 @@ public class WhirlWindRepeat : StateMachineBehaviour
         if(Input.GetKeyUp(KeyCode.W)) 
         {
             animator.SetBool("WhirlWindReapeat", false);
-            animator.SetBool("Skill", false);
-            player.stateMachine.ChangeState(player.idle);
-            player.skillVFXs[1].SetActive(false);
 
+            player.stateMachine.ChangeState(player.idle);
+
+            player.skillVFXs[1].SetActive(false);
         }
 
-        if (Input.GetMouseButton(1)) 
+        if (Input.GetMouseButtonDown(1)) 
         {
             player.nav.SetDestination(player.targetPosition);
         }

@@ -11,17 +11,13 @@ public class ClickableObject : MonoBehaviour, IPointerClickHandler, IPointerExit
     
     private void Awake()
     {
-        ren = GetComponentsInChildren<Renderer>();
-
     }
 
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         //ren.material.color = Color.red;
-        foreach(var r in ren)
-        {
-        }
+        
     }
 
     public void OnPointerClick(PointerEventData eventData)

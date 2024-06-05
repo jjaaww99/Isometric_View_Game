@@ -37,7 +37,7 @@ public class IdleState : PlayerState
             player.nav.ResetPath();
         }
 
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButtonDown(1))
         {
             if(!player.isPointerOnEnemy)
             {

@@ -56,23 +56,23 @@ public class BasicAttackState : PlayerState
 
     protected void Effect()
     {
-        int targets = Physics.OverlapSphereNonAlloc(player.basicAttackBase.position, player.basicAttackRadius, player.targetsInAttackRange);
+        int targets = Physics.OverlapSphereNonAlloc(player.basicAttackBase.position, player.basicAttackRadius, player.targetsInAttackRange, LayerMask.GetMask("Enemy"));
         
         for (int i = 0; i < targets; i++)
         {
             Vector3 direction = player.targetsInAttackRange[i].transform.position - player.transform.position;
-
-            if (player.targetsInAttackRange[i].TryGetComponent<Rigidbody>(out Rigidbody rb))
+            
+            if(player.targetsInAttackRange[i].TryGetComponent<Rigidbody>(out Rigidbody rigidBody))
             {
+                rigidBody.AddForce(direction.normalized * player.rbForce, ForceMode.VelocityChange);
+                
                 if (player.targetsInAttackRange[i].TryGetComponent<MonsterStateManager>(out MonsterStateManager monster))
                 {
-                    enemy = monster;
-
                     monster.MonsterDead();
                 }
-
-                rb.AddForce(direction.normalized * player.rbForce, ForceMode.VelocityChange);
             }
+
         }
     }
 }
+

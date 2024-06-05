@@ -60,7 +60,7 @@ BlendTree:
   m_Childs:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 8bd259975b33f6f438b40fc18f366a7a, type: 2}
-    m_Threshold: 0.2
+    m_Threshold: 0.1
     m_Position: {x: 0, y: 0}
     m_TimeScale: 0.5
     m_CycleOffset: 0
@@ -76,7 +76,7 @@ BlendTree:
     m_Mirror: 0
   m_BlendParameter: ClickDistance
   m_BlendParameterY: Blend
-  m_MinThreshold: 0.2
+  m_MinThreshold: 0.1
   m_MaxThreshold: 1
   m_UseAutomaticThresholds: 0
   m_NormalizedBlendValues: 0
@@ -93,6 +93,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d86d7d16a2bc8344a35ab352b592ee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  rotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1102 &-7089936894126960179
 AnimatorState:
   serializedVersion: 6
@@ -163,6 +165,18 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!114 &-5184617328572757459
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38e4523649ce79f4e9fc0e4b378a2594, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &-5040344605179194440
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -383,6 +397,18 @@ AnimatorStateMachine:
   m_ExitPosition: {x: 600, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -2812028123332717951}
+--- !u!114 &-1354813582588055199
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d208b135b5fdb7847931dd4b9fdfc20a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!206 &-390404510178953141
 BlendTree:
   m_ObjectHideFlags: 1
@@ -538,7 +564,7 @@ AnimatorStateMachine:
     m_Position: {x: 290, y: 150, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3744611612385908342}
-    m_Position: {x: 390, y: 200, z: 0}
+    m_Position: {x: 400, y: 200, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4304742494837128741}
     m_Position: {x: 510, y: 150, z: 0}
@@ -720,12 +746,12 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: WhirlWInd R
-  m_Speed: 1
+  m_Speed: 1.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1288001163132436695}
   m_StateMachineBehaviours:
-  - {fileID: -8080520342724298731}
+  - {fileID: -5184617328572757459}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -780,7 +806,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: -8731021167391714249}
   m_StateMachineBehaviours:
-  - {fileID: 6740809599203708613}
+  - {fileID: -1354813582588055199}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -812,7 +838,7 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 1
   serializedVersion: 3
-  m_TransitionDuration: 0.1
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.84042555
   m_HasExitTime: 0
