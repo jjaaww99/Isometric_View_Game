@@ -31,7 +31,6 @@ public class IdleState : PlayerState
             }
         }
 
-
         if (player.moveDistance <= 0.1f)
         {
             player.nav.ResetPath();
