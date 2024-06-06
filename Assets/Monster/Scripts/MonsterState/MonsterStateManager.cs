@@ -9,6 +9,7 @@ public class MonsterStateManager : MonoBehaviour
 {
     MonsterBasicState currentState;
     public MonsterIdleState idleState = new MonsterIdleState();
+    public MonsterWanderState wanderState = new MonsterWanderState();
     public MonsterChaseState chaseState = new MonsterChaseState();
     public MonsterAttackState attackState = new MonsterAttackState();
     public MonsterHitState hitState = new MonsterHitState();
@@ -24,8 +25,9 @@ public class MonsterStateManager : MonoBehaviour
     public Transform target;                        // 플레이어의 위치(임시)
 
     public float deadCount; //사망후 사라지는 시간
+    public float idleTowanderTime = 3;     //배회로 넘어가는 쿨타임
 
-    public bool isDead;                 //사망 상태 확인
+    public bool isDead;
     public bool hit;
     public float targetDistance;
 
@@ -46,12 +48,12 @@ public class MonsterStateManager : MonoBehaviour
     }
     void OnEnable()
     {
+        spawnTime = 3;
         deadCount = 10;
         currentHp = maxHp;
         nav.speed = speed;
-        isDead = false;
-        gameObject.SetActive(true);
         ani.enabled = true;
+        isDead = false;
         ragdoll.SetRagdollActive(false);
         rigid.isKinematic = false;
         bodyCollider.enabled = true;
@@ -88,24 +90,13 @@ public class MonsterStateManager : MonoBehaviour
         {
             ChangeState(chaseState);
         }
-        else if (isDead == false)
+        else if (targetDistance < 15 && isDead == false)
         {
             ChangeState(idleState);
         }
-        else if(isDead == true)
-        {
-            ChangeState(deadState);
-        }
 
     }
 
-
-    public void ChangeState(MonsterBasicState state)
-    {
-        currentState.ExitState(this);
-        currentState = state;
-        state.EnterState(this);
-    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -136,17 +127,24 @@ public class MonsterStateManager : MonoBehaviour
             speed = monsterData.speed;
             atk = monsterData.atk;
         }
-    }//엑셀데이터 불러오는 메서드
+    }                //엑셀데이터 불러오는 메서드
+
+    public void ChangeState(MonsterBasicState state)
+    {
+        currentState.ExitState(this);
+        currentState = state;
+        state.EnterState(this);
+    }   //상태 변경 메서드
 
     public void MonsterDead()
     {
         ChangeState(deadState);
-    }
+    }                               //사망 상태 호출
 
     public void MonsterHit()
     {
         ChangeState(hitState);
-    }
+    }                                 //피격 상태 호출
 
     
 

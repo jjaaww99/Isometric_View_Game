@@ -662,6 +662,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ZOmbie
       objectReference: {fileID: 0}
+    - target: {fileID: 3646996922929727149, guid: 7744826629fdd2a4bb5966ad3095014e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5154749735498914090, guid: 7744826629fdd2a4bb5966ad3095014e,
         type: 3}
       propertyPath: m_LocalPosition.x
