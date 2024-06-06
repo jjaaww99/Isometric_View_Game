@@ -48,7 +48,7 @@ public class MonsterStateManager : MonoBehaviour
     }
     void OnEnable()
     {
-        spawnTime = 3;
+        idleTowanderTime = 3;
         deadCount = 10;
         currentHp = maxHp;
         nav.speed = speed;
