@@ -3,26 +3,26 @@ using UnityEngine;
 
 public class PoolManager : MonoBehaviour
 {
-    public UnityEngine.GameObject[] prefabs;
-    public List<UnityEngine.GameObject>[] pools;
+    public GameObject[] prefabs;
+    public List<GameObject>[] pools;
     public int maxPoolSize = 20;
     int Active = 0;
     public int maxActive = 50;
 
     private void Awake()
     {
-        pools = new List<UnityEngine.GameObject>[prefabs.Length];
+        pools = new List<GameObject>[prefabs.Length];
         for (int i = 0; i < pools.Length; i++)
         {
-            pools[i] = new List<UnityEngine.GameObject>();
+            pools[i] = new List<GameObject>();
         }
     }
 
-    public UnityEngine.GameObject Get(int index)
+    public GameObject Get(int index)
     {
-        UnityEngine.GameObject select = null;
+        GameObject select = null;
 
-        foreach (UnityEngine.GameObject item in pools[index])
+        foreach (GameObject item in pools[index])
         {
             if (!item.activeSelf)
             {

@@ -11,6 +11,7 @@ public class JWPlayerController : MonoBehaviour
     private const int maxTargetNum = 20;
     public GameObject[] skillVFXs;
     public MousePointer pointer;
+    public PlayerEquipedSkills equipedSkills;
 
     #region States
     public StateMachine stateMachine;
@@ -41,8 +42,8 @@ public class JWPlayerController : MonoBehaviour
 
     public bool isPointerOnEnemy => pointer.isPointerOnTarget;
 
-    public KeyCode[] skillKeyCodes = { KeyCode.Q, KeyCode.W, KeyCode.E, KeyCode.R };
-    public string[] skillNames = { "JumpAttack", "WhirlWind", "JumpAttack", "WhirlWind" };
+    public KeyCode[] skillKeyCodes = { KeyCode.Q, KeyCode.W, KeyCode.E, KeyCode.R, KeyCode.Mouse0, KeyCode.Mouse1 };
+    public string[] skillNames;
     public Transform[] skillBases;
     public float[] skillRangeRadiuses = { 5f, 2f, 5f, 2f };
 
@@ -67,7 +68,8 @@ public class JWPlayerController : MonoBehaviour
         nav = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         playerRigidbody = GetComponent<Rigidbody>();
-        
+        equipedSkills = GetComponent<PlayerEquipedSkills>();
+
         foreach (var effect in skillVFXs)
         {
             effect.SetActive(false);
@@ -81,6 +83,16 @@ public class JWPlayerController : MonoBehaviour
     private void Start()
     {
         targetPosition = transform.position;
+        
+        for(int i = 0; i < equipedSkills.skillList.Length; i++)
+        {
+            skillNames[i] = equipedSkills.skillList[i].skillName;
+        }
+
+        foreach(var names in skillNames)
+        {
+            Debug.Log(names);
+        }
     }
 
     public float moveDistance;
@@ -88,8 +100,6 @@ public class JWPlayerController : MonoBehaviour
 
     private void Update()
     {
-        CheckNull();
-
         if (Input.GetMouseButtonDown(1))
         { 
             targetPosition = pointer.pointedPosition;
@@ -118,28 +128,25 @@ public class JWPlayerController : MonoBehaviour
         stateMachine.currentState.FixedUpdate();
     }
 
-    public Transform basicAttackBase;
-    public Transform whirlWindBase;
+    public Transform basicAttackPoint;
+    public Transform whirlWindPoint;
+    public Transform jumpAttackPoint;
     public float basicAttackRadius;
     public float jumpAttackRadius;
     public float whirlWindRadius;
+    public Vector3 jumpAttackSize;
 
-    void CheckNull()
-    {
-        if (null == stateMachine.currentState)
-        {
-            Initialized();
-        }
-    }
 
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, jumpAttackRadius);
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(basicAttackBase.position, basicAttackRadius);
+        Gizmos.DrawWireSphere(basicAttackPoint.position, basicAttackRadius);
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(whirlWindBase.position, whirlWindRadius);
+        Gizmos.DrawWireSphere(whirlWindPoint.position, whirlWindRadius);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawCube(jumpAttackPoint.position, jumpAttackSize);
     }
 
     public bool damageTrigger = false;

@@ -56,7 +56,7 @@ public class BasicAttackState : PlayerState
 
     protected void Effect()
     {
-        int targets = Physics.OverlapSphereNonAlloc(player.basicAttackBase.position, player.basicAttackRadius, player.targetsInAttackRange, LayerMask.GetMask("Enemy"));
+        int targets = Physics.OverlapSphereNonAlloc(player.basicAttackPoint.position, player.basicAttackRadius, player.targetsInAttackRange, LayerMask.GetMask("Enemy"));
         
         for (int i = 0; i < targets; i++)
         {

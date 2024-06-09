@@ -9,7 +9,7 @@ public class SkillState : PlayerState
     {
     }
 
-    int index;
+    public int index;
 
     public override void Enter()
     {
@@ -29,6 +29,7 @@ public class SkillState : PlayerState
     {
         player.animator.SetBool(player.skillNames[index], false);
 
+
         base.Exit();
     }
     public override void Update()
@@ -42,9 +43,48 @@ public class SkillState : PlayerState
     }
     public override void FixedUpdate()
     {
+        if(index == 1)
+        {
+            EffectCircle();
+        }
+        else if(index == 0)
+        {
+            EffectSquare();
+        }
+    }
+
+    void EffectCircle()
+    {
         if (player.damageTrigger)
         {
             int targets = Physics.OverlapSphereNonAlloc(player.skillBases[index].position, player.skillRangeRadiuses[index], player.targetsInAttackRange, LayerMask.GetMask("Enemy"));
+
+            for (int i = 0; i < targets; i++)
+            {
+                Vector3 direction = player.targetsInAttackRange[i].transform.position - player.transform.position;
+
+                if (player.targetsInAttackRange[i].TryGetComponent<Rigidbody>(out Rigidbody rigidBody))
+                {
+                    rigidBody.AddForce(direction.normalized * player.rbForce, ForceMode.VelocityChange);
+
+                    if (player.targetsInAttackRange[i].TryGetComponent<MonsterStateManager>(out MonsterStateManager monster))
+                    {
+                        monster.MonsterDead();
+                    }
+                }
+            }
+        }
+    }
+
+    void EffectSquare()
+    {
+        if (player.damageTrigger)
+        {
+            int targets = Physics.OverlapBoxNonAlloc(
+                player.jumpAttackPoint.position, 
+                player.jumpAttackSize, player.targetsInAttackRange,
+                Quaternion.identity, 
+                LayerMask.GetMask("Enemy"));
 
             for (int i = 0; i < targets; i++)
             {
