@@ -6,18 +6,19 @@ using UnityEngine.EventSystems;
 
 public class ClickableObject : MonoBehaviour, IPointerClickHandler, IPointerExitHandler, IPointerEnterHandler
 {
-    Renderer[] ren;
-    Color[] originalColor;
+    public SkinnedMeshRenderer[] SkinnedMeshRenderers;
     
-    private void Awake()
+    void Start()
     {
+        SkinnedMeshRenderers = GetComponentsInChildren<SkinnedMeshRenderer>();
     }
-
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        //ren.material.color = Color.red;
-        
+        foreach(var ren in SkinnedMeshRenderers)
+        {
+            ren.gameObject.layer = 7;
+        }
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -27,7 +28,10 @@ public class ClickableObject : MonoBehaviour, IPointerClickHandler, IPointerExit
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        //ren.material.color = originalColor;
+        foreach (var ren in SkinnedMeshRenderers)
+        {
+            ren.gameObject.layer = 0;
+        }
     }
-        
+
 }

@@ -20,24 +20,25 @@ public class WhirlWindRepeat : StateMachineBehaviour
         player.transform.rotation = rotation;
         player.damageTrigger = true;
 
-        if(Input.GetKeyDown(KeyCode.W)) 
+        if (Input.GetMouseButtonDown(1)) 
+        {
+            player.nav.SetDestination(player.targetPosition);
+        }
+
+        if (Input.GetKey(player.skillKeyCodes[player.skill.index]))
         {
             return;
         }
 
-        if(Input.GetKeyUp(KeyCode.W)) 
+        if(Input.GetKeyUp(player.skillKeyCodes[player.skill.index])) 
         {
-            animator.SetBool("WhirlWindReapeat", false);
+            animator.SetBool("WhirlWindRepeat", false);
 
             player.stateMachine.ChangeState(player.idle);
 
             player.skillVFXs[1].SetActive(false);
         }
 
-        if (Input.GetMouseButtonDown(1)) 
-        {
-            player.nav.SetDestination(player.targetPosition);
-        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

@@ -34,7 +34,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: WhirlWindReapeat
+    m_ConditionEvent: WhirlWindRepeat
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3744611612385908342}
@@ -60,7 +60,7 @@ BlendTree:
   m_Childs:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 8bd259975b33f6f438b40fc18f366a7a, type: 2}
-    m_Threshold: 0.1
+    m_Threshold: 0.05
     m_Position: {x: 0, y: 0}
     m_TimeScale: 0.5
     m_CycleOffset: 0
@@ -76,7 +76,7 @@ BlendTree:
     m_Mirror: 0
   m_BlendParameter: ClickDistance
   m_BlendParameterY: Blend
-  m_MinThreshold: 0.1
+  m_MinThreshold: 0.05
   m_MaxThreshold: 1
   m_UseAutomaticThresholds: 0
   m_NormalizedBlendValues: 0
@@ -328,7 +328,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: BasicAttack
-  m_Speed: 2.2
+  m_Speed: 2.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 2365723262889383230}
@@ -479,61 +479,61 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: TargetDistance
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: Idle
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 1
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: Evade
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: BasicAttack
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: ToTarget
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: WhirlWind
+    m_Controller: {fileID: 0}
+  - m_Name: whirlwind
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: JumpAttack
+    m_Controller: {fileID: 0}
+  - m_Name: jumpAttack
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: Skill
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: WhirlWindReapeat
+    m_Controller: {fileID: 0}
+  - m_Name: WhirlWindRepeat
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -564,7 +564,7 @@ AnimatorStateMachine:
     m_Position: {x: 290, y: 150, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3744611612385908342}
-    m_Position: {x: 400, y: 200, z: 0}
+    m_Position: {x: 400, y: 220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4304742494837128741}
     m_Position: {x: 510, y: 150, z: 0}
@@ -588,7 +588,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: WhirlWindReapeat
+    m_ConditionEvent: WhirlWindRepeat
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4304742494837128741}
@@ -680,7 +680,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: WhirlWind
+    m_ConditionEvent: whirlwind
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 0}
@@ -899,7 +899,7 @@ AnimatorTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: WhirlWind
+    m_ConditionEvent: whirlwind
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4135424836281640391}
