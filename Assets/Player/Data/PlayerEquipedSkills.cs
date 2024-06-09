@@ -13,6 +13,9 @@ public class PlayerEquipedSkills : MonoBehaviour
 
         skillList[0] = skillData.SkillList[1];
         skillList[1] = skillData.SkillList[2];
+        skillList[2] = skillData.SkillList[2];
+        skillList[3] = skillData.SkillList[2];
+        skillList[4] = skillData.SkillList[2];
         skillList[5] = skillData.SkillList[0];
 
         //for (int i = 0; i < skillData.SkillList.Count; i++) 
