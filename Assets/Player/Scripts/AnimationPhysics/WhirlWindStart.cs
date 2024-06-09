@@ -8,9 +8,11 @@ public class WhirlWindStart : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if(Input.GetKey(KeyCode.W))
+        JWPlayerController player = animator.GetComponent<JWPlayerController>();
+
+        if (Input.GetKey(player.skillKeyCodes[player.skill.index]))
         {
-            animator.SetBool("WhirlWindReapeat", true);
+            animator.SetBool("WhirlWindRepeat", true);
         }
     }
 

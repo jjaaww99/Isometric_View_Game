@@ -7,7 +7,6 @@ public class IdleState : PlayerState
     public IdleState(JWPlayerController _player, string _animName) : base(_player, _animName)
     {
     }
-
     public override void Enter()
     {
         base.Enter();

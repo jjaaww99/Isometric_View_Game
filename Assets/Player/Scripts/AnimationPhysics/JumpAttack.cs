@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class JumpAttack : StateMachineBehaviour
 {
@@ -15,6 +16,17 @@ public class JumpAttack : StateMachineBehaviour
         {
             player.stateMachine.ChangeState(player.idle);
         }
+
+        if(player.effectTrigger)
+        {
+            VisualEffect visualEffect = player.skillVFXs[2].GetComponent<VisualEffect>();
+            visualEffect.Play();
+        }
+    }
+
+    public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        player.skillVFXs[2].SetActive(false);
     }
 }
     

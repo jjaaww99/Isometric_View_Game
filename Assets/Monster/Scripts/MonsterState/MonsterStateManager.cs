@@ -36,13 +36,15 @@ public class MonsterStateManager : MonoBehaviour
     public Collider bodyCollider;
     public Animator ani;
     public BoxCollider detectArea;      //식별 범위
-    
+
+
 
     void Awake()
     {
         bodyCollider = GetComponent<Collider>();
         nav = GetComponent<NavMeshAgent>();
         InitializeFromDB(excelDBNumber);
+
     }
     void OnEnable()
     {
@@ -62,7 +64,7 @@ public class MonsterStateManager : MonoBehaviour
 
     void Start()
     {
-       
+
     }
 
 
@@ -78,8 +80,8 @@ public class MonsterStateManager : MonoBehaviour
             targetDistance = Vector3.Distance(transform.position, target.position);
             ani.SetFloat("targetDistance", targetDistance);
         }
-        
-        
+
+
         if (targetDistance <= 2 && isDead == false)
         {
             ChangeState(attackState);
@@ -92,7 +94,7 @@ public class MonsterStateManager : MonoBehaviour
         {
             ChangeState(idleState);
         }
-        else if(isDead == true)
+        else if (isDead == true)
         {
             ChangeState(deadState);
         }
@@ -116,15 +118,6 @@ public class MonsterStateManager : MonoBehaviour
         }
     }
 
-    void OnTriggerStay(Collider other)
-    {
-
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-
-    }
 
     private void InitializeFromDB(int index)
     {
@@ -147,9 +140,6 @@ public class MonsterStateManager : MonoBehaviour
     {
         ChangeState(hitState);
     }
-
-    
-
 
 }
 
