@@ -1382,6 +1382,7 @@ GameObject:
   - component: {fileID: 3652396445958643329}
   - component: {fileID: 2540689012715507754}
   - component: {fileID: 7646814998803635694}
+  - component: {fileID: 2007416245071532945}
   m_Layer: 6
   m_Name: ZOmbie
   m_TagString: Enemy
@@ -1491,12 +1492,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf55d1caa842a64cb3cb8297ee4eda8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colors:
-  - {r: 0, g: 0, b: 0, a: 0}
-  - {r: 0, g: 0, b: 0, a: 0}
-  materials:
-  - {fileID: 0}
-  - {fileID: 0}
   ragdoll: {fileID: 6008679486800899535}
   excelDBNumber: 1
   monsterName: 
@@ -1516,6 +1511,19 @@ MonoBehaviour:
   bodyCollider: {fileID: 0}
   ani: {fileID: 4269379705740888407}
   detectArea: {fileID: 2302009500915138886}
+--- !u!114 &2007416245071532945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3646996922929727149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9851256a11e636c419d23cc7b14caa56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkinnedMeshRenderers: []
 --- !u!1 &3656560170961859532
 GameObject:
   m_ObjectHideFlags: 0
@@ -3305,7 +3313,6 @@ SkinnedMeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 2cbb7e2ee92f6944ba8554f7d3a1a834, type: 2}
-  - {fileID: 2100000, guid: c911fe0a0f67f0143a725c6c851bb6fe, type: 2}
   - {fileID: 2100000, guid: c911fe0a0f67f0143a725c6c851bb6fe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
