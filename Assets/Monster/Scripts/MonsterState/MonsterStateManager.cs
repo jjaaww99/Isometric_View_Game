@@ -17,7 +17,7 @@ public class MonsterStateManager : MonoBehaviour
 
     [SerializeField] private int excelDBNumber;     //엑셀에서 불러올 데이터 번호
     [SerializeField] private string monsterName;    // 개체 이름
-    [SerializeField] private int maxHp;             // 최대 체력
+    public int maxHp;             // 최대 체력
     public int currentHp;         // 현재 체력
     [SerializeField] private float speed;           // 이동속도
     [SerializeField] private int atk;               // 공격력
