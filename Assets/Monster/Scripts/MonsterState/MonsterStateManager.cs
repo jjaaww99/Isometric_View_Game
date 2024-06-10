@@ -71,7 +71,6 @@ public class MonsterStateManager : MonoBehaviour
     void Update()
     {
         currentState.UpdateState(this);
-        Debug.Log(currentState);
 
         //몬스터와 타겟(플레이어 거리 체크)
         if (target != null)

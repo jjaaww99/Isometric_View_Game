@@ -6,6 +6,7 @@ using UnityEngine.VFX;
 public class JumpAttack : StateMachineBehaviour
 {
     JWPlayerController player;
+    VisualEffect visualEffect;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         player = animator.GetComponent<JWPlayerController>();
@@ -17,16 +18,17 @@ public class JumpAttack : StateMachineBehaviour
             player.stateMachine.ChangeState(player.idle);
         }
 
-        if(player.effectTrigger)
-        {
-            VisualEffect visualEffect = player.skillVFXs[2].GetComponent<VisualEffect>();
-            visualEffect.Play();
-        }
+        //if (player.effectTrigger)
+        //{
+        //    visualEffect = player.skillVFXs[2].GetComponent<VisualEffect>();
+        //    visualEffect.gameObject.SetActive(true);
+        //    visualEffect.Play();
+        //}
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        player.skillVFXs[2].SetActive(false);
+            //visualEffect.gameObject.SetActive(false);
     }
 }
-    
+

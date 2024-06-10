@@ -84,6 +84,8 @@ public class JWPlayerController : MonoBehaviour
     {
         targetPosition = transform.position;
         
+        skillNames = new string[equipedSkills.skillList.Length];
+
         for(int i = 0; i < equipedSkills.skillList.Length; i++)
         {
             skillNames[i] = equipedSkills.skillList[i].skillName;
@@ -146,7 +148,7 @@ public class JWPlayerController : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(whirlWindPoint.position, whirlWindRadius);
         Gizmos.color = Color.blue;
-        Gizmos.DrawCube(jumpAttackPoint.position, jumpAttackSize);
+        Gizmos.DrawWireCube(transform.position, jumpAttackSize);
     }
 
     public bool damageTrigger = false;

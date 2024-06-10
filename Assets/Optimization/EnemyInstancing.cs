@@ -35,8 +35,6 @@ public class DualMaterialInstancing : MonoBehaviour
 
             skins = enemy.GetComponentsInChildren<SkinnedMeshRenderer>();
 
-            Debug.Log(skins.Length);
-
             matrices[i] = Matrix4x4.TRS(position, rotation, scale);
             enemy.transform.position = position;
             enemy.transform.rotation = rotation;
