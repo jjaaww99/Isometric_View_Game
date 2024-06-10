@@ -68,7 +68,7 @@ public class BasicAttackState : PlayerState
                 
                 if (player.targetsInAttackRange[i].TryGetComponent<MonsterStateManager>(out MonsterStateManager monster))
                 {
-                    monster.MonsterDead();
+                    monster.currentHp -= 20;
                 }
             }
 
