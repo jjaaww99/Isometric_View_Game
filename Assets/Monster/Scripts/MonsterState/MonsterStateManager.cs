@@ -15,27 +15,27 @@ public class MonsterStateManager : ClickableObject
     public MonsterDeadState deadState = new MonsterDeadState();
     public RagDoll ragdoll;
 
-    [SerializeField] private int excelDBNumber;     //¿¢¼¿¿¡¼­ ºÒ·¯¿Ã µ¥ÀÌÅÍ ¹øÈ£
-    [SerializeField] private string monsterName;    // °³Ã¼ ÀÌ¸§
-    public int maxHp;             // ÃÖ´ë Ã¼·Â
-    public int currentHp;         // ÇöÀç Ã¼·Â
-    [SerializeField] private float speed;           // ÀÌµ¿¼Óµµ
-    [SerializeField] private int atk;               // °ø°Ý·Â
-    public Transform target;                        // ÇÃ·¹ÀÌ¾îÀÇ À§Ä¡(ÀÓ½Ã)
+    [SerializeField] private int excelDBNumber;     //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£
+    [SerializeField] private string monsterName;    // ï¿½ï¿½Ã¼ ï¿½Ì¸ï¿½
+    public int maxHp;             // ï¿½Ö´ï¿½ Ã¼ï¿½ï¿½
+    public int currentHp;         // ï¿½ï¿½ï¿½ï¿½ Ã¼ï¿½ï¿½
+    [SerializeField] private float speed;           // ï¿½Ìµï¿½ï¿½Óµï¿½
+    [SerializeField] private int atk;               // ï¿½ï¿½ï¿½Ý·ï¿½
+    public Transform target;                        // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡(ï¿½Ó½ï¿½)
 
-    public float deadCount; //»ç¸ÁÈÄ »ç¶óÁö´Â ½Ã°£
+    public float deadCount; //ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½
 
-    public bool isDead;                 //»ç¸Á »óÅÂ È®ÀÎ
+    public bool isDead;                 //ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½
     public bool hit;
     public float targetDistance;
 
-    public BoxCollider attackArea;      //°ø°Ý ¹üÀ§
+    public BoxCollider attackArea;      //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     [SerializeField] private MonsterDB monsterDB;
     public NavMeshAgent nav;
     public Rigidbody rigid;
     public Collider bodyCollider;
     public Animator ani;
-    public BoxCollider detectArea;      //½Äº° ¹üÀ§
+    public BoxCollider detectArea;      //ï¿½Äºï¿½ ï¿½ï¿½ï¿½ï¿½
 
 
 
@@ -76,7 +76,7 @@ public class MonsterStateManager : ClickableObject
     {
         currentState.UpdateState(this);
 
-        //¸ó½ºÅÍ¿Í Å¸°Ù(ÇÃ·¹ÀÌ¾î °Å¸® Ã¼Å©)
+        //ï¿½ï¿½ï¿½Í¿ï¿½ Å¸ï¿½ï¿½(ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½Å¸ï¿½ Ã¼Å©)
         if (target != null)
         {
             nav.enabled = true;
@@ -88,18 +88,20 @@ public class MonsterStateManager : ClickableObject
         {
             ChangeState(deadState);
         }
+        else if (targetDistance > 15 && isDead == false)
+        {
+            ChangeState(idleState);
+        }
+        else if (targetDistance > 2 && targetDistance <= 15 && isDead == false)
+        {
+            ChangeState(chaseState);
+        }
         else if (targetDistance <= 2 && isDead == false)
         {
             ChangeState(attackState);
         }
-        else if (targetDistance > 2 && targetDistance < 15 && isDead == false)
-        {
-            ChangeState(chaseState);
-        }
-        else if (isDead == false)
-        {
-            ChangeState(idleState);
-        }
+        
+        
         
 
     }
@@ -132,7 +134,7 @@ public class MonsterStateManager : ClickableObject
             speed = monsterData.speed;
             atk = monsterData.atk;
         }
-    }//¿¢¼¿µ¥ÀÌÅÍ ºÒ·¯¿À´Â ¸Þ¼­µå
+    }//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½
 
 
     public void MonsterHit()

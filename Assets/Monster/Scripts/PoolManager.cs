@@ -8,10 +8,12 @@ public class PoolManager : MonoBehaviour
     public int maxPoolSize = 20;
     int Active = 0;
     public int maxActive = 50;
+    public int prefablength;
 
     private void Awake()
     {
         pools = new List<GameObject>[prefabs.Length];
+        prefablength = pools.Length;
         for (int i = 0; i < pools.Length; i++)
         {
             pools[i] = new List<GameObject>();
