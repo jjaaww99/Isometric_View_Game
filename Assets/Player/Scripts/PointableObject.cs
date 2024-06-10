@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ClickableObject : MonoBehaviour, IPointerClickHandler, IPointerExitHandler, IPointerEnterHandler
+public class PointableObject : MonoBehaviour, IPointerClickHandler, IPointerExitHandler, IPointerEnterHandler
 {
     [SerializeField] protected Renderer[] multipleRenderers;
 
@@ -16,18 +16,10 @@ public class ClickableObject : MonoBehaviour, IPointerClickHandler, IPointerExit
         originalLayer = gameObject.layer;
     }
 
-    //protected virtual void SetRenderer(Renderer renderer)
-    //{
-
-    //}
-
-    //protected virtual void SetRenderer(Renderer[] renderers)
-    //{
-
-    //}
-
-    public void OnPointerEnter(PointerEventData eventData)
+    public virtual void OnPointerEnter(PointerEventData eventData)
     {
+        Debug.Log("MouseEnter");
+
         if(multipleRenderers != null)
         {
             foreach(var ren in multipleRenderers)

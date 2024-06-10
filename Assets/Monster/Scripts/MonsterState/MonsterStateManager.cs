@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class MonsterStateManager : ClickableObject
+public class MonsterStateManager : PointableObject
 {
     MonsterBasicState currentState;
     public MonsterIdleState idleState = new MonsterIdleState();

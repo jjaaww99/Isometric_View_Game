@@ -23,7 +23,7 @@ public class EnemyUI : MonoBehaviour
     private void Update()
     {
         
-        if(player.clickedTarget != null)
+        if(player.clickedTarget != null && player.clickedTarget.layer == 6 )
         {
             monster = player.clickedTarget.GetComponent<MonsterStateManager>();
 

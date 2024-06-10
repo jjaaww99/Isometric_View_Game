@@ -13,7 +13,7 @@ public class MousePointer : MonoBehaviour
     public GameObject? clickedObject;
 #nullable disable
 
-    public bool isPointerOnTarget = false;
+    public bool isPointerOnObject = false;
 
     private void Awake()
     {
@@ -34,7 +34,12 @@ public class MousePointer : MonoBehaviour
 
             pointedPosition = transform.position;
 
-            isPointerOnTarget = false;
+            isPointerOnObject = false;
+
+            if(Input.GetMouseButton(1))
+            {
+                pointedObject = null;
+            }
         }
 
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Enemy")))
@@ -45,9 +50,9 @@ public class MousePointer : MonoBehaviour
 
             pointedObject = hit.transform.gameObject;
 
-            isPointerOnTarget = true;
+            isPointerOnObject = true;
         }
-        
+
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Item")))
         {
             Vector3 mouseWorldPos = hit.point;
@@ -56,7 +61,7 @@ public class MousePointer : MonoBehaviour
 
             pointedObject = hit.transform.gameObject;
 
-            isPointerOnTarget = true;
+            isPointerOnObject = true;
         }
 
     }

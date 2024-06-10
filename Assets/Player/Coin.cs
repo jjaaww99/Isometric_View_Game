@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class Coin : ClickableObject
+public class Coin : PointableObject
 {
     public JWPlayerController jWPlayerController;
 
@@ -12,35 +14,33 @@ public class Coin : ClickableObject
 
     public float rotationSpeed = 90f;
 
-    private void Awake()
-    {
-        multipleRenderers = GetComponents<Renderer>();
-    }
-
     protected override void OnEnable()
     {
         base.OnEnable();
 
-        Vector3 point = (transform.position + jWPlayerController.transform.position) / 2;
-
-        startPosition = transform.position;
-        middlePosition = point + new Vector3(0, 2, 0);
-
-        StartCoroutine(MoveAlongBezierCurve());
+        multipleRenderers = GetComponentsInChildren<Renderer>();
     }
     private void Update()
     {
-        Debug.Log(originalLayer);
-        endPosition = jWPlayerController.transform.position;
     }
-    public float duration = 2f;
+    public float duration = 1f;
 
-    IEnumerator MoveAlongBezierCurve()
+
+
+    public IEnumerator GetCoin()
     {
         float elapsedTime = 0;
 
         while (elapsedTime < duration)
         {
+            startPosition = GetComponentInParent<Transform>().position;
+
+            Vector3 point = (transform.position + jWPlayerController.transform.position) / 2;
+
+            middlePosition = point + new Vector3(0, 2, 0);
+
+            endPosition = jWPlayerController.transform.position;
+
             elapsedTime += Time.deltaTime;
 
             float t = elapsedTime / duration;
@@ -75,5 +75,13 @@ public class Coin : ClickableObject
         p += tt * p2; // t^2 * p2
 
         return p;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Player"))
+        {
+            gameObject.SetActive(false);
+        }
     }
 }

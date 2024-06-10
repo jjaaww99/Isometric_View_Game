@@ -36,13 +36,13 @@ public class JWPlayerController : MonoBehaviour
 #nullable disable
 
     #region PlayerData
-    [Header ("PlayerData")]
+    [Header("PlayerData")]
     [SerializeField] public float attackRange = 2.3f;
     [SerializeField] public float rbForce = 2f;
     [SerializeField] public float evadeForce = 6f;
     #endregion
 
-    public bool isPointerOnEnemy => pointer.isPointerOnTarget;
+    public bool isPointerOnEnemy => pointer.isPointerOnObject;
 
     public KeyCode[] skillKeyCodes = { KeyCode.Q, KeyCode.W, KeyCode.E, KeyCode.R, KeyCode.Mouse0, KeyCode.Mouse1 };
     public string[] skillNames;
@@ -85,18 +85,14 @@ public class JWPlayerController : MonoBehaviour
     private void Start()
     {
         targetPosition = transform.position;
-        
+
         skillNames = new string[equipedSkills.skillList.Length];
 
-        for(int i = 0; i < equipedSkills.skillList.Length; i++)
+        for (int i = 0; i < equipedSkills.skillList.Length; i++)
         {
             skillNames[i] = equipedSkills.skillList[i].skillName;
         }
 
-        foreach(var names in skillNames)
-        {
-            Debug.Log(names);
-        }
     }
 
     public float moveDistance;
@@ -105,25 +101,31 @@ public class JWPlayerController : MonoBehaviour
     private void Update()
     {
         if (Input.GetMouseButtonDown(1))
-        { 
-            targetPosition = pointer.pointedPosition;
-            clickedTarget = pointer.pointedObject;
+        {
+
+            if (!pointer.isPointerOnObject)
+            {
+                targetPosition = pointer.pointedPosition;
+            }
         }
+        clickedTarget = pointer.pointedObject;
+
 
         pointerPosition = pointer.transform.position;
 
         moveDistance = Vector3.Distance(targetPosition, transform.position);
 
-        if(clickedTarget != null)
+        if (clickedTarget != null)
         {
             targetDistance = Vector3.Distance(clickedTarget.transform.position, transform.position);
             enemyUI.gameObject.SetActive(true);
         }
+
         else
         {
             enemyUI.gameObject.SetActive(false);
         }
-        
+
         animator.SetFloat("ClickDistance", moveDistance);
         animator.SetFloat("TargetDistance", targetDistance);
 

@@ -17,6 +17,7 @@ public class IdleState : PlayerState
         base.Exit();
     }
 
+    bool isCoroutineStarted = false;
     public override void Update()
     {
         base.Update();
@@ -37,11 +38,18 @@ public class IdleState : PlayerState
 
         if (Input.GetMouseButtonDown(1))
         {
-            if(!player.isPointerOnEnemy)
+
+            if(!player.isPointerOnEnemy && player.clickedTarget == null)
             {
                 player.targetPosition = player.pointerPosition;
 
                 player.nav.SetDestination(player.targetPosition);
+            }
+
+            else if(player.clickedTarget.TryGetComponent<Coin>(out Coin coin) && !isCoroutineStarted)
+            {
+                coin.StartCoroutine(coin.GetCoin());
+
             }
 
             else if(player.isPointerOnEnemy)
