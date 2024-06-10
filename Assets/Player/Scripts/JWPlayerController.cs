@@ -83,7 +83,9 @@ public class JWPlayerController : MonoBehaviour
     private void Start()
     {
         targetPosition = transform.position;
-        
+
+        skillNames = new string[equipedSkills.skillList.Length];
+
         for(int i = 0; i < equipedSkills.skillList.Length; i++)
         {
             skillNames[i] = equipedSkills.skillList[i].skillName;
