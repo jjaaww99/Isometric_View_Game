@@ -81,8 +81,11 @@ public class MonsterStateManager : MonoBehaviour
             ani.SetFloat("targetDistance", targetDistance);
         }
 
-
-        if (targetDistance <= 2 && isDead == false)
+        if (currentHp <= 0)
+        {
+            ChangeState(deadState);
+        }
+        else if (targetDistance <= 2 && isDead == false)
         {
             ChangeState(attackState);
         }
@@ -94,10 +97,7 @@ public class MonsterStateManager : MonoBehaviour
         {
             ChangeState(idleState);
         }
-        else if (isDead == true)
-        {
-            ChangeState(deadState);
-        }
+        
 
     }
 
@@ -131,10 +131,6 @@ public class MonsterStateManager : MonoBehaviour
         }
     }//엑셀데이터 불러오는 메서드
 
-    public void MonsterDead()
-    {
-        ChangeState(deadState);
-    }
 
     public void MonsterHit()
     {
