@@ -25,3 +25,7 @@ MonoBehaviour:
     maxHp: 40
     speed: 5
     atk: 20
+  - name: Bear
+    maxHp: 20
+    speed: 4
+    atk: 5
