@@ -44,7 +44,6 @@ public class MonsterStateManager : MonoBehaviour
         bodyCollider = GetComponent<Collider>();
         nav = GetComponent<NavMeshAgent>();
         InitializeFromDB(excelDBNumber);
-
     }
     void OnEnable()
     {
@@ -85,18 +84,20 @@ public class MonsterStateManager : MonoBehaviour
         {
             ChangeState(deadState);
         }
+        else if (targetDistance > 15 && isDead == false)
+        {
+            ChangeState(idleState);
+        }
+        else if (targetDistance > 2 && targetDistance <= 15 && isDead == false)
+        {
+            ChangeState(chaseState);
+        }
         else if (targetDistance <= 2 && isDead == false)
         {
             ChangeState(attackState);
         }
-        else if (targetDistance > 2 && targetDistance < 15 && isDead == false)
-        {
-            ChangeState(chaseState);
-        }
-        else if (isDead == false)
-        {
-            ChangeState(idleState);
-        }
+        
+        
         
 
     }

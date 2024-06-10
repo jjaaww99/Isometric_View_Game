@@ -6,10 +6,16 @@ public class Spawner : MonoBehaviour
 {
     public Transform[] spawnPoint;
     private float spawnTimer;
-
+    int num;
     private void Awake()
     {
+        
         spawnPoint = GetComponentsInChildren<Transform>();
+    }
+
+    private void Start()
+    {
+        num = GameManager.instance.pool.prefablength;
     }
 
     private void Update()
@@ -24,7 +30,7 @@ public class Spawner : MonoBehaviour
 
     private void Spawn()
     {
-        UnityEngine.GameObject enemy = GameManager.instance.pool.Get(0);
+        UnityEngine.GameObject enemy = GameManager.instance.pool.Get(Random.Range(0, num));
         if (enemy != null)
         {
             enemy.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].position;
