@@ -25,6 +25,7 @@ public class DualMaterialInstancing : MonoBehaviour
 
             enemies[i] = enemy;
             Vector3 position = new Vector3(
+
                 Random.Range(-10.0f, 10.0f),
                 0,
                 Random.Range(-10.0f, 10.0f)

@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class MonsterStateManager : MonoBehaviour
+public class MonsterStateManager : ClickableObject
 {
     MonsterBasicState currentState;
     public MonsterIdleState idleState = new MonsterIdleState();
@@ -44,10 +44,14 @@ public class MonsterStateManager : MonoBehaviour
         bodyCollider = GetComponent<Collider>();
         nav = GetComponent<NavMeshAgent>();
         InitializeFromDB(excelDBNumber);
-
+        multipleRenderers = GetComponentsInChildren<SkinnedMeshRenderer>();
     }
-    void OnEnable()
+    
+
+    protected override void OnEnable()
     {
+        base.OnEnable();
+
         deadCount = 10;
         currentHp = maxHp;
         nav.speed = speed;

@@ -12,6 +12,8 @@ public class JWPlayerController : MonoBehaviour
     public GameObject[] skillVFXs;
     public MousePointer pointer;
     public PlayerEquipedSkills equipedSkills;
+    public EnemyUI enemyUI;
+
 
     #region States
     public StateMachine stateMachine;
@@ -115,6 +117,11 @@ public class JWPlayerController : MonoBehaviour
         if(clickedTarget != null)
         {
             targetDistance = Vector3.Distance(clickedTarget.transform.position, transform.position);
+            enemyUI.gameObject.SetActive(true);
+        }
+        else
+        {
+            enemyUI.gameObject.SetActive(false);
         }
         
         animator.SetFloat("ClickDistance", moveDistance);

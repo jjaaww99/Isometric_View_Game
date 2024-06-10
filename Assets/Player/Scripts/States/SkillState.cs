@@ -69,7 +69,7 @@ public class SkillState : PlayerState
 
                     if (player.targetsInAttackRange[i].TryGetComponent<MonsterStateManager>(out MonsterStateManager monster))
                     {
-                        monster.currentHp -= 20;
+                        monster.currentHp -= 1;
                     }
                 }
             }
@@ -96,7 +96,7 @@ public class SkillState : PlayerState
 
                     if (player.targetsInAttackRange[i].TryGetComponent<MonsterStateManager>(out MonsterStateManager monster))
                     {
-                        monster.currentHp -= 20;
+                        monster.currentHp -= 1;
                     }
                 }
             }

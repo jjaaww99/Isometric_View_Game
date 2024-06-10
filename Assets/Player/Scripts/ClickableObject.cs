@@ -6,18 +6,34 @@ using UnityEngine.EventSystems;
 
 public class ClickableObject : MonoBehaviour, IPointerClickHandler, IPointerExitHandler, IPointerEnterHandler
 {
-    public SkinnedMeshRenderer[] SkinnedMeshRenderers;
-    
-    void Start()
+    [SerializeField] protected Renderer[] multipleRenderers;
+
+    const int outLineLayer = 7;
+    protected int originalLayer;
+
+    protected virtual void OnEnable()
     {
-        SkinnedMeshRenderers = GetComponentsInChildren<SkinnedMeshRenderer>();
+        originalLayer = gameObject.layer;
     }
+
+    //protected virtual void SetRenderer(Renderer renderer)
+    //{
+
+    //}
+
+    //protected virtual void SetRenderer(Renderer[] renderers)
+    //{
+
+    //}
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        foreach(var ren in SkinnedMeshRenderers)
+        if(multipleRenderers != null)
         {
-            ren.gameObject.layer = 7;
+            foreach(var ren in multipleRenderers)
+            {
+                ren.gameObject.layer = outLineLayer;
+            }
         }
     }
 
@@ -28,9 +44,12 @@ public class ClickableObject : MonoBehaviour, IPointerClickHandler, IPointerExit
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        foreach (var ren in SkinnedMeshRenderers)
+        if (multipleRenderers != null)
         {
-            ren.gameObject.layer = 0;
+            foreach (var ren in multipleRenderers)
+            {
+                ren.gameObject.layer = originalLayer;
+            }
         }
     }
 

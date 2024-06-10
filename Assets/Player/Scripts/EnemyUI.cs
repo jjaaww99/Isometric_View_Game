@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class EnemyUI : MonoBehaviour
 {
-    TextMeshProUGUI enemyNameUI;
-    Slider slider;
+    [SerializeField] TextMeshProUGUI enemyNameUI;
+    [SerializeField] Slider slider;
     public JWPlayerController player;
 
     private void Awake()
@@ -17,7 +17,7 @@ public class EnemyUI : MonoBehaviour
     }
 
 #nullable enable
-    MonsterStateManager? monster;
+    [SerializeField] MonsterStateManager? monster;
 #nullable disable
 
     private void Update()
@@ -26,11 +26,12 @@ public class EnemyUI : MonoBehaviour
         if(player.clickedTarget != null)
         {
             monster = player.clickedTarget.GetComponent<MonsterStateManager>();
-        }
 
-        slider.value = monster.currentHp;
-        slider.maxValue = monster.maxHp;
+            slider.value = monster.currentHp;
+            slider.maxValue = monster.maxHp;
        
-        enemyNameUI.text = monster.name;
+            enemyNameUI.text = monster.name;
+
+        }
     }
 }

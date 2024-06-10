@@ -47,6 +47,18 @@ public class MousePointer : MonoBehaviour
 
             isPointerOnTarget = true;
         }
+        
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Item")))
+        {
+            Vector3 mouseWorldPos = hit.point;
+
+            transform.position = mouseWorldPos;
+
+            pointedObject = hit.transform.gameObject;
+
+            isPointerOnTarget = true;
+        }
+
     }
 
     private void OnTriggerStay(Collider other)
