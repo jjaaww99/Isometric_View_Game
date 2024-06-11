@@ -39,7 +39,7 @@ public class IdleState : PlayerState
         if (Input.GetMouseButtonDown(1))
         {
 
-            if(!player.isPointerOnEnemy && player.clickedTarget == null)
+            if(!player.isPointerOnObject)
             {
                 player.targetPosition = player.pointerPosition;
 
@@ -52,7 +52,7 @@ public class IdleState : PlayerState
 
             }
 
-            else if(player.isPointerOnEnemy)
+            else if(player.isPointerOnObject)
             {
                 if (player.targetDistance <= player.attackRange)
                 {

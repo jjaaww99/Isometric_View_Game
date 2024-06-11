@@ -37,7 +37,7 @@ public class BasicAttackState : PlayerState
             player.skillVFXs[0].SetActive(true);
         }
 
-        if ((Input.GetMouseButton(1) && !player.isPointerOnEnemy) || player.animTrigger)
+        if ((Input.GetMouseButton(1) && !player.isPointerOnObject) || player.animTrigger)
         {
             machine.ChangeState(player.idle);
         }
