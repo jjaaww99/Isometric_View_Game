@@ -76,16 +76,17 @@ public class MonsterStateManager : PointableObject
     {
         currentState.UpdateState(this);
 
-        //���Ϳ� Ÿ��(�÷��̾� �Ÿ� üũ)
-        if (target != null)
+        Debug.Log(currentState);
+        if (target != null && isDead == false)
         {
             nav.enabled = true;
             targetDistance = Vector3.Distance(transform.position, target.position);
             ani.SetFloat("targetDistance", targetDistance);
         }
 
-        if (currentHp <= 0)
+        if (currentHp <= 0 && isDead == false)
         {
+            Debug.Log("사망");
             ChangeState(deadState);
         }
         else if (targetDistance > 15 && isDead == false)
