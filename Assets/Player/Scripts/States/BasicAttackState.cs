@@ -69,6 +69,7 @@ public class BasicAttackState : PlayerState
                 if (player.targetsInAttackRange[i].TryGetComponent<MonsterStateManager>(out MonsterStateManager monster))
                 {
                     monster.currentHp -= 1;
+                    CameraShake.Instance.Shake(0.5f, 0.5f);
                 }
             }
 
