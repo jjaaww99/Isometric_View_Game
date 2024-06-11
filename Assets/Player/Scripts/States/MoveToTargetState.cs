@@ -32,7 +32,7 @@ public class MoveToTargetState : PlayerState
 
         if (Input.GetMouseButton(1))
         {
-            if(!player.isPointerOnEnemy)
+            if(!player.isPointerOnObject)
             {
                 machine.ChangeState(player.idle);
             }

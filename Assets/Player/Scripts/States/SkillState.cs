@@ -81,9 +81,10 @@ public class SkillState : PlayerState
         if (player.damageTrigger)
         {
             int targets = Physics.OverlapBoxNonAlloc(
-                player.jumpAttackPoint.position, 
-                player.jumpAttackSize, player.targetsInAttackRange,
-                Quaternion.identity, 
+                player.jumpAttackPoint.position,
+                player.jumpAttackSize / 2, // OverlapBox의 반사이즈를 전달
+                player.targetsInAttackRange,
+                player.jumpAttackPoint.rotation, // 점프 공격 포인트의 회전을 사용
                 LayerMask.GetMask("Enemy"));
 
             for (int i = 0; i < targets; i++)
@@ -102,4 +103,5 @@ public class SkillState : PlayerState
             }
         }
     }
+
 }

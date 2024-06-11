@@ -42,7 +42,7 @@ public class JWPlayerController : MonoBehaviour
     [SerializeField] public float evadeForce = 6f;
     #endregion
 
-    public bool isPointerOnEnemy => pointer.isPointerOnObject;
+    public bool isPointerOnObject => pointer.isPointerOnObject;
 
     public KeyCode[] skillKeyCodes = { KeyCode.Q, KeyCode.W, KeyCode.E, KeyCode.R, KeyCode.Mouse0, KeyCode.Mouse1 };
     public string[] skillNames;
@@ -84,8 +84,6 @@ public class JWPlayerController : MonoBehaviour
 
     private void Start()
     {
-        targetPosition = transform.position;
-
         skillNames = new string[equipedSkills.skillList.Length];
 
         for (int i = 0; i < equipedSkills.skillList.Length; i++)
@@ -93,6 +91,7 @@ public class JWPlayerController : MonoBehaviour
             skillNames[i] = equipedSkills.skillList[i].skillName;
         }
 
+        targetPosition = transform.position;
     }
 
     public float moveDistance;
@@ -157,7 +156,11 @@ public class JWPlayerController : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(whirlWindPoint.position, whirlWindRadius);
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireCube(transform.position, jumpAttackSize);
+
+        Matrix4x4 rotationMatrix = Matrix4x4.TRS(jumpAttackPoint.position, jumpAttackPoint.rotation, jumpAttackPoint.localScale);
+        Gizmos.matrix = rotationMatrix;
+
+        Gizmos.DrawWireCube(Vector3.zero, jumpAttackSize);
     }
 
     public bool damageTrigger = false;

@@ -19,13 +19,14 @@ public class Coin : PointableObject
         base.OnEnable();
 
         multipleRenderers = GetComponentsInChildren<Renderer>();
+
+        jWPlayerController = GameObject.FindAnyObjectByType<JWPlayerController>();
     }
     private void Update()
     {
     }
+
     public float duration = 1f;
-
-
 
     public IEnumerator GetCoin()
     {
@@ -60,7 +61,6 @@ public class Coin : PointableObject
             yield return null;
         }
 
-        // 마지막 위치 설정 (정확한 끝점)
         transform.position = endPosition;
     }
 

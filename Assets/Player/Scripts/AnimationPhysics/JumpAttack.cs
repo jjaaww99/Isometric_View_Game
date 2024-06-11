@@ -18,17 +18,17 @@ public class JumpAttack : StateMachineBehaviour
             player.stateMachine.ChangeState(player.idle);
         }
 
-        //if (player.effectTrigger)
-        //{
-        //    visualEffect = player.skillVFXs[2].GetComponent<VisualEffect>();
-        //    visualEffect.gameObject.SetActive(true);
-        //    visualEffect.Play();
-        //}
+        if (player.effectTrigger)
+        {
+            visualEffect = player.skillVFXs[2].GetComponent<VisualEffect>();
+            visualEffect.gameObject.SetActive(true);
+            visualEffect.Play();
+        }
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-            //visualEffect.gameObject.SetActive(false);
+        visualEffect.gameObject.SetActive(false);
     }
 }
 
