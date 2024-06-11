@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager01 : MonoBehaviour
 {
-    public static GameManager instance;
+    public static GameManager01 instance;
     JWPlayerController player;
     MonsterStateManager monster;
 
