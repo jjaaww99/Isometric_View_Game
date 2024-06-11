@@ -14,7 +14,7 @@ public class MonsterDeadState : MonsterBasicState
         monster.bodyCollider.enabled = false;
         monster.rigid.isKinematic = true;
         monster.nav.enabled = false;
-        ItemDrops.instance.CoinSpawn(monster.transform);
+        GameManager.instance.CoinSpawn(monster.transform.position);
     }
 
     public override void UpdateState(MonsterStateManager monster)
