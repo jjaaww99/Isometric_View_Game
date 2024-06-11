@@ -5439,7 +5439,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &926349569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8601,12 +8601,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0ba07f0156f14a369b7d1acf97b7890f, type: 2}
+      objectReference: {fileID: 2100000, guid: f6e879f6bf1fb184a9063c7e7ab611f6, type: 2}
     - target: {fileID: 5567202043550775607, guid: 698135d0ab7279c44ab6b54a79239d22,
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 4114545145519611767, guid: 1923b44c1fa53fc4681b5ba9cf651ea0,
+      objectReference: {fileID: -55460119041599541, guid: 5dea63fcb1b16f64e82243007a59c6d9,
         type: 3}
     - target: {fileID: 6124748885323083385, guid: 698135d0ab7279c44ab6b54a79239d22,
         type: 3}
@@ -11329,9 +11329,6 @@ MonoBehaviour:
   enemyNameUI: {fileID: 0}
   slider: {fileID: 0}
   player: {fileID: 1330381179}
-  UIs:
-  - {fileID: 803122611941409560}
-  - {fileID: 7644805793267481769}
   monster: {fileID: 0}
 --- !u!1001 &1731153636
 PrefabInstance:
