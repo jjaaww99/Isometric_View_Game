@@ -9,7 +9,7 @@ public class EnemyUI : MonoBehaviour
     [SerializeField] TextMeshProUGUI enemyNameUI;
     [SerializeField] Slider slider;
     public JWPlayerController player;
-
+    public GameObject[] UIs;
     private void Awake()
     {
         enemyNameUI = GetComponentInChildren<TextMeshProUGUI>();
@@ -22,16 +22,28 @@ public class EnemyUI : MonoBehaviour
 
     private void Update()
     {
-        
-        if(player.clickedTarget != null && player.clickedTarget.layer == 6 )
+
+        if (player.clickedTarget != null &&  player.clickedTarget.TryGetComponent<MonsterStateManager>(out MonsterStateManager monster))
         {
+            foreach (var UI in UIs)
+            {
+                UI.SetActive(true);
+            }
+
             monster = player.clickedTarget.GetComponent<MonsterStateManager>();
 
             slider.value = monster.currentHp;
             slider.maxValue = monster.maxHp;
        
             enemyNameUI.text = monster.name;
+        }
 
+        else
+        {
+            foreach(var UI in UIs)
+            {
+                UI.SetActive(false);
+            }
         }
     }
 }

@@ -20,7 +20,7 @@ public class Coin : PointableObject
 
         multipleRenderers = GetComponentsInChildren<Renderer>();
 
-        jWPlayerController = GameObject.FindAnyObjectByType<JWPlayerController>();
+        jWPlayerController = FindAnyObjectByType<JWPlayerController>();
     }
     private void Update()
     {

@@ -12,8 +12,6 @@ public class JWPlayerController : MonoBehaviour
     public GameObject[] skillVFXs;
     public MousePointer pointer;
     public PlayerEquipedSkills equipedSkills;
-    public EnemyUI enemyUI;
-
 
     #region States
     public StateMachine stateMachine;
@@ -101,28 +99,21 @@ public class JWPlayerController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1))
         {
-
             if (!pointer.isPointerOnObject)
             {
                 targetPosition = pointer.pointedPosition;
             }
         }
-        clickedTarget = pointer.pointedObject;
 
+        clickedTarget = pointer.pointedObject;
 
         pointerPosition = pointer.transform.position;
 
         moveDistance = Vector3.Distance(targetPosition, transform.position);
 
-        if (clickedTarget != null)
+        if(clickedTarget != null)
         {
             targetDistance = Vector3.Distance(clickedTarget.transform.position, transform.position);
-            enemyUI.gameObject.SetActive(true);
-        }
-
-        else
-        {
-            enemyUI.gameObject.SetActive(false);
         }
 
         animator.SetFloat("ClickDistance", moveDistance);
@@ -149,17 +140,13 @@ public class JWPlayerController : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, jumpAttackRadius);
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(basicAttackPoint.position, basicAttackRadius);
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(whirlWindPoint.position, whirlWindRadius);
         Gizmos.color = Color.blue;
-
         Matrix4x4 rotationMatrix = Matrix4x4.TRS(jumpAttackPoint.position, jumpAttackPoint.rotation, jumpAttackPoint.localScale);
         Gizmos.matrix = rotationMatrix;
-
         Gizmos.DrawWireCube(Vector3.zero, jumpAttackSize);
     }
 

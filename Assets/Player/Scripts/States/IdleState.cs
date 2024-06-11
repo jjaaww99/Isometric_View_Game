@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class IdleState : PlayerState
 {
@@ -46,13 +47,12 @@ public class IdleState : PlayerState
                 player.nav.SetDestination(player.targetPosition);
             }
 
-            else if(player.clickedTarget.TryGetComponent<Coin>(out Coin coin) && !isCoroutineStarted)
+            else if(player.clickedTarget.TryGetComponent<Coin>(out Coin coin))
             {
                 coin.StartCoroutine(coin.GetCoin());
-
             }
 
-            else if(player.isPointerOnObject)
+            else if(player.clickedTarget.TryGetComponent<MonsterStateManager>(out MonsterStateManager monster))
             {
                 if (player.targetDistance <= player.attackRange)
                 {
