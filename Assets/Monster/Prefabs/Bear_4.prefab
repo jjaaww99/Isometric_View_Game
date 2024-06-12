@@ -1463,7 +1463,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf55d1caa842a64cb3cb8297ee4eda8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multipleRenderers: []
   ragdoll: {fileID: 1307587925404850056}
+  monsterType: 1
   excelDBNumber: 3
   monsterName: 
   maxHp: 0

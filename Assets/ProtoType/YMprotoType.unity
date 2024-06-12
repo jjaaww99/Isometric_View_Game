@@ -277,6 +277,7 @@ MonoBehaviour:
   - {fileID: 3646996922929727149, guid: 7744826629fdd2a4bb5966ad3095014e, type: 3}
   maxPoolSize: 40
   maxActive: 120
+  prefablength: 0
 --- !u!4 &38771192
 Transform:
   m_ObjectHideFlags: 0
@@ -5583,6 +5584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pool: {fileID: 38771191}
+  coin: {fileID: 0}
 --- !u!4 &1061943636
 Transform:
   m_ObjectHideFlags: 0
@@ -8266,7 +8268,7 @@ MonoBehaviour:
   pointedPosition: {x: 0, y: 0, z: 0}
   pointedObject: {fileID: 0}
   clickedObject: {fileID: 0}
-  isPointerOnTarget: 0
+  isPointerOnObject: 0
 --- !u!4 &1516162743
 Transform:
   m_ObjectHideFlags: 0
@@ -9601,6 +9603,11 @@ PrefabInstance:
     - target: {fileID: 5154749735498914090, guid: 7744826629fdd2a4bb5966ad3095014e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7646814998803635694, guid: 7744826629fdd2a4bb5966ad3095014e,
+        type: 3}
+      propertyPath: monsterType
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class MonsterAttackState : MonsterBasicState
 {
-    float attacktime;  //공격하는 시간
     
     public override void EnterState(MonsterStateManager monster)
     {
