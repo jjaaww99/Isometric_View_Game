@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class Coin : PointableObject
 {
-    public JWPlayerController jWPlayerController;
+    public JWPlayerController player;
 
     Vector3 startPosition;
     Vector3 middlePosition;
@@ -20,7 +20,7 @@ public class Coin : PointableObject
 
         multipleRenderers = GetComponentsInChildren<Renderer>();
 
-        jWPlayerController = FindAnyObjectByType<JWPlayerController>();
+        player = FindAnyObjectByType<JWPlayerController>();
     }
     private void Update()
     {
@@ -36,11 +36,11 @@ public class Coin : PointableObject
         {
             startPosition = GetComponentInParent<Transform>().position;
 
-            Vector3 point = (transform.position + jWPlayerController.transform.position) / 2;
+            Vector3 point = (transform.position + player.transform.position) / 2;
 
             middlePosition = point + new Vector3(0, 2, 0);
 
-            endPosition = jWPlayerController.transform.position;
+            endPosition = player.transform.position;
 
             elapsedTime += Time.deltaTime;
 

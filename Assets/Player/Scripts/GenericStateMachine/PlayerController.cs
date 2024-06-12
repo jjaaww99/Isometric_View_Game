@@ -9,11 +9,12 @@ public class PlayerController : StateMachineAvatar
     public MousePointer pointer;
 
     [SerializeField] private Vector3 pointerPosition;
+    [SerializeField] private Vector3 clickedPosition;
     [SerializeField] private float distance;
     [SerializeField] private float evadeForce;
 
 #nullable enable
-    public GameObject? clickedTarget;
+    [SerializeField] private GameObject? clickedTarget;
 #nullable disable
 
     private void Awake()
@@ -48,9 +49,9 @@ public class PlayerController : StateMachineAvatar
     void Controller()
     {
         pointerPosition = pointer.pointerPosition;
+        clickedTarget = pointer.pointedObject;
 
-
-        if(animationTrigger)
+        if (animationTrigger)
         {
             stateMachine.ChangeState(stateMachine.idle);
             animationTrigger = !animationTrigger;
@@ -58,14 +59,12 @@ public class PlayerController : StateMachineAvatar
 
         if (Input.GetMouseButtonDown(1))
         {
-            Vector3 clickPosition = pointerPosition;
-            GameObject clickedTarget = pointer.pointedObject;
-            distance = Vector3.Distance(clickPosition, transform.position);
-            animator.SetFloat("ClickDistance", distance);
+            clickedPosition = pointerPosition;
 
             if(clickedTarget == null)
             {
-                stateMachine.idle.SetDestination(clickPosition);
+                stateMachine.idle.SetDestination(clickedPosition);
+                stateMachine.ChangeState(stateMachine.idle);
             }
         }
 
@@ -105,6 +104,8 @@ public class PlayerController : StateMachineAvatar
 
     void AnimatorParameter()
     {
+        distance = navMeshAgent.remainingDistance;
+        animator.SetFloat("ClickDistance", distance);
     }
 
     [SerializeField] private bool animationTrigger = false;
