@@ -649,7 +649,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3691953703756951921}
-  - component: {fileID: 6008679486800899535}
   - component: {fileID: 4269379705740888407}
   m_Layer: 0
   m_Name: Zombiegirl W Kurniawan (ragdoll) (2)
@@ -677,20 +676,6 @@ Transform:
   - {fileID: 513445466238162374}
   m_Father: {fileID: 5154749735498914090}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6008679486800899535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2529865484786123528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68c893eba2da4524a82e63115236f9ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rigids: []
-  colliders: []
 --- !u!95 &4269379705740888407
 Animator:
   serializedVersion: 5
@@ -1381,7 +1366,8 @@ GameObject:
   - component: {fileID: 2115358908605751440}
   - component: {fileID: 3652396445958643329}
   - component: {fileID: 2540689012715507754}
-  - component: {fileID: 7646814998803635694}
+  - component: {fileID: 3074231011607644738}
+  - component: {fileID: 4127908566388420077}
   m_Layer: 6
   m_Name: ZOmbie
   m_TagString: Enemy
@@ -1437,7 +1423,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3646996922929727149}
-  m_Enabled: 0
+  m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
@@ -1479,7 +1465,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 94
   m_CollisionDetection: 0
---- !u!114 &7646814998803635694
+--- !u!95 &3074231011607644738
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3646996922929727149}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 64aab41526952554abc104855e9c952b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4127908566388420077
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1488,29 +1495,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3646996922929727149}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddf55d1caa842a64cb3cb8297ee4eda8, type: 3}
+  m_Script: {fileID: 11500000, guid: db4dd138380a55a4ab654c720a65a9ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  multipleRenderers: []
-  ragdoll: {fileID: 6008679486800899535}
-  excelDBNumber: 1
-  monsterName: 
-  maxHp: 0
-  currentHp: 0
-  speed: 0
-  atk: 0
-  target: {fileID: 0}
-  deadCount: 10
-  isDead: 0
-  hit: 0
-  targetDistance: 0
-  attackArea: {fileID: 1638521977977290431}
-  monsterDB: {fileID: 11400000, guid: 9b4e6a6ba7ae5cc41bf87c247119b0d3, type: 2}
-  nav: {fileID: 0}
-  rigid: {fileID: 2540689012715507754}
-  bodyCollider: {fileID: 0}
-  ani: {fileID: 4269379705740888407}
-  detectArea: {fileID: 2302009500915138886}
 --- !u!1 &3656560170961859532
 GameObject:
   m_ObjectHideFlags: 0

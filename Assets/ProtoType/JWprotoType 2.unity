@@ -4429,7 +4429,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &725508412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11339,6 +11339,7 @@ MonoBehaviour:
   enemyNameUI: {fileID: 0}
   slider: {fileID: 0}
   player: {fileID: 1330381179}
+  UIs: []
   monster: {fileID: 0}
 --- !u!1001 &1731153636
 PrefabInstance:
@@ -13001,9 +13002,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92f14abe59dc6dc418ced917ccb2f26f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPrefab: {fileID: 2834288042120143155, guid: 75ddcfef44c061c4a935f811149a62ae,
-    type: 3}
   pool: {fileID: 0}
+  coin: {fileID: 0}
 --- !u!4 &1942133828
 Transform:
   m_ObjectHideFlags: 0
