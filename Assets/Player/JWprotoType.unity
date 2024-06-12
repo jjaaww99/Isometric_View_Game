@@ -11464,10 +11464,10 @@ MonoBehaviour:
   rigidBody: {fileID: 0}
   pointer: {fileID: 1516162740}
   pointerPosition: {x: 0, y: 0, z: 0}
-  clickPosition: {x: 0, y: 0, z: 0}
   distance: 0
-  evadeForce: 6
+  evadeForce: 3
   clickedTarget: {fileID: 0}
+  clickedPosition: {x: 0, y: 0, z: 0}
   animationTrigger: 0
 --- !u!4 &8535680457662438406
 Transform:

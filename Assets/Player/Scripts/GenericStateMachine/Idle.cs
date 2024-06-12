@@ -19,16 +19,17 @@ public class Idle : AvatorState
     public override void Enter()
     {
         base.Enter();
+        avatar.navMeshAgent.SetDestination(targetPosition);
     }
 
     public override void Exit()
     {
         base.Exit();
+        avatar.navMeshAgent.ResetPath();
     }
 
     public override void Update()
     {
         base.Update();
-        avatar.navMeshAgent.SetDestination(targetPosition);
     }
 }
