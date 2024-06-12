@@ -17,7 +17,6 @@ public class EvadeState : PlayerState
         targetDir = player.pointerPosition - player.transform.forward;
 
         player.transform.LookAt(targetDir);
-
     }
 
     public override void Exit()
@@ -38,7 +37,6 @@ public class EvadeState : PlayerState
     public override void FixedUpdate()
     {
         base.FixedUpdate();
-        player.playerRigidbody.AddForce(targetPos.normalized * player.evadeForce, ForceMode.Impulse);
-        
+        player.playerRigidbody.AddForce(targetPos.normalized * player.evadeForce, ForceMode.Impulse);   
     }
 }

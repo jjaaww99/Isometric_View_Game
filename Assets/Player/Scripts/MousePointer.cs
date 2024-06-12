@@ -6,7 +6,7 @@ public class MousePointer : MonoBehaviour
 {
     Camera mainCam;
 
-    public Vector3 pointedPosition;
+    public Vector3 pointerPosition;
 
 #nullable enable
     public GameObject? pointedObject;
@@ -26,16 +26,14 @@ public class MousePointer : MonoBehaviour
 
         RaycastHit hit;
 
-        // Combine layer masks for Ground, Enemy, and Item
         int combinedLayerMask = LayerMask.GetMask("Ground", "Enemy", "Item");
 
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, combinedLayerMask))
         {
             Vector3 mouseWorldPos = hit.point;
             transform.position = mouseWorldPos;
-            pointedPosition = transform.position;
+            pointerPosition = transform.position;
 
-            // Determine what type of object was hit
             int groundLayer = LayerMask.NameToLayer("Ground");
             int enemyLayer = LayerMask.NameToLayer("Enemy");
             int itemLayer = LayerMask.NameToLayer("Item");
@@ -43,6 +41,7 @@ public class MousePointer : MonoBehaviour
             if (hit.transform.gameObject.layer == groundLayer)
             {
                 isPointerOnObject = false;
+
                 if (Input.GetMouseButton(1))
                 {
                     pointedObject = null;

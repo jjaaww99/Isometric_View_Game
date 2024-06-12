@@ -101,7 +101,7 @@ public class JWPlayerController : MonoBehaviour
         {
             if (!pointer.isPointerOnObject)
             {
-                targetPosition = pointer.pointedPosition;
+                targetPosition = pointer.pointerPosition;
             }
         }
 
