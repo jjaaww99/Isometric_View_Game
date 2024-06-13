@@ -1,3 +1,4 @@
+using NUnit.Framework.Constraints;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -19,6 +20,7 @@ public class MonsterStateManager : PointableObject
     public Rigidbody rigid;
     public Collider bodyCollider;
     public Animator ani;
+    public BoxCollider attackArea;
     public BoxCollider detectArea;
     public RagDoll ragdoll;
 
@@ -62,10 +64,11 @@ public class MonsterStateManager : PointableObject
                 attackState = new ZombieAttackState();
                 break;
             case MonsterType.Bear:
-                attackState = new BearAttackState();
+                chaseState = new BearChaseState();
                 break;
             default:
                 attackState = new MonsterAttackState();
+                chaseState = new MonsterChaseState();
                 break;
         }
     }
@@ -93,7 +96,7 @@ public class MonsterStateManager : PointableObject
     void Update()
     {
         currentState.UpdateState(this);
-
+        //Debug.Log(currentState);
         if (target != null && !isDead)
         {
             nav.enabled = true;
@@ -104,22 +107,32 @@ public class MonsterStateManager : PointableObject
         // 상태 변환 조건
         if (currentHp <= 0 && !isDead)
         {
-            ChangeState(deadState);
+            TryChangeState(deadState);
         }
         else if (distanceToTarget > 15 && !isDead)
         {
-            ChangeState(idleState);
+            TryChangeState(idleState);
         }
         else if (distanceToTarget > 2 && distanceToTarget <= 15 && !isDead)
         {
-            ChangeState(chaseState);
+            TryChangeState(chaseState);
         }
         else if (distanceToTarget <= 2 && !isDead)
         {
-            ChangeState(attackState);
+            TryChangeState(attackState);
         }
+
+
+
     }
 
+    private void TryChangeState(MonsterBasicState newState) //동일상태에서 재귀하는걸 방지
+    {
+        if (currentState != newState)
+        {
+            ChangeState(newState);
+        }
+    }
 
     public void ChangeState(MonsterBasicState state)
     {
