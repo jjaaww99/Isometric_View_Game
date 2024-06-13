@@ -8745,7 +8745,7 @@ Animator:
   m_GameObject: {fileID: 8503528040513358439}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: b9b2f45a7c19f35478957dc595f2b2cb, type: 3}
-  m_Controller: {fileID: 9100000, guid: d6e66c3a47e92f14f8338de35bedaf41, type: 2}
+  m_Controller: {fileID: 9100000, guid: fbb3dfc79b557964e8096b00ac4480bb, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -11626,8 +11626,7 @@ MonoBehaviour:
   rigidBody: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   player: {fileID: 8503528040513358440}
-  isPlayerDetected: 0
-  isPlayerInAttackRange: 0
+  remainingDistance: 0
   targetDistance: 0
 --- !u!4 &8887043706127065068
 Transform:

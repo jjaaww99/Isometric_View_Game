@@ -262,6 +262,7 @@ MonoBehaviour:
   - {fileID: 5359943858135523952}
   - {fileID: 6553911399907628646}
   pointer: {fileID: 0}
+  equipedSkills: {fileID: 0}
   nav: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   pointerPosition: {x: 0, y: 0, z: 0}
@@ -788,6 +789,12 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.24840713
       objectReference: {fileID: 0}
+    - target: {fileID: -3080497277139479580, guid: 9b7f3323a3c2eac45b69d9542b486355,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 3632185829967231944, guid: f6fd29152b78aee4da998d42c625d6a7,
+        type: 3}
     - target: {fileID: -2415278057915362079, guid: 9b7f3323a3c2eac45b69d9542b486355,
         type: 3}
       propertyPath: m_LocalPosition.x
