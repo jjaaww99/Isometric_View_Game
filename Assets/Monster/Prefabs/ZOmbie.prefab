@@ -1491,25 +1491,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf55d1caa842a64cb3cb8297ee4eda8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multipleRenderers: []
+  nav: {fileID: 0}
+  rigid: {fileID: 2540689012715507754}
+  bodyCollider: {fileID: 2115358908605751440}
+  ani: {fileID: 4269379705740888407}
+  attackArea: {fileID: 1638521977977290431}
+  detectArea: {fileID: 2302009500915138886}
   ragdoll: {fileID: 6008679486800899535}
-  excelDBNumber: 1
-  monsterName: 
+  monsterDB: {fileID: 11400000, guid: 9b4e6a6ba7ae5cc41bf87c247119b0d3, type: 2}
+  monsterType: 0
   maxHp: 0
   currentHp: 0
-  speed: 0
-  atk: 0
   target: {fileID: 0}
   deadCount: 10
   isDead: 0
-  hit: 0
-  targetDistance: 0
-  attackArea: {fileID: 1638521977977290431}
-  monsterDB: {fileID: 11400000, guid: 9b4e6a6ba7ae5cc41bf87c247119b0d3, type: 2}
-  nav: {fileID: 0}
-  rigid: {fileID: 2540689012715507754}
-  bodyCollider: {fileID: 0}
-  ani: {fileID: 4269379705740888407}
-  detectArea: {fileID: 2302009500915138886}
+  isHit: 0
+  distanceToTarget: 0
 --- !u!1 &3656560170961859532
 GameObject:
   m_ObjectHideFlags: 0

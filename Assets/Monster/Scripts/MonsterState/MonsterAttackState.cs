@@ -12,7 +12,7 @@ public class MonsterAttackState : MonsterBasicState
 
     public override void UpdateState(MonsterStateManager monster)
     {
-
+         
     }
 
     public override void ExitState(MonsterStateManager monster)

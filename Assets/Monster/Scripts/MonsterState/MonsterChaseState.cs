@@ -10,7 +10,6 @@ public class MonsterChaseState : MonsterBasicState
         monster.ani.SetBool("Chase", true);
     }
 
-
     public override void UpdateState(MonsterStateManager monster)
     {
         monster.nav.SetDestination(monster.target.position);
