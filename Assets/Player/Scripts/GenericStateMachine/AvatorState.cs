@@ -7,10 +7,14 @@ public abstract class AvatorState : IState
     protected Animator animator;
     protected string animParameter;
 
-    public AvatorState(StateMachineAvatar _stateMachineAvatar, string _animParameter)
+    protected Vector3 targetDirection;
+    protected Vector3 targetPosition;
+
+
+    public AvatorState(StateMachineAvatar _avater, string _animParameter)
     {
-        avatar = _stateMachineAvatar;
-        animator = _stateMachineAvatar.animator;
+        avatar = _avater;
+        animator = _avater.animator;
         animParameter = _animParameter;
     }
 

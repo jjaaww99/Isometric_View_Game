@@ -12,5 +12,4 @@ public abstract class MonsterBasicState
 
     public abstract void ExitState(MonsterStateManager monster);
 
-
 }
