@@ -16,7 +16,7 @@ public class MonsterStateManager : PointableObject
     public RagDoll ragdoll;
 
     [SerializeField] private int excelDBNumber;     //�������� �ҷ��� ������ ��ȣ
-    [SerializeField] private string monsterName;    // ��ü �̸�
+    [SerializeField] public string monsterName;    // ��ü �̸�
     public int maxHp;             // �ִ� ü��
     public int currentHp;         // ���� ü��
     [SerializeField] private float speed;           // �̵��ӵ�

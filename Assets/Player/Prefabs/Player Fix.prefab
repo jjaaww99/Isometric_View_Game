@@ -1299,6 +1299,7 @@ MonoBehaviour:
   - {fileID: 393152162037116587}
   - {fileID: 6124748885323083385}
   pointer: {fileID: 0}
+  equipedSkills: {fileID: 0}
   nav: {fileID: 2889418989150702801}
   targetPosition: {x: -12.848816, y: -0.71715546, z: 9.326561}
   pointerPosition: {x: 54.29663, y: -0.27723694, z: 108.5855}
@@ -1906,10 +1907,10 @@ SkinnedMeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   serializedVersion: 2
-  m_Quality: 0
+  m_Quality: 4
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 2627802267214752003, guid: 9b7f3323a3c2eac45b69d9542b486355, type: 3}
+  m_Mesh: {fileID: 2627802267214752003, guid: 4991ad994fbb8c74190619ec8d379fd1, type: 3}
   m_Bones:
   - {fileID: 8346692099386102332}
   - {fileID: 3329323074826662010}

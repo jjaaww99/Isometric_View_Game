@@ -35,7 +35,7 @@ public class EnemyUI : MonoBehaviour
             slider.value = monster.currentHp;
             slider.maxValue = monster.maxHp;
        
-            enemyNameUI.text = monster.name;
+            enemyNameUI.text = monster.monsterName;
         }
 
         else
