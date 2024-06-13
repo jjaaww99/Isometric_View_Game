@@ -8,8 +8,6 @@ public class Evade : AvatorState
     {
     }
 
-    private Vector3 targetDirection;
-    private Vector3 targetPosition;
     private float evadeForce;
 
     public void SetDirection(Vector3 _targetDirection, Vector3 _targetPosition, float _evadeForce)

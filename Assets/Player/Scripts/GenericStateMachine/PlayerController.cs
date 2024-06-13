@@ -27,6 +27,7 @@ public class PlayerController : StateMachineAvatar
         navMeshAgent = GetComponent<NavMeshAgent>();
         rigidBody = GetComponent<Rigidbody>();
         stateMachine = new GenericStateMachine(this);
+        stateMachine.PlayerPackage();
     }
 
 
@@ -49,23 +50,17 @@ public class PlayerController : StateMachineAvatar
     void Controller()
     {
         pointerPosition = pointer.pointerPosition;
-        clickedTarget = pointer.pointedObject;
-
-        if (animationTrigger)
-        {
-            stateMachine.ChangeState(stateMachine.idle);
-            animationTrigger = !animationTrigger;
-        }
+        stateMachine.idle.SetDestination(clickedPosition);
 
         if (Input.GetMouseButtonDown(1))
         {
+            clickedTarget = pointer.pointedObject;
             clickedPosition = pointerPosition;
-
-            if(clickedTarget == null)
-            {
-                stateMachine.idle.SetDestination(clickedPosition);
-                stateMachine.ChangeState(stateMachine.idle);
-            }
+        }
+        else 
+        {
+            clickedTarget = null;
+            clickedPosition = Vector3.zero; 
         }
 
         if(Input.GetButtonDown("Evade"))
@@ -75,6 +70,9 @@ public class PlayerController : StateMachineAvatar
             stateMachine.evade.SetDirection(targetDirection, targetPosition, evadeForce);
             stateMachine.ChangeState(stateMachine.evade);
         }
+
+
+
 
         if (Input.GetButtonDown("Skill1"))
         {
@@ -96,9 +94,10 @@ public class PlayerController : StateMachineAvatar
             Debug.Log("RInput");
         }
 
-        if (Input.GetButtonDown("Evade"))
+        if (animationTrigger)
         {
-            Debug.Log("Evade");
+            stateMachine.ChangeState(stateMachine.idle);
+            animationTrigger = !animationTrigger;
         }
     }
 

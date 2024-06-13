@@ -5,9 +5,7 @@ using UnityEngine.AI;
 
 public class Idle : AvatorState
 {
-    private Vector3 targetPosition;
-
-    public Idle(StateMachineAvatar _user, string _animParameter) : base(_user, _animParameter)
+    public Idle(StateMachineAvatar _avatar, string _animParameter) : base(_avatar, _animParameter)
     {
     }
 
@@ -19,17 +17,20 @@ public class Idle : AvatorState
     public override void Enter()
     {
         base.Enter();
-        avatar.navMeshAgent.SetDestination(targetPosition);
     }
 
     public override void Exit()
     {
         base.Exit();
-        avatar.navMeshAgent.ResetPath();
     }
 
     public override void Update()
     {
         base.Update();
+        
+        if(targetPosition != Vector3.zero)
+        {
+            avatar.navMeshAgent.SetDestination(targetPosition);
+        }
     }
 }
