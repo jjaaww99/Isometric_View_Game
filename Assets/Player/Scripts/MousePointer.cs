@@ -1,3 +1,4 @@
+using DamageNumbersPro;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ public class MousePointer : MonoBehaviour
     Camera mainCam;
 
     public Vector3 pointerPosition;
+    public DamageNumber damage;
 
 #nullable enable
     public GameObject? pointedObject;
@@ -27,6 +29,11 @@ public class MousePointer : MonoBehaviour
         RaycastHit hit;
 
         int combinedLayerMask = LayerMask.GetMask("Ground", "Enemy", "Item");
+
+        if(Input.GetMouseButtonDown(0))
+        {
+            DamageNumber dam = damage.Spawn(transform.position, 1f);
+        }
 
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, combinedLayerMask))
         {

@@ -15,9 +15,6 @@ public enum MonsterType
 
 public class MonsterStateManager : PointableObject
 {
-    public Canvas canvas;
-    public GameObject hpUI;
-
     [Header("Components")]
     public NavMeshAgent nav;
     public Rigidbody rigid;

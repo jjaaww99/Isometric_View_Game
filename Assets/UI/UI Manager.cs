@@ -40,8 +40,6 @@ public class UIManager : MonoBehaviour
         DisplayEnemyUI();
         DisplayCoinUI();
 
-        Debug.Log(hpSlider.value);
-        Debug.Log(hpSlider.maxValue);
     }
 
     void UpdateSlider()

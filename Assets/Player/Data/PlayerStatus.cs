@@ -40,8 +40,12 @@ public class PlayerStatus : MonoBehaviour
         currentExp = 0;
     }
 
-    private void Start()
+    private void Update()
     {
+        if (currentExp <= maxExp)
+        {
+            LevelUP();
+        }
     }
 
     public void LevelUP()
@@ -55,5 +59,11 @@ public class PlayerStatus : MonoBehaviour
         currentRage = maxRage;
         maxExp = playerStatus[level - 1].maxExp;
         currentExp = 0;
+    }
+
+    public int Damage(int Multiplier)
+    {
+        int RandomDivider = Random.Range(90, 110);
+        return str * Multiplier / RandomDivider;
     }
 }

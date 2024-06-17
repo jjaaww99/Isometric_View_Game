@@ -1,3 +1,4 @@
+using DamageNumbersPro;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -8,10 +9,13 @@ public class JWPlayerController : MonoBehaviour
     public Animator animator;
     public Rigidbody playerRigidbody;
     public Collider[] targetsInAttackRange;
+    public Collider[] targetsInDetectRange;
     private const int maxTargetNum = 20;
     public GameObject[] skillVFXs;
     public MousePointer pointer;
-    public PlayerStatus equipedSkills;
+    public PlayerStatus playerStat;
+
+    public DamageNumber damageNumber;
 
     #region States
     public StateMachine stateMachine;
@@ -42,10 +46,10 @@ public class JWPlayerController : MonoBehaviour
 
     public bool isPointerOnObject => pointer.isPointerOnObject;
 
-    public KeyCode[] skillKeyCodes = { KeyCode.Q, KeyCode.W};
+    public KeyCode[] skillKeyCodes = { KeyCode.Q, KeyCode.W };
     public string[] skillNames;
     public Transform[] skillBases;
-    public float[] skillRangeRadiuses = { 5f, 2f};
+    public float[] skillRangeRadiuses = { 5f, 2f };
 
     public Dictionary<KeyCode, string> skillDictionary;
     public void Awake()
@@ -67,7 +71,7 @@ public class JWPlayerController : MonoBehaviour
         nav = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         playerRigidbody = GetComponent<Rigidbody>();
-        equipedSkills = GetComponent<PlayerStatus>();
+        playerStat = GetComponent<PlayerStatus>();
 
         foreach (var effect in skillVFXs)
         {
@@ -75,17 +79,18 @@ public class JWPlayerController : MonoBehaviour
         }
 
         targetsInAttackRange = new Collider[maxTargetNum];
+        targetsInDetectRange = new Collider[maxTargetNum];
 
         stateMachine.Init(idle);
     }
 
     private void Start()
     {
-        skillNames = new string[equipedSkills.skillList.Length];
+        skillNames = new string[playerStat.skillList.Length];
 
-        for (int i = 0; i < equipedSkills.skillList.Length; i++)
+        for (int i = 0; i < playerStat.skillList.Length; i++)
         {
-            skillNames[i] = equipedSkills.skillList[i].skillName;
+            skillNames[i] = playerStat.skillList[i].skillName;
         }
 
         targetPosition = transform.position;
@@ -118,6 +123,8 @@ public class JWPlayerController : MonoBehaviour
         animator.SetFloat("ClickDistance", moveDistance);
         animator.SetFloat("TargetDistance", targetDistance);
 
+        int targets = Physics.OverlapSphereNonAlloc(transform.position, 5f, targetsInDetectRange, LayerMask.GetMask("Enemy"));
+        
         stateMachine.currentState.Update();
     }
 
@@ -129,6 +136,7 @@ public class JWPlayerController : MonoBehaviour
     public Transform basicAttackPoint;
     public Transform whirlWindPoint;
     public Transform jumpAttackPoint;
+    public const float detectRadius = 5f;
     public float basicAttackRadius;
     public float jumpAttackRadius;
     public float whirlWindRadius;
@@ -137,6 +145,8 @@ public class JWPlayerController : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, detectRadius);
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(basicAttackPoint.position, basicAttackRadius);
         Gizmos.color = Color.yellow;

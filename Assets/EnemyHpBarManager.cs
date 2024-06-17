@@ -1,3 +1,4 @@
+using DamageNumbersPro;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,15 +8,18 @@ public class EnemyHpBarManager : MonoBehaviour
 {
     public JWPlayerController player;
     public MonsterStateManager[] monsters;
+    public DamageNumber damage;
     public Slider[] monsterHpSliders;
     public const int hpBarCount = 20;
 
     private void Awake()
     {
+        monsters = new MonsterStateManager[hpBarCount];
+        monsterHpSliders = new Slider[hpBarCount];
+
         monsterHpSliders = GetComponentsInChildren<Slider>();
 
-        monsters = new MonsterStateManager[hpBarCount];
-        
+
         foreach (var slider in monsterHpSliders)
         {
             slider.gameObject.SetActive(false);
@@ -24,22 +28,57 @@ public class EnemyHpBarManager : MonoBehaviour
 
     private void Update()
     {
-        for (int i = 0; i < player.targetsInAttackRange.Length; i++)
+        for (int i = 0; i < monsters.Length; i++)
         {
-            player.targetsInAttackRange[i].TryGetComponent<MonsterStateManager>(out MonsterStateManager monster);
+            if (i >= hpBarCount) break;
 
-            monsters[i] = monster;
-
-            if (monsters[i] != null)
+            if (player.targetsInDetectRange[i] != null)
             {
-                monsterHpSliders[i].gameObject.SetActive(true);
+                player.targetsInDetectRange[i].TryGetComponent<MonsterStateManager>(out MonsterStateManager monster);
+                monsters[i] = monster;
 
-                monsterHpSliders[i].transform.position = monsters[i].transform.position;
+                if (monsters[i] != null)
+                {
+                    monsterHpSliders[i].gameObject.SetActive(true);
 
-                monsterHpSliders[i].maxValue = monsters[i].maxHp;
-                monsterHpSliders[i].value = monsters[i].currentHp;
+                    Vector3 worldPosition = monsters[i].transform.position + Vector3.up * 2;
+                    Vector3 screenPosition = Camera.main.WorldToScreenPoint(worldPosition);
+                    monsterHpSliders[i].transform.position = screenPosition;
+
+                    monsterHpSliders[i].maxValue = monsters[i].maxHp;
+                    monsterHpSliders[i].value = monsters[i].currentHp;
+                }
+            }
+
+            if (monsterHpSliders[i].value <= 0 || monsters[i] == null)
+            {
+                monsterHpSliders[i].gameObject.SetActive(false);
             }
         }
-    }
 
+        //for (int i = 0; i < player.targetsInAttackRange.Length; i++)
+        //{
+        //    if (i >= hpBarCount) break;
+
+        //    player.targetsInAttackRange[i].TryGetComponent<MonsterStateManager>(out MonsterStateManager monster);
+
+        //    monsters[i] = monster;
+
+        //monsterHpSliders[i].gameObject.SetActive(true);
+
+        //Vector3 worldPosition = monsters[i].transform.position + Vector3.up * 2;
+        //Vector3 screenPosition = Camera.main.WorldToScreenPoint(worldPosition);
+        //monsterHpSliders[i].transform.position = screenPosition;
+
+        //monsterHpSliders[i].maxValue = monster.maxHp;
+        //monsterHpSliders[i].value = monster.currentHp;
+
+
+        //    if (monsterHpSliders[i].value <= 0 || monsters[i] == null)
+        //    {
+        //        monsterHpSliders[i].gameObject.SetActive(false);
+        //    }
+        //}
+
+    }
 }
