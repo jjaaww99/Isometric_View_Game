@@ -20,8 +20,6 @@ public class MonsterStateManager : PointableObject
     public Rigidbody rigid;
     public Collider bodyCollider;
     public Animator ani;
-    public BoxCollider attackArea;
-    public BoxCollider detectArea;
     public RagDoll ragdoll;
 
     [Header("States")]
@@ -56,6 +54,7 @@ public class MonsterStateManager : PointableObject
         bodyCollider = GetComponent<Collider>();
         nav = GetComponent<NavMeshAgent>();
         multipleRenderers = GetComponentsInChildren<SkinnedMeshRenderer>();
+        //target = GameManager.instance.playerController.transform;
 
         InitializeFromDB(excelDBNumber);
 
@@ -100,13 +99,11 @@ public class MonsterStateManager : PointableObject
     void Update()
     {
         currentState.UpdateState(this);
-        Debug.Log(currentState);
-        if (target != null && !isDead)
-        {
-            nav.enabled = true;
-            distanceToTarget = Vector3.Distance(transform.position, target.position);
-            ani.SetFloat("targetDistance", distanceToTarget);
-        }
+        //Debug.Log(currentState);
+        
+        distanceToTarget = Vector3.Distance(transform.position, target.position);
+        ani.SetFloat("targetDistance", distanceToTarget);
+        
 
         // 상태 변환 조건
         if (currentHp <= 0 && !isDead)
@@ -155,11 +152,7 @@ public class MonsterStateManager : PointableObject
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            JWPlayerController player = other.GetComponent<JWPlayerController>();
-            target = player.transform;
-        }
+
     }
 
 
