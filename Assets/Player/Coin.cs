@@ -14,6 +14,8 @@ public class Coin : PointableObject
 
     public float rotationSpeed = 90f;
 
+    private Vector3 originalPosition;
+    private float jumpHeight = 2.0f;
     protected override void OnEnable()
     {
         base.OnEnable();
@@ -21,10 +23,65 @@ public class Coin : PointableObject
         multipleRenderers = GetComponentsInChildren<Renderer>();
 
         jWPlayerController = FindAnyObjectByType<JWPlayerController>();
+
+        originalPosition = transform.position;
+
+        StartCoroutine(JumpAndResetCoroutine());
+    
     }
+
+    private void Start()
+    {
+        startPosition = transform.position;
+    }
+
     private void Update()
     {
+
     }
+
+    IEnumerator JumpAndResetCoroutine()
+    {
+        Vector3 jumpPosition = originalPosition + Vector3.up * jumpHeight;
+
+        Vector3 rotationAxis = Vector3.left;
+        float angle = rotationSpeed * Time.deltaTime;
+        Quaternion rotation = Quaternion.AngleAxis(angle, rotationAxis);
+
+        float Duration = 0.5f;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < Duration)
+        {
+            //선형보간기능
+            transform.position = Vector3.Lerp(originalPosition, jumpPosition, elapsedTime / Duration);
+            elapsedTime += Time.deltaTime;
+
+            //회전 기능
+            transform.rotation = rotation * transform.rotation;
+
+            yield return null;
+        }
+
+        elapsedTime = 0f;
+
+        while (elapsedTime < Duration)
+        {
+            //선형보간기능
+            transform.position = Vector3.Lerp(jumpPosition, originalPosition, elapsedTime / Duration);
+            elapsedTime += Time.deltaTime;
+
+            //회전기능
+            transform.rotation = rotation * transform.rotation;
+
+            yield return null;
+        }
+
+        // 마지막에 원상태로 복귀하게
+        transform.position = originalPosition;
+        transform.rotation = Quaternion.identity;
+    }
+
 
     public float duration = 1f;
 
