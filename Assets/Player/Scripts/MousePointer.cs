@@ -41,6 +41,7 @@ public class MousePointer : MonoBehaviour
             if (hit.transform.gameObject.layer == groundLayer)
             {
                 isPointerOnObject = false;
+                pointedObject = null;
 
                 if (Input.GetMouseButton(1))
                 {

@@ -1383,7 +1383,7 @@ GameObject:
   - component: {fileID: 2540689012715507754}
   - component: {fileID: 7646814998803635694}
   m_Layer: 6
-  m_Name: ZOmbie
+  m_Name: Zombie
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1500,6 +1500,7 @@ MonoBehaviour:
   detectArea: {fileID: 2302009500915138886}
   ragdoll: {fileID: 6008679486800899535}
   monsterDB: {fileID: 11400000, guid: 9b4e6a6ba7ae5cc41bf87c247119b0d3, type: 2}
+  monsterName: 
   monsterType: 0
   maxHp: 0
   currentHp: 0

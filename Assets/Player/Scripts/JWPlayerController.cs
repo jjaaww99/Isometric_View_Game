@@ -11,7 +11,7 @@ public class JWPlayerController : MonoBehaviour
     private const int maxTargetNum = 20;
     public GameObject[] skillVFXs;
     public MousePointer pointer;
-    public PlayerEquipedSkills equipedSkills;
+    public PlayerStatus equipedSkills;
 
     #region States
     public StateMachine stateMachine;
@@ -42,13 +42,12 @@ public class JWPlayerController : MonoBehaviour
 
     public bool isPointerOnObject => pointer.isPointerOnObject;
 
-    public KeyCode[] skillKeyCodes = { KeyCode.Q, KeyCode.W, KeyCode.E, KeyCode.R, KeyCode.Mouse0, KeyCode.Mouse1 };
+    public KeyCode[] skillKeyCodes = { KeyCode.Q, KeyCode.W};
     public string[] skillNames;
     public Transform[] skillBases;
-    public float[] skillRangeRadiuses = { 5f, 2f, 5f, 2f };
+    public float[] skillRangeRadiuses = { 5f, 2f};
 
     public Dictionary<KeyCode, string> skillDictionary;
-
     public void Awake()
     {
         Initialized();
@@ -68,7 +67,7 @@ public class JWPlayerController : MonoBehaviour
         nav = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         playerRigidbody = GetComponent<Rigidbody>();
-        equipedSkills = GetComponent<PlayerEquipedSkills>();
+        equipedSkills = GetComponent<PlayerStatus>();
 
         foreach (var effect in skillVFXs)
         {
@@ -120,8 +119,6 @@ public class JWPlayerController : MonoBehaviour
         animator.SetFloat("TargetDistance", targetDistance);
 
         stateMachine.currentState.Update();
-
-        Debug.Log(stateMachine.currentState);
     }
 
     private void FixedUpdate()

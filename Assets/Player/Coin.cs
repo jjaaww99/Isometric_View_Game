@@ -14,9 +14,13 @@ public class Coin : PointableObject
 
     public float rotationSpeed = 90f;
 
+    public int coinValue;
+
     protected override void OnEnable()
     {
         base.OnEnable();
+
+        coinValue = Random.Range(2, 10);
 
         multipleRenderers = GetComponentsInChildren<Renderer>();
 
