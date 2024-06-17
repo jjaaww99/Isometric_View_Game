@@ -22,6 +22,9 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI enemyName;
     public Slider enemyHpSlider;
 
+    public TextMeshProUGUI strText;
+    public TextMeshProUGUI dexText;
+
     private void Start()
     {
         SetSlider();
@@ -39,6 +42,9 @@ public class UIManager : MonoBehaviour
         UpdateSlider();
         DisplayEnemyUI();
         DisplayCoinUI();
+
+        strText.text = playerStat.str.ToString();
+        dexText.text = playerStat.dex.ToString();
 
     }
 

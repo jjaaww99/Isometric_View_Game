@@ -24,6 +24,11 @@ public class SkillState : PlayerState
                 player.animator.SetBool(player.skillNames[i], true);
             }
         }
+
+        if (player.playerStat.skillList[index].rageUseType == 1)
+        {
+            player.playerStat.currentRage -= player.playerStat.skillList[index].rageAmount;
+        }
     }
 
     public override void Exit()
@@ -33,9 +38,28 @@ public class SkillState : PlayerState
 
         base.Exit();
     }
+    float elapsedTime = 0;
     public override void Update()
     {
         base.Update();
+
+        if(player.playerStat.currentRage < player.playerStat.skillList[index].rageAmount)
+        {
+            machine.ChangeState(player.idle);
+        }
+
+        if (player.playerStat.skillList[index].rageUseType == 2)
+        {
+            elapsedTime += Time.deltaTime;
+
+            Debug.Log(elapsedTime);
+
+            if(elapsedTime >= 0.5f)
+            {
+                elapsedTime -= 0.5f;
+                player.playerStat.currentRage -= player.playerStat.skillList[index].rageAmount;
+            }
+        }
 
         if (player.animTrigger)
         {
@@ -74,6 +98,8 @@ public class SkillState : PlayerState
 
                 if (player.targetsInAttackRange[i].TryGetComponent<MonsterStateManager>(out MonsterStateManager monster))
                 {
+                    monster.isHit = true;
+
                     GameManager.instance.DamageToEnemy(monster, player.playerStat.Damage(10));
 
                     Debug.Log(player.playerStat.Damage(5));

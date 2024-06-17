@@ -17,11 +17,11 @@ public class SkillUI : MonoBehaviour
 
 
 
-        for(int i = 0; i < equpiedSkills.Length; i++)
+        for(int i = 0; i < 6; i++)
         {
             skillIcons[i] = transform.GetChild(i).GetChild(0).GetComponent<Image>();
         
-            if(equpiedSkills[i].skillIcon != null)
+            if(equpiedSkills[i] != null)
             {
                 skillIcons[i].sprite = Resources.Load<Sprite>(equpiedSkills[i].skillIcon);
             }

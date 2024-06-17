@@ -24,6 +24,7 @@ public class JWPlayerController : MonoBehaviour
     public EvadeState evade;
     public BasicAttackState basicAttack;
     public SkillState skill;
+    public DeadState dead;
     #endregion
 
     #region MoveData
@@ -66,6 +67,7 @@ public class JWPlayerController : MonoBehaviour
         evade = new EvadeState(this, "Evade");
         basicAttack = new BasicAttackState(this, "BasicAttack");
         skill = new SkillState(this, "Skill");
+        dead = new DeadState(this, "Dead");
         #endregion
 
         nav = GetComponent<NavMeshAgent>();
@@ -88,9 +90,12 @@ public class JWPlayerController : MonoBehaviour
     {
         skillNames = new string[playerStat.skillList.Length];
 
-        for (int i = 0; i < playerStat.skillList.Length; i++)
+        for (int i = 0; i < 6; i++)
         {
-            skillNames[i] = playerStat.skillList[i].skillName;
+            if (playerStat.skillList[i] != null)
+            {
+                skillNames[i] = playerStat.skillList[i].skillName;
+            }
         }
 
         targetPosition = transform.position;
