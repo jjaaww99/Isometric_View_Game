@@ -1,3 +1,4 @@
+using DamageNumbersPro;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ public class EnemyHpBarManager : MonoBehaviour
 {
     public JWPlayerController player;
     public MonsterStateManager[] monsters;
+    public DamageNumber damage;
     public Slider[] monsterHpSliders;
     public const int hpBarCount = 20;
 

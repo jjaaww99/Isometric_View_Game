@@ -1,3 +1,4 @@
+using DamageNumbersPro;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -12,7 +13,9 @@ public class JWPlayerController : MonoBehaviour
     private const int maxTargetNum = 20;
     public GameObject[] skillVFXs;
     public MousePointer pointer;
-    public PlayerStatus equipedSkills;
+    public PlayerStatus playerStat;
+
+    public DamageNumber damageNumber;
 
     #region States
     public StateMachine stateMachine;
@@ -68,7 +71,7 @@ public class JWPlayerController : MonoBehaviour
         nav = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         playerRigidbody = GetComponent<Rigidbody>();
-        equipedSkills = GetComponent<PlayerStatus>();
+        playerStat = GetComponent<PlayerStatus>();
 
         foreach (var effect in skillVFXs)
         {
@@ -83,11 +86,11 @@ public class JWPlayerController : MonoBehaviour
 
     private void Start()
     {
-        skillNames = new string[equipedSkills.skillList.Length];
+        skillNames = new string[playerStat.skillList.Length];
 
-        for (int i = 0; i < equipedSkills.skillList.Length; i++)
+        for (int i = 0; i < playerStat.skillList.Length; i++)
         {
-            skillNames[i] = equipedSkills.skillList[i].skillName;
+            skillNames[i] = playerStat.skillList[i].skillName;
         }
 
         targetPosition = transform.position;

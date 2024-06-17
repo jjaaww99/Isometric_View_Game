@@ -1,3 +1,4 @@
+using DamageNumbersPro;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -43,65 +44,84 @@ public class SkillState : PlayerState
     }
     public override void FixedUpdate()
     {
-        if(index == 1)
+        if(player.damageTrigger)
         {
-            EffectCircle();
-        }
-        else if(index == 0)
-        {
-            EffectSquare();
+            if (index == 1)
+            {
+                EffectCircle();
+                player.damageTrigger = false;
+            }
+            else if (index == 0)
+            {
+                EffectSquare();
+                player.damageTrigger = false;
+            }
         }
     }
 
     void EffectCircle()
     {
-        if (player.damageTrigger)
+
+        int targets = Physics.OverlapSphereNonAlloc(player.skillBases[index].position, player.skillRangeRadiuses[index], player.targetsInAttackRange, LayerMask.GetMask("Enemy"));
+
+        for (int i = 0; i < targets; i++)
         {
-            int targets = Physics.OverlapSphereNonAlloc(player.skillBases[index].position, player.skillRangeRadiuses[index], player.targetsInAttackRange, LayerMask.GetMask("Enemy"));
+            Vector3 direction = player.targetsInAttackRange[i].transform.position - player.transform.position;
 
-            for (int i = 0; i < targets; i++)
+            if (player.targetsInAttackRange[i].TryGetComponent<Rigidbody>(out Rigidbody rigidBody))
             {
-                Vector3 direction = player.targetsInAttackRange[i].transform.position - player.transform.position;
+                rigidBody.AddForce(direction.normalized * player.rbForce, ForceMode.VelocityChange);
 
-                if (player.targetsInAttackRange[i].TryGetComponent<Rigidbody>(out Rigidbody rigidBody))
+                if (player.targetsInAttackRange[i].TryGetComponent<MonsterStateManager>(out MonsterStateManager monster))
                 {
-                    rigidBody.AddForce(direction.normalized * player.rbForce, ForceMode.VelocityChange);
+                    GameManager.instance.DamageToEnemy(monster, player.playerStat.Damage(10));
 
-                    if (player.targetsInAttackRange[i].TryGetComponent<MonsterStateManager>(out MonsterStateManager monster))
-                    {
-                        monster.currentHp -= 1;
-                    }
+                    Debug.Log(player.playerStat.Damage(5));
+
+                    Vector3 numberPosition = monster.transform.position + new Vector3(0, 2, 0);
+
+                    DamageNumber damage = player.damageNumber.Spawn(numberPosition, player.playerStat.Damage(10));
+
+                    CameraShake.Instance.Shake(0.5f, 0.5f);
                 }
             }
         }
+
     }
 
     void EffectSquare()
     {
-        if (player.damageTrigger)
+
+        int targets = Physics.OverlapBoxNonAlloc(
+            player.jumpAttackPoint.position,
+            player.jumpAttackSize / 2, // OverlapBox의 반사이즈를 전달
+            player.targetsInAttackRange,
+            player.jumpAttackPoint.rotation, // 점프 공격 포인트의 회전을 사용
+            LayerMask.GetMask("Enemy"));
+
+        for (int i = 0; i < targets; i++)
         {
-            int targets = Physics.OverlapBoxNonAlloc(
-                player.jumpAttackPoint.position,
-                player.jumpAttackSize / 2, // OverlapBox의 반사이즈를 전달
-                player.targetsInAttackRange,
-                player.jumpAttackPoint.rotation, // 점프 공격 포인트의 회전을 사용
-                LayerMask.GetMask("Enemy"));
+            Vector3 direction = player.targetsInAttackRange[i].transform.position - player.transform.position;
 
-            for (int i = 0; i < targets; i++)
+            if (player.targetsInAttackRange[i].TryGetComponent<Rigidbody>(out Rigidbody rigidBody))
             {
-                Vector3 direction = player.targetsInAttackRange[i].transform.position - player.transform.position;
+                rigidBody.AddForce(direction.normalized * player.rbForce, ForceMode.VelocityChange);
 
-                if (player.targetsInAttackRange[i].TryGetComponent<Rigidbody>(out Rigidbody rigidBody))
+                if (player.targetsInAttackRange[i].TryGetComponent<MonsterStateManager>(out MonsterStateManager monster))
                 {
-                    rigidBody.AddForce(direction.normalized * player.rbForce, ForceMode.VelocityChange);
+                    GameManager.instance.DamageToEnemy(monster, player.playerStat.Damage(10));
 
-                    if (player.targetsInAttackRange[i].TryGetComponent<MonsterStateManager>(out MonsterStateManager monster))
-                    {
-                        monster.currentHp -= 1;
-                    }
+                    Debug.Log(player.playerStat.Damage(10));
+
+                    Vector3 numberPosition = monster.transform.position + new Vector3(0, 2, 0);
+
+                    DamageNumber damage = player.damageNumber.Spawn(numberPosition, player.playerStat.Damage(10));
+
+                    CameraShake.Instance.Shake(0.5f, 0.5f);
                 }
             }
         }
+
     }
 
 }
