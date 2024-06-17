@@ -8,6 +8,7 @@ public class JWPlayerController : MonoBehaviour
     public Animator animator;
     public Rigidbody playerRigidbody;
     public Collider[] targetsInAttackRange;
+    public Collider[] targetsInDetectRange;
     private const int maxTargetNum = 20;
     public GameObject[] skillVFXs;
     public MousePointer pointer;
@@ -42,10 +43,10 @@ public class JWPlayerController : MonoBehaviour
 
     public bool isPointerOnObject => pointer.isPointerOnObject;
 
-    public KeyCode[] skillKeyCodes = { KeyCode.Q, KeyCode.W};
+    public KeyCode[] skillKeyCodes = { KeyCode.Q, KeyCode.W };
     public string[] skillNames;
     public Transform[] skillBases;
-    public float[] skillRangeRadiuses = { 5f, 2f};
+    public float[] skillRangeRadiuses = { 5f, 2f };
 
     public Dictionary<KeyCode, string> skillDictionary;
     public void Awake()
@@ -75,6 +76,7 @@ public class JWPlayerController : MonoBehaviour
         }
 
         targetsInAttackRange = new Collider[maxTargetNum];
+        targetsInDetectRange = new Collider[maxTargetNum];
 
         stateMachine.Init(idle);
     }
@@ -118,6 +120,8 @@ public class JWPlayerController : MonoBehaviour
         animator.SetFloat("ClickDistance", moveDistance);
         animator.SetFloat("TargetDistance", targetDistance);
 
+        int targets = Physics.OverlapSphereNonAlloc(transform.position, 5f, targetsInDetectRange, LayerMask.GetMask("Enemy"));
+        
         stateMachine.currentState.Update();
     }
 
@@ -129,6 +133,7 @@ public class JWPlayerController : MonoBehaviour
     public Transform basicAttackPoint;
     public Transform whirlWindPoint;
     public Transform jumpAttackPoint;
+    public const float detectRadius = 5f;
     public float basicAttackRadius;
     public float jumpAttackRadius;
     public float whirlWindRadius;
@@ -137,6 +142,8 @@ public class JWPlayerController : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, detectRadius);
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(basicAttackPoint.position, basicAttackRadius);
         Gizmos.color = Color.yellow;
