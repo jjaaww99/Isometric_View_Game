@@ -49,6 +49,7 @@ public class MousePointer : MonoBehaviour
                     pointedObject = null;
                 }
             }
+
             else if (hit.transform.gameObject.layer == enemyLayer || hit.transform.gameObject.layer == itemLayer)
             {
                 pointedObject = hit.transform.gameObject;
