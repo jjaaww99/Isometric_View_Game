@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class WhirlWindRepeat : StateMachineBehaviour
@@ -19,6 +21,11 @@ public class WhirlWindRepeat : StateMachineBehaviour
     {
         player.transform.rotation = rotation;
         player.damageTrigger = true;
+
+        if (player.playerStat.currentRage < player.playerStat.skillList[1].rageAmount)
+        {
+            player.stateMachine.ChangeState(player.idle);
+        }
 
         if (Input.GetMouseButtonDown(1)) 
         {

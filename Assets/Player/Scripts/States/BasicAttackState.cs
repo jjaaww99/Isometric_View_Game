@@ -1,4 +1,5 @@
 using DamageNumbersPro;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -20,6 +21,8 @@ public class BasicAttackState : PlayerState
         }
 
         player.transform.LookAt(targetDir);
+
+        player.playerStat.currentRage += player.playerStat.skillList[5].rageAmount;
     }
 
     public override void Exit()
