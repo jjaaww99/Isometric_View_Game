@@ -18,7 +18,6 @@ public class IdleState : PlayerState
         base.Exit();
     }
 
-    bool isCoroutineStarted = false;
     public override void Update()
     {
         base.Update();

@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class Coin : PointableObject
 {
-    public JWPlayerController jWPlayerController;
+    public JWPlayerController player;
 
     Vector3 startPosition;
     Vector3 middlePosition;
@@ -14,11 +14,15 @@ public class Coin : PointableObject
 
     public float rotationSpeed = 90f;
 
+    public int coinValue;
+
     private Vector3 originalPosition;
     private float jumpHeight = 2.0f;
     protected override void OnEnable()
     {
         base.OnEnable();
+
+        coinValue = Random.Range(2, 10);
 
         multipleRenderers = GetComponentsInChildren<Renderer>();
 
@@ -53,11 +57,11 @@ public class Coin : PointableObject
 
         while (elapsedTime < Duration)
         {
-            //¼±Çüº¸°£±â´É
+            //ì„ í˜•ë³´ê°„ê¸°ëŠ¥
             transform.position = Vector3.Lerp(originalPosition, jumpPosition, elapsedTime / Duration);
             elapsedTime += Time.deltaTime;
 
-            //È¸Àü ±â´É
+            //íšŒì „ ê¸°ëŠ¥
             transform.rotation = rotation * transform.rotation;
 
             yield return null;
@@ -67,17 +71,17 @@ public class Coin : PointableObject
 
         while (elapsedTime < Duration)
         {
-            //¼±Çüº¸°£±â´É
+            //ì„ í˜•ë³´ê°„ê¸°ëŠ¥
             transform.position = Vector3.Lerp(jumpPosition, originalPosition, elapsedTime / Duration);
             elapsedTime += Time.deltaTime;
 
-            //È¸Àü±â´É
+            //íšŒì „ê¸°ëŠ¥
             transform.rotation = rotation * transform.rotation;
 
             yield return null;
         }
 
-        // ¸¶Áö¸·¿¡ ¿ø»óÅÂ·Î º¹±ÍÇÏ°Ô
+        // ë§ˆì§€ë§‰ì— ì›ìƒíƒœë¡œ ë³µê·€í•˜ê²Œ
         transform.position = originalPosition;
         transform.rotation = Quaternion.identity;
     }
@@ -93,11 +97,11 @@ public class Coin : PointableObject
         {
             startPosition = GetComponentInParent<Transform>().position;
 
-            Vector3 point = (transform.position + jWPlayerController.transform.position) / 2;
+            Vector3 point = (transform.position + player.transform.position) / 2;
 
             middlePosition = point + new Vector3(0, 2, 0);
 
-            endPosition = jWPlayerController.transform.position;
+            endPosition = player.transform.position;
 
             elapsedTime += Time.deltaTime;
 

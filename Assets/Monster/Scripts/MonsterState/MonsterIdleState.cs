@@ -138,10 +138,13 @@ public class MonsterIdleState : MonsterBasicState
 
     public override void ExitState(MonsterStateManager monster)
     {
+        if(monster.isDead == false)
+        {
+            monster.ani.SetBool("Wander", false);
+            monster.nav.isStopped = true;
+            isWandering = false;
+        }
         // 상태 종료 시 작업: 예를 들어 애니메이션을 종료하고 배회 상태를 초기화
-        monster.ani.SetBool("Wander", false);
-        monster.nav.isStopped = true;
-        isWandering = false;
     }
 
     // 랜덤한 위치로 이동하는 메서드

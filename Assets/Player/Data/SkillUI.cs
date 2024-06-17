@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class SkillUI : MonoBehaviour
 {
-    public PlayerEquipedSkills skillData;
+    public PlayerStatus skillData;
     public skillEntity[] equpiedSkills;
     public Image[] skillIcons;
 
