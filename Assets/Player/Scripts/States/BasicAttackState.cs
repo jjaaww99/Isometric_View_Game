@@ -73,6 +73,8 @@ public class BasicAttackState : PlayerState
                 
                 if (player.targetsInAttackRange[i].TryGetComponent<MonsterStateManager>(out MonsterStateManager monster))
                 {
+                    monster.isHit = true;
+
                     GameManager.instance.DamageToEnemy(monster, player.playerStat.Damage(10));
 
                     Debug.Log(player.playerStat.Damage(10));

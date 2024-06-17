@@ -24,7 +24,7 @@ public class WhirlWindRepeat : StateMachineBehaviour
 
         if (player.playerStat.currentRage < player.playerStat.skillList[1].rageAmount)
         {
-            player.stateMachine.ChangeState(player.idle);
+            animator.SetBool("WhirlWindRepeat", false);
         }
 
         if (Input.GetMouseButtonDown(1)) 
