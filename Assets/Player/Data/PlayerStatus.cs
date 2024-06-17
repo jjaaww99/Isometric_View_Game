@@ -42,7 +42,7 @@ public class PlayerStatus : MonoBehaviour
 
     private void Update()
     {
-        if (currentExp <= maxExp)
+        if (currentExp >= maxExp)
         {
             LevelUP();
         }

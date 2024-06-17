@@ -79,6 +79,8 @@ public class SkillState : PlayerState
                     Debug.Log(player.playerStat.Damage(5));
 
                     Vector3 numberPosition = monster.transform.position + new Vector3(0, 2, 0);
+                    
+                    monster.isHit = true;
 
                     DamageNumber damage = player.damageNumber.Spawn(numberPosition, player.playerStat.Damage(10));
 

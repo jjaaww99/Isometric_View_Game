@@ -35,7 +35,7 @@ public class MonsterStateManager : PointableObject
 
     [Header("Attributes")]
     public MonsterDB monsterDB;
-    private int excelDBNumber;
+    public int excelDBNumber;
     public string monsterName;
     public MonsterType monsterType;
     public int maxHp;
@@ -100,7 +100,7 @@ public class MonsterStateManager : PointableObject
     void Update()
     {
         currentState.UpdateState(this);
-       
+        Debug.Log(currentState);
         if (target != null && !isDead)
         {
             nav.enabled = true;
@@ -117,15 +117,15 @@ public class MonsterStateManager : PointableObject
         {
             TryChangeState(hitState);
         }
-        else if (distanceToTarget > 15 && !isDead && chagetowandertime < 2 && !isHit)
+        else if (distanceToTarget > 6 && !isDead && chagetowandertime < 2 && !isHit)
         {
             TryChangeState(idleState);
         }
-        else if (distanceToTarget > 15 && !isDead && chagetowandertime >= 2 && !isHit)
+        else if (distanceToTarget > 6 && !isDead && chagetowandertime >= 2 && !isHit)
         {
             TryChangeState(wanderState);
         }
-        else if (distanceToTarget > 2 && distanceToTarget <= 15 && !isDead && !isHit)
+        else if (distanceToTarget > 2 && distanceToTarget <= 6 && !isDead && !isHit)
         {
             TryChangeState(chaseState);
         }

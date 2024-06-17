@@ -8,7 +8,6 @@ public class MousePointer : MonoBehaviour
     Camera mainCam;
 
     public Vector3 pointerPosition;
-    public DamageNumber damage;
 
 #nullable enable
     public GameObject? pointedObject;
@@ -30,10 +29,6 @@ public class MousePointer : MonoBehaviour
 
         int combinedLayerMask = LayerMask.GetMask("Ground", "Enemy", "Item");
 
-        if(Input.GetMouseButtonDown(0))
-        {
-            DamageNumber dam = damage.Spawn(transform.position, 1f);
-        }
 
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, combinedLayerMask))
         {
@@ -55,6 +50,7 @@ public class MousePointer : MonoBehaviour
                     pointedObject = null;
                 }
             }
+
             else if (hit.transform.gameObject.layer == enemyLayer || hit.transform.gameObject.layer == itemLayer)
             {
                 pointedObject = hit.transform.gameObject;

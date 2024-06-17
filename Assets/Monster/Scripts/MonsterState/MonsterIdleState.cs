@@ -14,8 +14,7 @@ public class MonsterIdleState : MonsterBasicState
         if(monster.chagetowandertime >= 2)
         {
             monster.nav.enabled = true;
-            monster.bodyCollider.enabled = false;
-            monster.TryChangeState(monster.wanderState);
+            monster.bodyCollider.isTrigger = true;
         }
     }
 
