@@ -1,3 +1,4 @@
+using NUnit.Framework.Constraints;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -5,56 +6,82 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
+public enum MonsterType
+{
+    Zombie,
+    Bear,
+    Normal
+}
+
 public class MonsterStateManager : PointableObject
 {
+    [Header("Components")]
+    public NavMeshAgent nav;
+    public Rigidbody rigid;
+    public Collider bodyCollider;
+    public Animator ani;
+    public BoxCollider attackArea;
+    public BoxCollider detectArea;
+    public RagDoll ragdoll;
+
+    [Header("States")]
     MonsterBasicState currentState;
     public MonsterIdleState idleState = new MonsterIdleState();
     public MonsterChaseState chaseState = new MonsterChaseState();
     public MonsterAttackState attackState = new MonsterAttackState();
     public MonsterHitState hitState = new MonsterHitState();
     public MonsterDeadState deadState = new MonsterDeadState();
-    public RagDoll ragdoll;
 
-    [SerializeField] private int excelDBNumber;     //�������� �ҷ��� ������ ��ȣ
-    [SerializeField] public string monsterName;    // ��ü �̸�
-    public int maxHp;             // �ִ� ü��
-    public int currentHp;         // ���� ü��
-    [SerializeField] private float speed;           // �̵��ӵ�
-    [SerializeField] private int atk;               // ���ݷ�
-    public Transform target;                        // �÷��̾��� ��ġ(�ӽ�)
+    [Header("Attributes")]
+    public MonsterDB monsterDB;
+    private int excelDBNumber;
+    private string monsterName;
+    public MonsterType monsterType;
+    public int maxHp;
+    public int currentHp;
+    private float movementSpeed;
+    private int attackPower;
 
-    public float deadCount; //����� ������� �ð�
-
-    public bool isDead;                 //��� ���� Ȯ��
-    public bool hit;
-    public float targetDistance;
-
-    public BoxCollider attackArea;      //���� ����
-    [SerializeField] private MonsterDB monsterDB;
-    public NavMeshAgent nav;
-    public Rigidbody rigid;
-    public Collider bodyCollider;
-    public Animator ani;
-    public BoxCollider detectArea;      //�ĺ� ����
-
-
+    [Header("Status")]
+    public Transform target;
+    public float deadCount;
+    public bool isDead;
+    public bool isHit;
+    public float distanceToTarget;
 
     void Awake()
     {
         bodyCollider = GetComponent<Collider>();
         nav = GetComponent<NavMeshAgent>();
-        InitializeFromDB(excelDBNumber);
         multipleRenderers = GetComponentsInChildren<SkinnedMeshRenderer>();
+
+        InitializeFromDB(excelDBNumber);
+
+        // 몬스터 타입에 따라 공격 상태를 설정
+        switch (monsterType)
+        {
+            case MonsterType.Zombie:
+                attackState = new ZombieAttackState();
+                break;
+            case MonsterType.Bear:
+                chaseState = new BearChaseState();
+                break;
+            default:
+                attackState = new MonsterAttackState();
+                chaseState = new MonsterChaseState();
+                break;
+        }
     }
-    
+
 
     protected override void OnEnable()
     {
         base.OnEnable();
 
+        // 초기 상태 설정
         deadCount = 10;
         currentHp = maxHp;
-        nav.speed = speed;
+        nav.speed = movementSpeed;
         isDead = false;
         gameObject.SetActive(true);
         ani.enabled = true;
@@ -66,47 +93,46 @@ public class MonsterStateManager : PointableObject
     }
 
 
-    void Start()
-    {
-
-    }
-
-
     void Update()
     {
         currentState.UpdateState(this);
-
-        Debug.Log(currentState);
-        if (target != null && isDead == false)
+        //Debug.Log(currentState);
+        if (target != null && !isDead)
         {
             nav.enabled = true;
-            targetDistance = Vector3.Distance(transform.position, target.position);
-            ani.SetFloat("targetDistance", targetDistance);
+            distanceToTarget = Vector3.Distance(transform.position, target.position);
+            ani.SetFloat("targetDistance", distanceToTarget);
         }
 
-        if (currentHp <= 0 && isDead == false)
+        // 상태 변환 조건
+        if (currentHp <= 0 && !isDead)
         {
-            Debug.Log("사망");
-            ChangeState(deadState);
+            TryChangeState(deadState);
         }
-        else if (targetDistance > 15 && isDead == false)
+        else if (distanceToTarget > 15 && !isDead)
         {
-            ChangeState(idleState);
+            TryChangeState(idleState);
         }
-        else if (targetDistance > 2 && targetDistance <= 15 && isDead == false)
+        else if (distanceToTarget > 2 && distanceToTarget <= 15 && !isDead)
         {
-            ChangeState(chaseState);
+            TryChangeState(chaseState);
         }
-        else if (targetDistance <= 2 && isDead == false)
+        else if (distanceToTarget <= 2 && !isDead)
         {
-            ChangeState(attackState);
+            TryChangeState(attackState);
         }
-        
-        
-        
+
+
 
     }
 
+    private void TryChangeState(MonsterBasicState newState) //동일상태에서 재귀하는걸 방지
+    {
+        if (currentState != newState)
+        {
+            ChangeState(newState);
+        }
+    }
 
     public void ChangeState(MonsterBasicState state)
     {
@@ -132,16 +158,15 @@ public class MonsterStateManager : PointableObject
             MonsterEntity monsterData = monsterDB.Monster[index];
             monsterName = monsterData.name;
             maxHp = monsterData.maxHp;
-            speed = monsterData.speed;
-            atk = monsterData.atk;
+            movementSpeed = monsterData.speed;
+            attackPower = monsterData.atk;
         }
-    }//���������� �ҷ����� �޼���
+    }
 
-
+    // 플레이어의 공격을 처리하는 메서드
     public void MonsterHit()
     {
         ChangeState(hitState);
     }
 
 }
-
