@@ -29,7 +29,6 @@ public class MousePointer : MonoBehaviour
 
         int combinedLayerMask = LayerMask.GetMask("Ground", "Enemy", "Item");
 
-
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, combinedLayerMask))
         {
             Vector3 mouseWorldPos = hit.point;
