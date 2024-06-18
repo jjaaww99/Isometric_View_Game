@@ -374,7 +374,7 @@ MonoBehaviour:
   - {fileID: -3020831812767619094}
   - {fileID: 3730109822642873576}
   - {fileID: -6473998260746020774}
-  - {fileID: 9063925689128845284}
+  - {fileID: 7992688414289021044}
 --- !u!114 &1892257915317109778
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -449,8 +449,6 @@ MonoBehaviour:
     m_Value: {x: 1, y: 0.607795, z: 0.8152398, w: 0.20311823}
   gain:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.83609474, z: 0.86693996, w: 0.004539273}
---- !u!114 &8457399363676685185
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
