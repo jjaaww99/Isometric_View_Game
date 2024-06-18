@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.639
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1287954621}
-  m_IndirectSpecularColor: {r: 0.116744556, g: 0.14595222, b: 0.19623752, a: 0.639}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 0.639}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -456,7 +456,7 @@ GameObject:
   - component: {fileID: 128029962}
   - component: {fileID: 128029961}
   m_Layer: 0
-  m_Name: scoremanager
+  m_Name: 'ScoreManager '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3879,6 +3879,7 @@ MonoBehaviour:
   enemyHpSlider: {fileID: 5049815579220716628}
   strText: {fileID: 519058310}
   dexText: {fileID: 524905150}
+  levelText: {fileID: 3985819609038573951}
 --- !u!4 &925642872
 Transform:
   m_ObjectHideFlags: 0

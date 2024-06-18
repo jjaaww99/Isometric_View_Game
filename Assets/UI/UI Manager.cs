@@ -25,6 +25,8 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI strText;
     public TextMeshProUGUI dexText;
 
+    public TextMeshProUGUI levelText;
+
     private void Start()
     {
         SetSlider();
@@ -32,9 +34,6 @@ public class UIManager : MonoBehaviour
 
     private void SetSlider()
     {
-        hpSlider.maxValue = playerStat.maxHp;
-        rageSlider.maxValue = playerStat.maxRage;
-        expSlider.maxValue = playerStat.maxExp;
     }
 
     void Update()
@@ -45,11 +44,14 @@ public class UIManager : MonoBehaviour
 
         strText.text = playerStat.str.ToString();
         dexText.text = playerStat.dex.ToString();
-
+        levelText.text = playerStat.level.ToString();
     }
 
     void UpdateSlider()
     {
+        hpSlider.maxValue = playerStat.maxHp;
+        rageSlider.maxValue = playerStat.maxRage;
+        expSlider.maxValue = playerStat.maxExp;
         hpSlider.value = playerStat.currentHp;
         rageSlider.value = playerStat.currentRage;
         expSlider.value = playerStat.currentExp;

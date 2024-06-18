@@ -144,5 +144,7 @@ public class Coin : PointableObject
         {
             gameObject.SetActive(false);
         }
+
+        ScoreManager.instance.earnedGold += coinValue;
     }
 }
