@@ -26,7 +26,7 @@ public class Coin : PointableObject
 
         multipleRenderers = GetComponentsInChildren<Renderer>();
 
-        jWPlayerController = FindAnyObjectByType<JWPlayerController>();
+        player = FindAnyObjectByType<JWPlayerController>();
 
         originalPosition = transform.position;
 

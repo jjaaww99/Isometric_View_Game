@@ -1,3 +1,5 @@
+using DamageNumbersPro;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -19,6 +21,8 @@ public class BasicAttackState : PlayerState
         }
 
         player.transform.LookAt(targetDir);
+
+        player.playerStat.currentRage += player.playerStat.skillList[5].rageAmount;
     }
 
     public override void Exit()
@@ -51,6 +55,7 @@ public class BasicAttackState : PlayerState
         if (player.damageTrigger)
         {
             Effect();
+            player.damageTrigger = false;
         }
     }
 
@@ -68,7 +73,18 @@ public class BasicAttackState : PlayerState
                 
                 if (player.targetsInAttackRange[i].TryGetComponent<MonsterStateManager>(out MonsterStateManager monster))
                 {
-                    monster.currentHp -= 1;
+                    monster.isHit = true;
+
+                    GameManager.instance.DamageToEnemy(monster, player.playerStat.Damage(10));
+
+                    Debug.Log(player.playerStat.Damage(10));
+
+                    monster.isHit = true;
+
+                    Vector3 numberPosition = monster.transform.position + new Vector3(0, 2, 0);
+
+                    DamageNumber damage = player.damageNumber.Spawn(numberPosition, player.playerStat.Damage(10));
+
                     CameraShake.Instance.Shake(0.5f, 0.5f);
                 }
             }

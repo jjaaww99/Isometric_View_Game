@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,9 +26,14 @@ public class IdleState : PlayerState
             
         for(int i = 0; i < player.skillKeyCodes.Length; i++)
         {
-            if (Input.GetKey(player.skillKeyCodes[i]))
+            if (Input.GetKey(player.skillKeyCodes[i]) && player.playerStat.currentRage > player.playerStat.skillList[i].rageAmount)
             {
                 machine.ChangeState(player.skill);
+            }
+
+            else if(Input.GetKey(player.skillKeyCodes[i]) && player.playerStat.currentRage < player.playerStat.skillList[i].rageAmount)
+            {
+
             }
         }
 

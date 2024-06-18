@@ -40,7 +40,10 @@ public class PlayerState
     }
     public virtual void Update() 
     {
-
+        if (player.playerStat.currentHp <= 0)
+        {
+            machine.ChangeState(player.dead);
+        }
     }
     public virtual void FixedUpdate()
     {

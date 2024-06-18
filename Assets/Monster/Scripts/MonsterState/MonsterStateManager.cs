@@ -15,9 +15,6 @@ public enum MonsterType
 
 public class MonsterStateManager : PointableObject
 {
-    public Canvas canvas;
-    public GameObject hpUI;
-
     [Header("Components")]
     public NavMeshAgent nav;
     public Rigidbody rigid;
@@ -30,6 +27,7 @@ public class MonsterStateManager : PointableObject
     [Header("States")]
     MonsterBasicState currentState;
     public MonsterIdleState idleState = new MonsterIdleState();
+    public MonsterWanderState wanderState = new MonsterWanderState();
     public MonsterChaseState chaseState = new MonsterChaseState();
     public MonsterAttackState attackState = new MonsterAttackState();
     public MonsterHitState hitState = new MonsterHitState();
@@ -37,7 +35,7 @@ public class MonsterStateManager : PointableObject
 
     [Header("Attributes")]
     public MonsterDB monsterDB;
-    private int excelDBNumber;
+    public int excelDBNumber;
     public string monsterName;
     public MonsterType monsterType;
     public int maxHp;
@@ -51,6 +49,7 @@ public class MonsterStateManager : PointableObject
     public bool isDead;
     public bool isHit;
     public float distanceToTarget;
+    public float chagetowandertime;
 
     void Awake()
     {
@@ -93,13 +92,15 @@ public class MonsterStateManager : PointableObject
         bodyCollider.enabled = true;
         currentState = idleState;
         currentState.EnterState(this);
+        distanceToTarget = 30;
+        chagetowandertime = 0f;
     }
 
 
     void Update()
     {
         currentState.UpdateState(this);
-        //Debug.Log(currentState);
+        Debug.Log(currentState);
         if (target != null && !isDead)
         {
             nav.enabled = true;
@@ -112,15 +113,23 @@ public class MonsterStateManager : PointableObject
         {
             TryChangeState(deadState);
         }
-        else if (distanceToTarget > 15 && !isDead)
+        else if (isHit && !isDead)
+        {
+            TryChangeState(hitState);
+        }
+        else if (distanceToTarget > 6 && !isDead && chagetowandertime < 2 && !isHit)
         {
             TryChangeState(idleState);
         }
-        else if (distanceToTarget > 2 && distanceToTarget <= 15 && !isDead)
+        else if (distanceToTarget > 6 && !isDead && chagetowandertime >= 2 && !isHit)
+        {
+            TryChangeState(wanderState);
+        }
+        else if (distanceToTarget > 2 && distanceToTarget <= 6 && !isDead && !isHit)
         {
             TryChangeState(chaseState);
         }
-        else if (distanceToTarget <= 2 && !isDead)
+        else if (distanceToTarget <= 2 && !isDead && !isHit)
         {
             TryChangeState(attackState);
         }
@@ -129,7 +138,7 @@ public class MonsterStateManager : PointableObject
 
     }
 
-    private void TryChangeState(MonsterBasicState newState) //동일상태에서 재귀하는걸 방지
+    public void TryChangeState(MonsterBasicState newState) //동일상태에서 재귀하는걸 방지
     {
         if (currentState != newState)
         {
@@ -170,6 +179,11 @@ public class MonsterStateManager : PointableObject
     public void MonsterHit()
     {
         ChangeState(hitState);
+    }
+
+    public void DamagetoPlayer()
+    {
+        GameManager.instance.player.currentHp -= attackPower;
     }
 
 }

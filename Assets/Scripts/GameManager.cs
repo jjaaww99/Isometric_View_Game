@@ -5,13 +5,15 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    JWPlayerController player;
-    MonsterStateManager monster;
+    public JWPlayerController playerController;
+    public PlayerStatus player;
+    public MonsterStateManager monster;
     public PoolManager pool;
 
     void Awake()
     {
         instance = this;
+        DontDestroyOnLoad(this);
     }
 
 
@@ -29,8 +31,15 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void DamageToPlayer(int damage)
+    {
+        player.currentHp -= damage;
+    }
 
+    public void DamageToEnemy(MonsterStateManager _monster, int damage)
+    {
+        MonsterStateManager monster = _monster;
 
-
-
+        monster.currentHp -= damage;
+    }
 }

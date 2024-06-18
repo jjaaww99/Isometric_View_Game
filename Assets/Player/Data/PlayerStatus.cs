@@ -21,13 +21,12 @@ public class PlayerStatus : MonoBehaviour
 
     private void Awake()
     {
-        skillList = new skillEntity[skillData.SkillList.Count];
+        skillList = new skillEntity[6];
         playerStatus = playerStat.playerData.ToArray();
 
-            
         skillList[0] = skillData.SkillList[1];
         skillList[1] = skillData.SkillList[2];
-        skillList[2] = skillData.SkillList[2];
+        skillList[5] = skillData.SkillList[0];
         
         level = 1;
         str = playerStatus[level - 1].str;
@@ -40,20 +39,33 @@ public class PlayerStatus : MonoBehaviour
         currentExp = 0;
     }
 
-    private void Start()
+    private void Update()
     {
+        if (currentExp >= maxExp)
+        {
+            LevelUP();
+        }
     }
 
     public void LevelUP()
     {
-        level++;
-        str = playerStatus[level - 1].str;
-        dex = playerStatus[level - 1].dex;
-        maxHp = playerStatus[level - 1].playerHp;
-        currentHp = maxHp;
-        maxRage = playerStatus[level - 1].playerRage;
-        currentRage = maxRage;
-        maxExp = playerStatus[level - 1].maxExp;
-        currentExp = 0;
+        if(level < 5)
+        {
+            level++;
+            str = playerStatus[level - 1].str;
+            dex = playerStatus[level - 1].dex;
+            maxHp = playerStatus[level - 1].playerHp;
+            currentHp = maxHp;
+            maxRage = playerStatus[level - 1].playerRage;
+            currentRage = maxRage;
+            maxExp = playerStatus[level - 1].maxExp;
+            currentExp = 0;
+        }
+    }
+
+    public int Damage(int Multiplier)
+    {
+        int RandomDivider = Random.Range(90, 110);
+        return str * Multiplier / RandomDivider;
     }
 }
