@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public enum GameState { Playing, Idle }
+public enum GameState { Playing, Idle , End}
 
 public class GameManager : MonoBehaviour
 {
@@ -11,12 +11,12 @@ public class GameManager : MonoBehaviour
     public JWPlayerController playerController;
     public PlayerStatus player;
     public PoolManager pool;
-    public GameObject coin;
+    public CoinPool coinPool;
 
     void Awake()
     {
-        gameState = new GameState();
         gameState = GameState.Idle;
+
         instance = this;
         DontDestroyOnLoad(this);
     }
@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
         percent = Random.Range(1, 101);
         if (percent <= 80)
         {
-            Instantiate(coin, position, Quaternion.identity);
+            coinPool.ActivateCoin(position);
         }
 
     }

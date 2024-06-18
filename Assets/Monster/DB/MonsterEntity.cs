@@ -5,5 +5,6 @@ public class MonsterEntity
     public int maxHp;
     public float speed;
     public int atk;
+    public int exp;
 }
 
