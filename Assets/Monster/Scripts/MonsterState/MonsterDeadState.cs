@@ -15,6 +15,8 @@ public class MonsterDeadState : MonsterBasicState
         monster.rigid.isKinematic = true;
         monster.nav.enabled = false;
         GameManager.instance.CoinSpawn(monster.transform.position);
+        ScoreManager.instance.killedEnemyCount++;
+        GameManager.instance.player.currentExp += monster.exp;
     }
 
     public override void UpdateState(MonsterStateManager monster)

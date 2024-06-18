@@ -95,8 +95,6 @@ public class SkillState : PlayerState
 
                 player.DamageToEnemy(monster, player.playerStat.Damage(10));
 
-                Debug.Log(player.playerStat.Damage(5));
-
                     Vector3 numberPosition = monster.transform.position + new Vector3(0, 2, 0);
                     
                     monster.isHit = true;

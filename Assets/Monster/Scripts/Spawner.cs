@@ -5,6 +5,8 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public Transform[] spawnPoint;
+    public int spawnStartPoint = 1;
+    public int spawnPointenable = 5;
     private float spawnTimer;
     int num;
     private void Awake()
@@ -32,7 +34,7 @@ public class Spawner : MonoBehaviour
         UnityEngine.GameObject enemy = GameManager.instance.pool.Get(Random.Range(0, num));
         if (enemy != null)
         {
-            enemy.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].position;
+            enemy.transform.position = spawnPoint[Random.Range(spawnStartPoint, spawnPointenable + 1)].position;
         }
     }
 }
