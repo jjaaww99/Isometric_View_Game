@@ -61,16 +61,13 @@ public class PlayerStatus : MonoBehaviour
             LevelUP();
         }
 
-
         float healthPercentage = (float)currentHp / (float)maxHp;
-        if (healthPercentage <= 50)
-        {
-            float vignetteIntensity = Mathf.Lerp(, 1, healthPercentage);
-            vignette.intensity.value = 1 - vignetteIntensity;
-        }
+        float vignetteIntensity = Mathf.Lerp(0, 1, healthPercentage);
+        vignette.intensity.value = 1 - vignetteIntensity;
 
-        
+
     }
+
 
     public void LevelUP()
     {

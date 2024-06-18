@@ -27,15 +27,6 @@ public class UIManager : MonoBehaviour
 
     public TextMeshProUGUI levelText;
 
-    private void Start()
-    {
-        SetSlider();
-    }
-
-    private void SetSlider()
-    {
-    }
-
     void Update()
     {
         UpdateSlider();
@@ -57,13 +48,16 @@ public class UIManager : MonoBehaviour
         expSlider.value = playerStat.currentExp;
     }
 
+
+    MonsterStateManager monster;
+
     void DisplayEnemyUI()
     {
-        if (player.clickedTarget != null && player.clickedTarget.TryGetComponent<MonsterStateManager>(out MonsterStateManager monster))
+        if (player.clickedTarget != null && player.clickedTarget.TryGetComponent<MonsterStateManager>(out MonsterStateManager _monster))
         {
             enemyUI.SetActive(true);
 
-            monster = player.clickedTarget.GetComponent<MonsterStateManager>();
+            monster = _monster;
 
             enemyHpSlider.value = monster.currentHp;
             enemyHpSlider.maxValue = monster.maxHp;
