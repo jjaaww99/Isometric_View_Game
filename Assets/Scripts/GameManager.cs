@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+public enum GameState { Playing, Idle }
 
 public class GameManager : MonoBehaviour
 {
+    public GameState gameState;
+
     public static GameManager instance;
     public JWPlayerController playerController;
     public PlayerStatus player;
-    public MonsterStateManager monster;
     public PoolManager pool;
     public GameObject coin;
 
     void Awake()
     {
+        gameState = new GameState();
         instance = this;
         DontDestroyOnLoad(this);
     }
@@ -27,17 +30,5 @@ public class GameManager : MonoBehaviour
             Instantiate(coin, position, Quaternion.identity);
         }
 
-    }
-
-    public void DamageToPlayer(int damage)
-    {
-        player.currentHp -= damage;
-    }
-
-    public void DamageToEnemy(MonsterStateManager _monster, int damage)
-    {
-        MonsterStateManager monster = _monster;
-
-        monster.currentHp -= damage;
     }
 }

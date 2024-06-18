@@ -107,7 +107,7 @@ public class MonsterStateManager : PointableObject
     {
         currentState.UpdateState(this);
         //Debug.Log(currentState);
-        targetPosition = GameManager.instance.player.transform.position;
+        targetPosition = GameManager.instance.player.transform.position;    
         distanceToTarget = Vector3.Distance(transform.position, targetPosition);
         ani.SetFloat("targetDistance", distanceToTarget);
         
