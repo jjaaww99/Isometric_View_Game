@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -62,9 +63,11 @@ public class PlayerStatus : MonoBehaviour
         }
 
         float healthPercentage = (float)currentHp / (float)maxHp;
-        float vignetteIntensity = Mathf.Lerp(0, 1, healthPercentage);
-        vignette.intensity.value = 1 - vignetteIntensity;
-
+        if (healthPercentage <= 0.5)
+        {
+            float bogan = Mathf.Lerp(0, 0.673f, healthPercentage * 2);
+            vignette.intensity.value = 1 - bogan;
+        }
 
     }
 
