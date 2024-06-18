@@ -40,6 +40,7 @@ public class MonsterStateManager : PointableObject
     public int currentHp;
     private float movementSpeed;
     private int attackPower;
+    public int exp;
 
     [Header("Status")]
     public Vector3 targetPosition;
@@ -164,6 +165,7 @@ public class MonsterStateManager : PointableObject
             maxHp = monsterData.maxHp;
             movementSpeed = monsterData.speed;
             attackPower = monsterData.atk;
+            exp = monsterData.exp;
         }
     }
 
