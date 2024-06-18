@@ -42,7 +42,7 @@ public class MonsterStateManager : PointableObject
     private int attackPower;
 
     [Header("Status")]
-    public Transform target;
+    public Vector3 targetPosition;
     public float deadCount;
     public bool isDead;
     public bool isHit;
@@ -54,7 +54,6 @@ public class MonsterStateManager : PointableObject
         bodyCollider = GetComponent<Collider>();
         nav = GetComponent<NavMeshAgent>();
         multipleRenderers = GetComponentsInChildren<SkinnedMeshRenderer>();
-        //target = GameManager.instance.playerController.transform;
 
         InitializeFromDB(excelDBNumber);
 
@@ -100,8 +99,8 @@ public class MonsterStateManager : PointableObject
     {
         currentState.UpdateState(this);
         //Debug.Log(currentState);
-        
-        distanceToTarget = Vector3.Distance(transform.position, target.position);
+        targetPosition = GameManager.instance.player.transform.position;
+        distanceToTarget = Vector3.Distance(transform.position, targetPosition);
         ani.SetFloat("targetDistance", distanceToTarget);
         
 
