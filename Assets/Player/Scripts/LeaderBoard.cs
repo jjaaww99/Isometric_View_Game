@@ -31,7 +31,7 @@ public class LeaderBoard : MonoBehaviour
         {
             display[i].scoreTexts[0].text = scores[i].killedEnemyCount.ToString();
             display[i].scoreTexts[1].text = scores[i].earnedGold.ToString();
-            display[i].scoreTexts[2].text = scores[i].surviveTime.ToString();
+            display[i].scoreTexts[2].text = scores[i].surviveTime.ToString("F1");
             display[i].scoreTexts[3].text = scores[i].totalScore.ToString();
         }
     }

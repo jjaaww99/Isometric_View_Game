@@ -7062,6 +7062,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1942133828}
+  - {fileID: 2094882982}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1800182658
@@ -8348,6 +8349,63 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1881846194}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2094882981
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2094882982}
+  - component: {fileID: 2094882983}
+  m_Layer: 0
+  m_Name: UIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2094882982
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094882981}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 965.8132, y: 516.3203, z: -5.1211343}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1792973529}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2094882983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094882981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9a507f590e5b0d4baa02a8e802bd312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStat: {fileID: 1330381174}
+  player: {fileID: 1330381179}
+  hpSlider: {fileID: 8051137058250210078}
+  rageSlider: {fileID: 6600779184842926225}
+  expSlider: {fileID: 6977572408210652252}
+  coinUI: {fileID: 656751069}
+  coinText: {fileID: 85858644}
+  enemyUI: {fileID: 1714675749}
+  enemyName: {fileID: 0}
+  enemyHpSlider: {fileID: 0}
+  strText: {fileID: 519058310}
+  dexText: {fileID: 524905150}
+  levelText: {fileID: 3985819609038573951}
 --- !u!1 &2130211071
 GameObject:
   m_ObjectHideFlags: 0

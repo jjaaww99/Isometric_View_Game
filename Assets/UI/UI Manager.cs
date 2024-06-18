@@ -27,15 +27,6 @@ public class UIManager : MonoBehaviour
 
     public TextMeshProUGUI levelText;
 
-    private void Start()
-    {
-        SetSlider();
-    }
-
-    private void SetSlider()
-    {
-    }
-
     void Update()
     {
         UpdateSlider();
