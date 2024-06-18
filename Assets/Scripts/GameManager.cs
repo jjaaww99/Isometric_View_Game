@@ -9,15 +9,13 @@ public class GameManager : MonoBehaviour
     public PlayerStatus player;
     public MonsterStateManager monster;
     public PoolManager pool;
+    public GameObject coin;
 
     void Awake()
     {
         instance = this;
         DontDestroyOnLoad(this);
     }
-
-
-    public GameObject coin;
 
     int percent;
 

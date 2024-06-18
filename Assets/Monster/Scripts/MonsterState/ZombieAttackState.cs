@@ -32,14 +32,12 @@
     {
         biteCheck = true;
         monster.ani.SetBool("Bite", true);
-        monster.attackArea.enabled = true;
     }
 
     private void BiteExit(MonsterStateManager monster)
     {
         biteCheck = false;
         monster.ani.SetBool("Bite", false);
-        monster.attackArea.enabled = false;
     }
 
     //bite해서 플레이어에게 데미지를 주면 좀비는 피를 회복하는 로직 필요함
