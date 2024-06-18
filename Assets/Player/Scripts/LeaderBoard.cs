@@ -27,8 +27,14 @@ public class LeaderBoard : MonoBehaviour
     {
         int maxLength = Mathf.Min(scores.Count, display.Length);
 
+        foreach (var item in display)
+        {
+            item.transform.parent.gameObject.SetActive(false);
+        }
+
         for (int i = 0; i < maxLength; i++)
         {
+            display[i].transform.parent.gameObject.SetActive(true);
             display[i].scoreTexts[0].text = scores[i].killedEnemyCount.ToString();
             display[i].scoreTexts[1].text = scores[i].earnedGold.ToString();
             display[i].scoreTexts[2].text = scores[i].surviveTime.ToString("F1");

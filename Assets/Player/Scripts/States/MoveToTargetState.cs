@@ -34,12 +34,12 @@ public class MoveToTargetState : PlayerState
         {
             if(!player.isPointerOnObject)
             {
-                machine.ChangeState(player.idle);
+                player.stateMachine.ChangeState(player.idle);
             }
 
             else if(player.clickedTarget != target)
             {
-                machine.ChangeState(player.moveToTarget);
+                player.stateMachine.ChangeState(player.moveToTarget);
             }
 
             if(player.clickedTarget == target)
@@ -50,12 +50,12 @@ public class MoveToTargetState : PlayerState
 
         if (player.targetDistance <= player.attackRange)
         {
-            machine.ChangeState(player.basicAttack);
+            player.stateMachine.ChangeState(player.basicAttack);
         }
 
         if(Input.GetKeyDown(KeyCode.LeftShift))
         {
-            machine.ChangeState(player.evade);
+            player.stateMachine.ChangeState(player.evade);
         }
     }
 }

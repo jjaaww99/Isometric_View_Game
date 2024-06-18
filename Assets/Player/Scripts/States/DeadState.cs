@@ -8,14 +8,20 @@ public class DeadState : PlayerState
     public DeadState(JWPlayerController _player, string _animParameter) : base(_player, _animParameter)
     {
     }
-
+    bool isDataSaved = false;
     public override void Enter()
     {
         base.Enter();
 
-        ScoreManager.instance.OnGameOver();
-
         stateTimer = 0;
+
+        isDataSaved = false;
+
+        if (!isDataSaved)
+        {
+            ScoreManager.instance.OnGameOver();
+            isDataSaved = true;
+        }
     }
 
     public override void Exit()
@@ -28,11 +34,6 @@ public class DeadState : PlayerState
     {
         base.Update();
       
-        stateTimer += Time.deltaTime;
-
-        if(stateTimer > 3 ) 
-        {
-            SceneController.Instance.ToStartScene();
-        }
+        
     }
 }

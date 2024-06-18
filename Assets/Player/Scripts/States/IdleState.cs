@@ -28,7 +28,7 @@ public class IdleState : PlayerState
         {
             if (Input.GetKey(player.skillKeyCodes[i]) && player.playerStat.currentRage > player.playerStat.skillList[i].rageAmount)
             {
-                machine.ChangeState(player.skill);
+                player.stateMachine.ChangeState(player.skill);
             }
 
             else if(Input.GetKey(player.skillKeyCodes[i]) && player.playerStat.currentRage < player.playerStat.skillList[i].rageAmount)
@@ -61,19 +61,19 @@ public class IdleState : PlayerState
             {
                 if (player.targetDistance <= player.attackRange)
                 {
-                    machine.ChangeState(player.basicAttack);
+                    player.stateMachine.ChangeState(player.basicAttack);
                 }
 
                 else
                 {
-                    machine.ChangeState(player.moveToTarget);
+                    player.stateMachine.ChangeState(player.moveToTarget);
                 }
             }
         }
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            machine.ChangeState(player.evade);
+            player.stateMachine.ChangeState(player.evade);
         }
     }
 }

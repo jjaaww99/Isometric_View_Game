@@ -43,7 +43,7 @@ public class BasicAttackState : PlayerState
 
         if ((Input.GetMouseButton(1) && !player.isPointerOnObject) || player.animTrigger)
         {
-            machine.ChangeState(player.idle);
+            player.stateMachine.ChangeState(player.idle);
         }
     }
 

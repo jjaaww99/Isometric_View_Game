@@ -27,6 +27,15 @@ public class UIManager : MonoBehaviour
 
     public TextMeshProUGUI levelText;
 
+    public Canvas deadUI;
+    public Button toMainButton;
+
+    private void Awake()
+    {
+        deadUI.gameObject.SetActive(false);
+        toMainButton.onClick.AddListener(SceneController.Instance.ToStartScene);
+    }
+
     void Update()
     {
         UpdateSlider();
@@ -36,6 +45,16 @@ public class UIManager : MonoBehaviour
         strText.text = playerStat.str.ToString();
         dexText.text = playerStat.dex.ToString();
         levelText.text = playerStat.level.ToString();
+
+        if(GameManager.instance.playerController.stateMachine.GetState() == GameManager.instance.playerController.dead)
+        {
+            Invoke(nameof(ShowDeadUI), 1f);
+        }
+    }
+
+    void ShowDeadUI()
+    {
+        deadUI.gameObject.SetActive(true);
     }
 
     void UpdateSlider()

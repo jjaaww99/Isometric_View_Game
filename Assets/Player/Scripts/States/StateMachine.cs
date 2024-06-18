@@ -18,4 +18,9 @@ public class StateMachine
         currentState = targetState;
         targetState.Enter();
     }
+
+    public PlayerState GetState()
+    {
+        return currentState;
+    }
 }

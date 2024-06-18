@@ -16,6 +16,12 @@ public class SkillState : PlayerState
     {
         base.Enter();
 
+        targetPos = player.pointerPosition - player.transform.position;
+
+        targetDir = player.pointerPosition - player.transform.forward;
+
+        player.transform.LookAt(targetDir);
+
         for (int i = 0; i < player.skillKeyCodes.Length; i++)
         {
             if (Input.GetKeyDown(player.skillKeyCodes[i]))
@@ -45,7 +51,7 @@ public class SkillState : PlayerState
 
         if (player.playerStat.currentRage < player.playerStat.skillList[index].rageAmount)
         {
-            machine.ChangeState(player.idle);
+            player.stateMachine.ChangeState(player.idle);
         }
 
         if (player.playerStat.skillList[index].rageUseType == 2)
