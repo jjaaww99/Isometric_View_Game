@@ -9,7 +9,7 @@ public class MousePointer : MonoBehaviour
     Camera mainCam;
 
     public Vector3 pointerPosition;
-    private VisualEffect clickEffect;
+    public VisualEffect clickEffect;
 #nullable enable
     public GameObject? pointedObject;
     public GameObject? clickedObject;
@@ -20,7 +20,6 @@ public class MousePointer : MonoBehaviour
     private void Awake()
     {
         mainCam = Camera.main;
-        clickEffect = GetComponentInChildren<VisualEffect>();
     }
 
     void Update()
@@ -48,6 +47,7 @@ public class MousePointer : MonoBehaviour
 
                 if (Input.GetMouseButtonDown(1))
                 {
+                    clickEffect.transform.position = transform.position + new Vector3(0, 0.2f, 0);
                     clickEffect.Play();
                 }
             }

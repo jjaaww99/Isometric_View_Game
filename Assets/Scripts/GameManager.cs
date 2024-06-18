@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
+
+        gameState = GameState.Playing;
     }
 
     int percent;
