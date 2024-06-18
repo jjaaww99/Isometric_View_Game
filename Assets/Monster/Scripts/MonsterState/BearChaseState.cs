@@ -25,6 +25,7 @@ public class BearChaseState : MonsterChaseState
 
     private IEnumerator Roar(MonsterStateManager monster)
     {
+        monster.nav.enabled = true;
         monster.transform.LookAt(monster.targetPosition);
         monster.ani.SetTrigger("Roar");
         monster.nav.isStopped = true;
