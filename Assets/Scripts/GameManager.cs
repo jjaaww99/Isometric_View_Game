@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public PlayerStatus player;
     public PoolManager pool;
     public CoinPool coinPool;
+    public Spawner spawner;
 
     void Awake()
     {
