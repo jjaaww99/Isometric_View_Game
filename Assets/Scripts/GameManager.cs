@@ -12,21 +12,19 @@ public class GameManager : MonoBehaviour
     public PlayerStatus player;
     public PoolManager pool;
     public CoinPool coinPool;
+    public Spawner spawner;
     void Awake()
     {
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<JWPlayerController>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStatus>();
+        pool = GameObject.FindGameObjectWithTag("PoolManager").GetComponent<PoolManager>();
+        coinPool = GameObject.FindGameObjectWithTag("CoinPool").GetComponent<CoinPool>();
+        spawner =  GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>();
+
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
         }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        instance = this;
-        DontDestroyOnLoad(this);
     }
 
     int percent;

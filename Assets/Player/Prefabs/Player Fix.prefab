@@ -1294,12 +1294,14 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  targetsInDetectRange: []
   skillVFXs:
   - {fileID: 1510578394269765923}
   - {fileID: 393152162037116587}
   - {fileID: 6124748885323083385}
   pointer: {fileID: 0}
-  equipedSkills: {fileID: 0}
+  playerStat: {fileID: 0}
+  damageNumber: {fileID: 0}
   nav: {fileID: 2889418989150702801}
   targetPosition: {x: -12.848816, y: -0.71715546, z: 9.326561}
   pointerPosition: {x: 54.29663, y: -0.27723694, z: 108.5855}
@@ -1397,7 +1399,7 @@ NavMeshAgent:
   m_Radius: 0.5
   m_Speed: 5
   m_Acceleration: 10000
-  avoidancePriority: 50
+  avoidancePriority: 1
   m_AngularSpeed: 10000
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 0

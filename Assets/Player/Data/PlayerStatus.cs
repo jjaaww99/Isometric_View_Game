@@ -31,6 +31,8 @@ public class PlayerStatus : MonoBehaviour
         skillList = new skillEntity[6];
         playerStatus = playerStat.playerData.ToArray();
 
+        volume = FindAnyObjectByType<Volume>(); 
+
         skillList[0] = skillData.SkillList[1];
         skillList[1] = skillData.SkillList[2];
         skillList[5] = skillData.SkillList[0];
@@ -44,6 +46,11 @@ public class PlayerStatus : MonoBehaviour
         currentRage = maxRage;
         maxExp = playerStatus[level - 1].maxExp;
         currentExp = 0;
+    }
+
+
+    private void Start()
+    {
         volume.profile.TryGet(out vignette);
     }
 
