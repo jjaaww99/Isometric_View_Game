@@ -49,7 +49,7 @@ public class UIManager : MonoBehaviour
     }
 
 
-    MonsterStateManager monster;
+    public MonsterStateManager monster;
 
     void DisplayEnemyUI()
     {
@@ -59,10 +59,10 @@ public class UIManager : MonoBehaviour
 
             monster = _monster;
 
-            enemyHpSlider.value = monster.currentHp;
-            enemyHpSlider.maxValue = monster.maxHp;
+            enemyHpSlider.value = _monster.currentHp;
+            enemyHpSlider.maxValue = _monster.maxHp;
 
-            enemyName.text = monster.monsterName;
+            enemyName.text = _monster.monsterName;
         }
 
         else
