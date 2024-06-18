@@ -18,7 +18,6 @@ public class PointableObject : MonoBehaviour, IPointerClickHandler, IPointerExit
 
     public virtual void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("MouseEnter");
 
         if(multipleRenderers != null)
         {

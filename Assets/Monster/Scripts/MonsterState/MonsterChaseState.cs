@@ -6,6 +6,7 @@ public class MonsterChaseState : MonsterBasicState
 
     public override void EnterState(MonsterStateManager monster)
     {
+        monster.nav.enabled = true;
         monster.bodyCollider.isTrigger = true;
         monster.nav.isStopped = false;
         monster.ani.SetBool("Chase", true);
