@@ -64,8 +64,8 @@ public class PlayerStatus : MonoBehaviour
         float healthPercentage = (float)currentHp / (float)maxHp;
         float vignetteIntensity = Mathf.Lerp(0, 1, healthPercentage);
         vignette.intensity.value = 1 - vignetteIntensity;
-        
-        
+
+
     }
 
 
