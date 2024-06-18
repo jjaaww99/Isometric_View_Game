@@ -72,8 +72,6 @@ public class BasicAttackState : PlayerState
 
                 player.DamageToEnemy(monster, player.playerStat.Damage(10));
 
-                Debug.Log(player.playerStat.Damage(10));
-
                 monster.isHit = true;
 
                 Vector3 numberPosition = monster.transform.position + new Vector3(0, 2, 0);

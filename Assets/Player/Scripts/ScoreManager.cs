@@ -1,16 +1,21 @@
 using System.IO;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
 
-    public Score resultScore;
+    public Score currentScore;
+    public List<Score> scoreList = new List<Score>();
+    public ScoreList saveScore = new ScoreList();
+    public string scoreFilePath;
+
     public int killedEnemyCount;
     public int earnedGold;
-    public int totalScore;
     public float surviveTime;
-    public string scoreFilePath;
+    public int totalScore;
+
     private void Awake()
     {
         if (instance == null)
@@ -21,19 +26,29 @@ public class ScoreManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+            return;
         }
 
-        OnGameOver();
+        scoreFilePath = Path.Combine(Application.streamingAssetsPath, "scores.json");
 
-        scoreFilePath = Path.Combine(Application.streamingAssetsPath, "score.json");
+        LoadScores();
+        ResetScores();
     }
 
     private void Update()
     {
-        if(GameManager.instance.gameState == GameState.Playing )
+        if (GameManager.instance.gameState == GameState.Playing)
         {
             surviveTime += Time.deltaTime;
         }
+    }
+
+    public void OnGameOver()
+    {
+        currentScore = new Score(killedEnemyCount, earnedGold, totalScore, surviveTime);
+        scoreList.Add(currentScore);
+        SaveScores();
+        ResetScores();
     }
 
     private void ResetScores()
@@ -44,16 +59,30 @@ public class ScoreManager : MonoBehaviour
         surviveTime = 0;
     }
 
-    public void OnGameOver()
+    private void SaveScores()
     {
-        resultScore = new Score(killedEnemyCount, earnedGold, totalScore, surviveTime);
-        ResetScores();   
+        scoreList.Sort();
+
+        saveScore.scores = scoreList;
+
+        string json = JsonUtility.ToJson(saveScore);
+
+        File.WriteAllText(scoreFilePath, json);
+        Debug.Log("Scores saved to " + scoreFilePath);
     }
 
-    public void SaveData()
+    private void LoadScores()
     {
-        string json = JsonUtility.ToJson(resultScore);
-        File.WriteAllText(scoreFilePath, json);
-        Debug.Log("Score saved to " + scoreFilePath);
+        if (File.Exists(scoreFilePath))
+        {
+            string json = File.ReadAllText(scoreFilePath);
+
+            scoreList = JsonUtility.FromJson<List<Score>>(json);
+            saveScore.scores = scoreList;
+        }
+        else
+        {
+            Debug.Log("No scores file found, starting with an empty list.");
+        }
     }
 }

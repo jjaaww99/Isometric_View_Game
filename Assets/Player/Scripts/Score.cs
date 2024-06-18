@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Score 
+[System.Serializable]
+public struct Score : IComparable<Score>
 {
     public Score(int _killedEnemyCount, int _earnedGold, int _totalScore, float _surviveTime)
     {
@@ -14,6 +16,11 @@ public class Score
 
     public int killedEnemyCount;
     public int earnedGold;
-    public int totalScore;
     public float surviveTime;
+    public int totalScore;
+
+    public int CompareTo(Score other)
+    {
+        return other.totalScore.CompareTo(totalScore);
+    }
 }
