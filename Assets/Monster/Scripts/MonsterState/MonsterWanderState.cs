@@ -5,8 +5,8 @@ public class MonsterWanderState : MonsterBasicState
 {
     bool isWandering = false;
     float timer = 0;
-    float wanderTimer = 3f; // 배회 타이머 (초 단위)
-    float wanderRadius = 5f; // 배회 반경
+    float wanderTimer = 2f; // 배회 타이머 (초 단위)
+    float wanderRadius = 4f; // 배회 반경
 
     public override void EnterState(MonsterStateManager monster)
     {

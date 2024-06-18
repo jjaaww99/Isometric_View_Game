@@ -40,6 +40,7 @@ public class MonsterStateManager : PointableObject
     public int currentHp;
     private float movementSpeed;
     private int attackPower;
+    public int exp;
 
     [Header("Status")]
     public Vector3 targetPosition;
@@ -48,6 +49,9 @@ public class MonsterStateManager : PointableObject
     public bool isHit;
     public float distanceToTarget;
     public float chagetowandertime;
+
+
+    public bool roar = true;
 
     void Awake()
     {
@@ -92,6 +96,10 @@ public class MonsterStateManager : PointableObject
         currentState.EnterState(this);
         distanceToTarget = 30;
         chagetowandertime = 0f;
+        nav.enabled = false;
+        bodyCollider.isTrigger = false;
+
+        roar = true; //곰 표효 확인
     }
 
 
@@ -109,7 +117,7 @@ public class MonsterStateManager : PointableObject
         {
             TryChangeState(deadState);
         }
-        else if (isHit && !isDead)
+        else if (isHit && !isDead && chagetowandertime >= 2)
         {
             TryChangeState(hitState);
         }
@@ -164,6 +172,7 @@ public class MonsterStateManager : PointableObject
             maxHp = monsterData.maxHp;
             movementSpeed = monsterData.speed;
             attackPower = monsterData.atk;
+            exp = monsterData.exp;
         }
     }
 

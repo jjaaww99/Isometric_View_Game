@@ -52,9 +52,7 @@ public class SkillState : PlayerState
         {
             elapsedTime += Time.deltaTime;
 
-            Debug.Log(elapsedTime);
-
-            if (elapsedTime >= 0.5f)
+            if(elapsedTime >= 0.5f)
             {
                 elapsedTime -= 0.5f;
                 player.playerStat.currentRage -= player.playerStat.skillList[index].rageAmount;
@@ -99,9 +97,9 @@ public class SkillState : PlayerState
 
                 Debug.Log(player.playerStat.Damage(5));
 
-                Vector3 numberPosition = monster.transform.position + new Vector3(0, 2, 0);
-
-                monster.isHit = true;
+                    Vector3 numberPosition = monster.transform.position + new Vector3(0, 2, 0);
+                    
+                    monster.isHit = true;
 
                 DamageNumber damage = player.damageNumber.Spawn(numberPosition, player.playerStat.Damage(10));
 
@@ -117,9 +115,9 @@ public class SkillState : PlayerState
 
         int targets = Physics.OverlapBoxNonAlloc(
             player.jumpAttackPoint.position,
-            player.jumpAttackSize / 2, // OverlapBoxÀÇ ¹İ»çÀÌÁî¸¦ Àü´Ş
+            player.jumpAttackSize / 2, // OverlapBoxì˜ ë°˜ì‚¬ì´ì¦ˆë¥¼ ì „ë‹¬
             player.targetsInAttackRange,
-            player.jumpAttackPoint.rotation, // Á¡ÇÁ °ø°İ Æ÷ÀÎÆ®ÀÇ È¸ÀüÀ» »ç¿ë
+            player.jumpAttackPoint.rotation, // ì í”„ ê³µê²© í¬ì¸íŠ¸ì˜ íšŒì „ì„ ì‚¬ìš©
             LayerMask.GetMask("Enemy"));
 
         for (int i = 0; i < targets; i++)
