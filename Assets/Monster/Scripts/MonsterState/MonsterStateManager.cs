@@ -110,7 +110,7 @@ public class MonsterStateManager : PointableObject
         targetPosition = GameManager.instance.player.transform.position;    
         distanceToTarget = Vector3.Distance(transform.position, targetPosition);
         ani.SetFloat("targetDistance", distanceToTarget);
-        
+
 
         // 상태 변환 조건
         if (currentHp <= 0 && !isDead)
@@ -133,7 +133,7 @@ public class MonsterStateManager : PointableObject
         {
             TryChangeState(chaseState);
         }
-        else if (distanceToTarget <= 2 && !isDead && !isHit)
+        else if (distanceToTarget <= 2 && !isDead && !isHit && GameManager.instance.gameState == GameState.Playing)
         {
             TryChangeState(attackState);
         }
