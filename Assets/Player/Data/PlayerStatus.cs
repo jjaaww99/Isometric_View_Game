@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class PlayerStatus : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class PlayerStatus : MonoBehaviour
     public skillEntity[] skillList;
     public playerStat playerStat;
     public PlayerStatusEntity[] playerStatus;
+    public VisualEffect levelEffect;
 
     public int level;
     public int maxHp;
@@ -49,7 +51,8 @@ public class PlayerStatus : MonoBehaviour
 
     public void LevelUP()
     {
-        if(level < 5)
+        levelEffect.Play();
+        if (level < 5)
         {
             level++;
             str = playerStatus[level - 1].str;

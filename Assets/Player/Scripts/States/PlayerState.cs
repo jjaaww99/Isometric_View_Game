@@ -12,6 +12,7 @@ public class PlayerState
     protected Vector3 targetPos;
     protected Vector3 targetDir;
     protected float stateTimer;
+    bool isOver = false;
 
     public PlayerState (JWPlayerController _player, string _animParameter)
     {
@@ -40,9 +41,10 @@ public class PlayerState
     }
     public virtual void Update() 
     {
-        if (player.playerStat.currentHp <= 0)
+        if (player.playerStat.currentHp <= 0 && !isOver)
         {
             machine.ChangeState(player.dead);
+            isOver = true;
         }
     }
     public virtual void FixedUpdate()

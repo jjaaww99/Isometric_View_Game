@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Timers;
 using UnityEngine;
 
 public class DeadState : PlayerState
@@ -11,16 +12,27 @@ public class DeadState : PlayerState
     public override void Enter()
     {
         base.Enter();
-        GameManager.instance.gameState = GameState.Idle;
+
+        ScoreManager.instance.OnGameOver();
+
+        stateTimer = 0;
     }
 
     public override void Exit()
     {
         base.Exit();
+
     }
 
     public override void Update()
     {
         base.Update();
+      
+        stateTimer += Time.deltaTime;
+
+        if(stateTimer > 3 ) 
+        {
+            SceneController.Instance.ToStartScene();
+        }
     }
 }

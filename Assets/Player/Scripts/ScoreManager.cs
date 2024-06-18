@@ -35,19 +35,16 @@ public class ScoreManager : MonoBehaviour
         ResetScores();
     }
 
-    private void Update()
-    {
-        if (GameManager.instance.gameState == GameState.Playing)
-        {
-            surviveTime += Time.deltaTime;
-        }
-    }
-
     public void OnGameOver()
     {
+        totalScore = killedEnemyCount + earnedGold + (int)surviveTime; 
+
         currentScore = new Score(killedEnemyCount, earnedGold, totalScore, surviveTime);
+
         scoreList.Add(currentScore);
+        
         SaveScores();
+        
         ResetScores();
     }
 

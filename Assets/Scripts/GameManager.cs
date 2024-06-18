@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public enum GameState { Playing, Idle , End}
+public enum GameState { Idle, Playing }
 
 public class GameManager : MonoBehaviour
 {
@@ -12,10 +12,18 @@ public class GameManager : MonoBehaviour
     public PlayerStatus player;
     public PoolManager pool;
     public CoinPool coinPool;
-
     void Awake()
     {
-        gameState = GameState.Idle;
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
 
         instance = this;
         DontDestroyOnLoad(this);
@@ -30,6 +38,32 @@ public class GameManager : MonoBehaviour
         {
             coinPool.ActivateCoin(position);
         }
+    }
 
+    private bool playerInitialized = false;
+
+    private void Update()
+    {
+        if (gameState == GameState.Playing)
+        { 
+            ScoreManager.instance.surviveTime += Time.deltaTime;
+            
+            if(!playerInitialized)
+            {
+                InitializePlayer();
+                playerInitialized = true;
+            }
+        }
+
+        Debug.Log(gameState.ToString());
+    }
+
+    private void InitializePlayer()
+    {
+        playerController = FindObjectOfType<JWPlayerController>();
+        if (playerController != null)
+        {
+            player = playerController.GetComponent<PlayerStatus>();
+        }
     }
 }

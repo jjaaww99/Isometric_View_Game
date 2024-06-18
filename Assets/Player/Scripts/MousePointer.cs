@@ -2,13 +2,14 @@ using DamageNumbersPro;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class MousePointer : MonoBehaviour
 {
     Camera mainCam;
 
     public Vector3 pointerPosition;
-
+    private VisualEffect clickEffect;
 #nullable enable
     public GameObject? pointedObject;
     public GameObject? clickedObject;
@@ -19,6 +20,7 @@ public class MousePointer : MonoBehaviour
     private void Awake()
     {
         mainCam = Camera.main;
+        clickEffect = GetComponentInChildren<VisualEffect>();
     }
 
     void Update()
@@ -44,9 +46,9 @@ public class MousePointer : MonoBehaviour
                 isPointerOnObject = false;
                 pointedObject = null;
 
-                if (Input.GetMouseButton(1))
+                if (Input.GetMouseButtonDown(1))
                 {
-                    pointedObject = null;
+                    clickEffect.Play();
                 }
             }
 

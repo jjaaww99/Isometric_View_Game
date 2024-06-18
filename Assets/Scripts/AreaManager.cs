@@ -22,8 +22,6 @@ public class AreaManager : MonoBehaviour
             spawner.spawnStartPoint = spawner.spawnPointenable;
             spawner.spawnPointenable = areapoint;
         }
-
-
     }
 
 }

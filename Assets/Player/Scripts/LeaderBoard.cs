@@ -15,12 +15,12 @@ public class LeaderBoard : MonoBehaviour
     private void Start()
     {
         display = GetComponentsInChildren<ScoreDisplay>();
-        ShowScore();
     }
 
     private void Update()
     {
         scores = ScoreManager.instance.scoreList;
+        ShowScore();
     }
 
     public void ShowScore()
