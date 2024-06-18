@@ -13,7 +13,7 @@ public class MonsterChaseState : MonsterBasicState
 
     public override void UpdateState(MonsterStateManager monster)
     {
-        monster.nav.SetDestination(monster.target.position);
+        monster.nav.SetDestination(monster.targetPosition);
         monster.rigid.velocity = Vector3.zero;
         monster.rigid.angularVelocity = Vector3.zero;
     }

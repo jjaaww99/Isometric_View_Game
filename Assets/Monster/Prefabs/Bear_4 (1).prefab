@@ -819,112 +819,6 @@ Transform:
   - {fileID: 377065555887416702}
   m_Father: {fileID: 6193551923591631689}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2832119837412018450
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 86783862162636237}
-  - component: {fileID: 3915886379364468074}
-  m_Layer: 0
-  m_Name: DetectArea
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &86783862162636237
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2832119837412018450}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3877690700820399268}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &3915886379364468074
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2832119837412018450}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 25, y: 10, z: 25}
-  m_Center: {x: 0, y: 1, z: 0}
---- !u!1 &3046328639710124813
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 188188091671921508}
-  - component: {fileID: 2060247795257279960}
-  m_Layer: 0
-  m_Name: AttackArea
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &188188091671921508
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3046328639710124813}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.78, z: 2.084}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3877690700820399268}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2060247795257279960
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3046328639710124813}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Size: {x: 1.5233217, y: 1.5654716, z: 1}
-  m_Center: {x: -0.012740194, y: 0.046337366, z: 3.7547604e-10}
 --- !u!1 &3289985342606973277
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,7 +1299,7 @@ GameObject:
   - component: {fileID: 1430465723674909588}
   - component: {fileID: 183577859629480405}
   m_Layer: 6
-  m_Name: Bear_4
+  m_Name: Bear_4 (1)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1420,14 +1314,12 @@ Transform:
   m_GameObject: {fileID: 4967713264241241020}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.97865236, z: -0, w: -0.20552275}
-  m_LocalPosition: {x: 8.1, y: 0.5, z: 26.6}
+  m_LocalPosition: {x: -17.02, y: -0.16, z: 16.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2455640396852753320}
   - {fileID: 6952012625623749698}
-  - {fileID: 188188091671921508}
-  - {fileID: 86783862162636237}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -203.71999, z: 0}
 --- !u!95 &101814620219664833
@@ -1464,26 +1356,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multipleRenderers: []
-  ragdoll: {fileID: 1307587925404850056}
-  monsterType: 1
-  excelDBNumber: 3
-  monsterName: 
-  maxHp: 0
-  currentHp: 0
-  speed: 0
-  atk: 0
-  target: {fileID: 0}
-  deadCount: 0
-  isDead: 0
-  hit: 0
-  targetDistance: 0
-  attackArea: {fileID: 2060247795257279960}
-  monsterDB: {fileID: 11400000, guid: 9b4e6a6ba7ae5cc41bf87c247119b0d3, type: 2}
   nav: {fileID: 6160795822562708519}
   rigid: {fileID: 183577859629480405}
   bodyCollider: {fileID: 1430465723674909588}
   ani: {fileID: 101814620219664833}
-  detectArea: {fileID: 3915886379364468074}
+  ragdoll: {fileID: 1307587925404850056}
+  monsterDB: {fileID: 11400000, guid: 9b4e6a6ba7ae5cc41bf87c247119b0d3, type: 2}
+  excelDBNumber: 3
+  monsterName: 
+  monsterType: 1
+  maxHp: 0
+  currentHp: 0
+  exp: 0
+  targetPosition: {x: 0, y: 0, z: 0}
+  deadCount: 0
+  isDead: 0
+  isHit: 0
+  distanceToTarget: 0
+  chagetowandertime: 0
 --- !u!195 &6160795822562708519
 NavMeshAgent:
   m_ObjectHideFlags: 0

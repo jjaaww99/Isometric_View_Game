@@ -9,7 +9,6 @@ public class Spawner : MonoBehaviour
     int num;
     private void Awake()
     {
-        
         spawnPoint = GetComponentsInChildren<Transform>();
     }
 
@@ -21,7 +20,7 @@ public class Spawner : MonoBehaviour
     private void Update()
     {
         spawnTimer += Time.deltaTime;
-        if (spawnTimer > 0.5f)
+        if (spawnTimer > 1f)
         {
             spawnTimer = 0;
             Spawn();

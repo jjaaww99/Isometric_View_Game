@@ -20,8 +20,6 @@ public class MonsterStateManager : PointableObject
     public Rigidbody rigid;
     public Collider bodyCollider;
     public Animator ani;
-    public BoxCollider attackArea;
-    public BoxCollider detectArea;
     public RagDoll ragdoll;
 
     [Header("States")]
@@ -42,14 +40,18 @@ public class MonsterStateManager : PointableObject
     public int currentHp;
     private float movementSpeed;
     private int attackPower;
+    public int exp;
 
     [Header("Status")]
-    public Transform target;
+    public Vector3 targetPosition;
     public float deadCount;
     public bool isDead;
     public bool isHit;
     public float distanceToTarget;
     public float chagetowandertime;
+
+
+    public bool roar = true;
 
     void Awake()
     {
@@ -94,26 +96,28 @@ public class MonsterStateManager : PointableObject
         currentState.EnterState(this);
         distanceToTarget = 30;
         chagetowandertime = 0f;
+        nav.enabled = false;
+        bodyCollider.isTrigger = false;
+
+        roar = true; //곰 표효 확인
     }
 
 
     void Update()
     {
         currentState.UpdateState(this);
-        Debug.Log(currentState);
-        if (target != null && !isDead)
-        {
-            nav.enabled = true;
-            distanceToTarget = Vector3.Distance(transform.position, target.position);
-            ani.SetFloat("targetDistance", distanceToTarget);
-        }
+        //Debug.Log(currentState);
+        targetPosition = GameManager.instance.player.transform.position;
+        distanceToTarget = Vector3.Distance(transform.position, targetPosition);
+        ani.SetFloat("targetDistance", distanceToTarget);
+        
 
         // 상태 변환 조건
         if (currentHp <= 0 && !isDead)
         {
             TryChangeState(deadState);
         }
-        else if (isHit && !isDead)
+        else if (isHit && !isDead && chagetowandertime >= 2)
         {
             TryChangeState(hitState);
         }
@@ -155,11 +159,7 @@ public class MonsterStateManager : PointableObject
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            JWPlayerController player = other.GetComponent<JWPlayerController>();
-            target = player.transform;
-        }
+
     }
 
 
@@ -172,6 +172,7 @@ public class MonsterStateManager : PointableObject
             maxHp = monsterData.maxHp;
             movementSpeed = monsterData.speed;
             attackPower = monsterData.atk;
+            exp = monsterData.exp;
         }
     }
 

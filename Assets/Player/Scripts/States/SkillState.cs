@@ -52,8 +52,6 @@ public class SkillState : PlayerState
         {
             elapsedTime += Time.deltaTime;
 
-            Debug.Log(elapsedTime);
-
             if(elapsedTime >= 0.5f)
             {
                 elapsedTime -= 0.5f;
@@ -101,8 +99,6 @@ public class SkillState : PlayerState
                     monster.isHit = true;
 
                     GameManager.instance.DamageToEnemy(monster, player.playerStat.Damage(10));
-
-                    Debug.Log(player.playerStat.Damage(5));
 
                     Vector3 numberPosition = monster.transform.position + new Vector3(0, 2, 0);
                     
