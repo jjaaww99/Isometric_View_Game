@@ -1,6 +1,7 @@
 using System.IO;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class ScoreManager : MonoBehaviour
     public int earnedGold;
     public float surviveTime;
     public int totalScore;
+
 
     private void Awake()
     {

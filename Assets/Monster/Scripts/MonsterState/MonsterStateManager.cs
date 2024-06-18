@@ -184,7 +184,7 @@ public class MonsterStateManager : PointableObject
 
     public void DamagetoPlayer()
     {
-        GameManager.instance.player.currentHp -= attackPower;
+        GameManager.instance.player.TakeDamage(attackPower);
     }
 
 }

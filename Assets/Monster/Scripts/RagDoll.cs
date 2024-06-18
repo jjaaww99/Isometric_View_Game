@@ -41,7 +41,7 @@ public class RagDoll : MonoBehaviour
 
     public void DamagetoPlayer()
     {
-        GameManager.instance.player.currentHp -= 5;
+        GameManager.instance.player.TakeDamage(5);
     }
 
 }

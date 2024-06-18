@@ -30,7 +30,7 @@ public class EvadeState : PlayerState
         
         if(player.animTrigger)
         {
-            machine.ChangeState(player.idle);
+            player.stateMachine.ChangeState(player.idle);
         }
     }
 

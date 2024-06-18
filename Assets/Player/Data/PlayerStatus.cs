@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -14,6 +15,8 @@ public class PlayerStatus : MonoBehaviour
     private VolumeProfile profile;
     private Vignette vignette;
     private float vignetteintensity;
+    Color originalColor;
+    float originalIntensity;
 
     public int level;
     public int maxHp;
@@ -53,6 +56,9 @@ public class PlayerStatus : MonoBehaviour
     private void Start()
     {
         volume.profile.TryGet(out vignette);
+
+        originalColor = vignette.color.value;
+        originalIntensity = vignette.intensity.value;
     }
 
     private void Update()
@@ -68,9 +74,7 @@ public class PlayerStatus : MonoBehaviour
             float bogan = Mathf.Lerp(0, 0.673f, healthPercentage * 2);
             vignette.intensity.value = 1 - bogan;
         }
-
     }
-
 
     public void LevelUP()
     {
@@ -93,4 +97,41 @@ public class PlayerStatus : MonoBehaviour
         int RandomDivider = Random.Range(90, 110);
         return str * Multiplier / RandomDivider;
     }
+
+    public void TakeDamage(int damageTaken)
+    {
+        currentHp -= damageTaken;
+
+        if(currentHp > 0)
+        {
+            StartCoroutine(ScreenBlinkRed());
+        }
+    }
+    private IEnumerator ScreenBlinkRed()
+    {
+        float duration = 0.3f;
+        float blinkDuration = 0.2f; // 빨간색으로 변하는 시간
+        float elapsedTime = 0f;
+        Color targetColor = Color.red; // 원하는 붉은색으로 설정
+
+        while (elapsedTime < blinkDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            vignette.color.value = Color.Lerp(originalColor, targetColor, elapsedTime / blinkDuration);
+            yield return null;
+        }
+
+        float restoreTime = duration - blinkDuration;
+        elapsedTime = 0f;
+        while (elapsedTime < restoreTime)
+        {
+            elapsedTime += Time.deltaTime;
+            vignette.color.value = Color.Lerp(targetColor, originalColor, elapsedTime / restoreTime);
+            yield return null;
+        }
+
+        vignette.color.value = originalColor;
+    }
+
+
 }

@@ -8,24 +8,23 @@ public class PlayerState
 {
     protected JWPlayerController player;
     protected string animParameter;
-    protected StateMachine machine;
     protected Vector3 targetPos;
     protected Vector3 targetDir;
     protected float stateTimer;
+
     bool isOver = false;
 
     public PlayerState (JWPlayerController _player, string _animParameter)
     {
         player = _player;
         animParameter = _animParameter;
-        machine = player.stateMachine;
     }
 
     public virtual void Enter()
     {
         player.animator.SetBool(animParameter, true);
-
         player.nav.ResetPath();
+        isOver = false;
     }
     public virtual void Exit() 
     {
@@ -43,7 +42,8 @@ public class PlayerState
     {
         if (player.playerStat.currentHp <= 0 && !isOver)
         {
-            machine.ChangeState(player.dead);
+            Debug.Log("Dead called");
+            player.stateMachine.ChangeState(player.dead);
             isOver = true;
         }
     }
