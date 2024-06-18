@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.VFX;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class PlayerStatus : MonoBehaviour
 {
@@ -9,7 +8,11 @@ public class PlayerStatus : MonoBehaviour
     public skillEntity[] skillList;
     public playerStat playerStat;
     public PlayerStatusEntity[] playerStatus;
-    public VisualEffect levelEffect;
+
+    public Volume volume;
+    private VolumeProfile profile;
+    private Vignette vignette;
+    private float vignetteintensity;
 
     public int level;
     public int maxHp;
@@ -20,6 +23,8 @@ public class PlayerStatus : MonoBehaviour
     public int dex;
     public int maxExp;
     public int currentExp;
+
+
 
     private void Awake()
     {
@@ -39,6 +44,7 @@ public class PlayerStatus : MonoBehaviour
         currentRage = maxRage;
         maxExp = playerStatus[level - 1].maxExp;
         currentExp = 0;
+        volume.profile.TryGet(out vignette);
     }
 
     private void Update()
@@ -47,12 +53,18 @@ public class PlayerStatus : MonoBehaviour
         {
             LevelUP();
         }
+
+        float healthPercentage = (float)currentHp / (float)maxHp;
+        float vignetteIntensity = Mathf.Lerp(0, 1, healthPercentage);
+        vignette.intensity.value = 1 - vignetteIntensity;
+        
+        
     }
+
 
     public void LevelUP()
     {
-        levelEffect.Play();
-        if (level < 5)
+        if(level < 5)
         {
             level++;
             str = playerStatus[level - 1].str;

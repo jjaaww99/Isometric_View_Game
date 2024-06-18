@@ -5,23 +5,27 @@ using UnityEngine;
 public class AreaManager : MonoBehaviour
 {
     public BoxCollider area;
-    public Spawner spawner;
 
-    public int areapoint;
+    public int startpoint;
+    public int endpoint;
 
     private void Awake()
     {
         area = GetComponent<BoxCollider>();
-        spawner = GetComponent<Spawner>();
+    }
+
+    private void Update()
+    {
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
         {
-            spawner.spawnStartPoint = spawner.spawnPointenable;
-            spawner.spawnPointenable = areapoint;
+            GameManager.instance.spawner.SpawnPointChange(startpoint, endpoint);
         }
+
     }
 
 }
