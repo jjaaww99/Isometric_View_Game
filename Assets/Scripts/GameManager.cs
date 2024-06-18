@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         gameState = new GameState();
+        gameState = GameState.Idle;
         instance = this;
         DontDestroyOnLoad(this);
     }
