@@ -43,7 +43,7 @@ public class SkillState : PlayerState
     {
         base.Update();
 
-        if(player.playerStat.currentRage < player.playerStat.skillList[index].rageAmount)
+        if (player.playerStat.currentRage < player.playerStat.skillList[index].rageAmount)
         {
             machine.ChangeState(player.idle);
         }
@@ -54,7 +54,7 @@ public class SkillState : PlayerState
 
             Debug.Log(elapsedTime);
 
-            if(elapsedTime >= 0.5f)
+            if (elapsedTime >= 0.5f)
             {
                 elapsedTime -= 0.5f;
                 player.playerStat.currentRage -= player.playerStat.skillList[index].rageAmount;
@@ -68,7 +68,7 @@ public class SkillState : PlayerState
     }
     public override void FixedUpdate()
     {
-        if(player.damageTrigger)
+        if (player.damageTrigger)
         {
             if (index == 1)
             {
@@ -90,29 +90,24 @@ public class SkillState : PlayerState
 
         for (int i = 0; i < targets; i++)
         {
-            Vector3 direction = player.targetsInAttackRange[i].transform.position - player.transform.position;
 
-            if (player.targetsInAttackRange[i].TryGetComponent<Rigidbody>(out Rigidbody rigidBody))
+            if (player.targetsInAttackRange[i].TryGetComponent<MonsterStateManager>(out MonsterStateManager monster))
             {
-                rigidBody.AddForce(direction.normalized * player.rbForce, ForceMode.VelocityChange);
+                monster.isHit = true;
 
-                if (player.targetsInAttackRange[i].TryGetComponent<MonsterStateManager>(out MonsterStateManager monster))
-                {
-                    monster.isHit = true;
+                player.DamageToEnemy(monster, player.playerStat.Damage(10));
 
-                    GameManager.instance.DamageToEnemy(monster, player.playerStat.Damage(10));
+                Debug.Log(player.playerStat.Damage(5));
 
-                    Debug.Log(player.playerStat.Damage(5));
+                Vector3 numberPosition = monster.transform.position + new Vector3(0, 2, 0);
 
-                    Vector3 numberPosition = monster.transform.position + new Vector3(0, 2, 0);
-                    
-                    monster.isHit = true;
+                monster.isHit = true;
 
-                    DamageNumber damage = player.damageNumber.Spawn(numberPosition, player.playerStat.Damage(10));
+                DamageNumber damage = player.damageNumber.Spawn(numberPosition, player.playerStat.Damage(10));
 
-                    CameraShake.Instance.Shake(0.5f, 0.5f);
-                }
+                CameraShake.Instance.Shake(0.5f, 0.5f);
             }
+
         }
 
     }
@@ -129,25 +124,21 @@ public class SkillState : PlayerState
 
         for (int i = 0; i < targets; i++)
         {
-            Vector3 direction = player.targetsInAttackRange[i].transform.position - player.transform.position;
-
-            if (player.targetsInAttackRange[i].TryGetComponent<Rigidbody>(out Rigidbody rigidBody))
+            if (player.targetsInAttackRange[i].TryGetComponent<MonsterStateManager>(out MonsterStateManager monster))
             {
-                rigidBody.AddForce(direction.normalized * player.rbForce, ForceMode.VelocityChange);
+                monster.isHit = true;
 
-                if (player.targetsInAttackRange[i].TryGetComponent<MonsterStateManager>(out MonsterStateManager monster))
-                {
-                    GameManager.instance.DamageToEnemy(monster, player.playerStat.Damage(10));
+                player.DamageToEnemy(monster, player.playerStat.Damage(10));
 
-                    Debug.Log(player.playerStat.Damage(10));
+                Debug.Log(player.playerStat.Damage(10));
 
-                    Vector3 numberPosition = monster.transform.position + new Vector3(0, 2, 0);
+                Vector3 numberPosition = monster.transform.position + new Vector3(0, 2, 0);
 
-                    DamageNumber damage = player.damageNumber.Spawn(numberPosition, player.playerStat.Damage(10));
+                DamageNumber damage = player.damageNumber.Spawn(numberPosition, player.playerStat.Damage(10));
 
-                    CameraShake.Instance.Shake(0.5f, 0.5f);
-                }
+                CameraShake.Instance.Shake(0.5f, 0.5f);
             }
+
         }
 
     }

@@ -62,33 +62,26 @@ public class BasicAttackState : PlayerState
     protected void Effect()
     {
         int targets = Physics.OverlapSphereNonAlloc(player.basicAttackPoint.position, player.basicAttackRadius, player.targetsInAttackRange, LayerMask.GetMask("Enemy"));
-        
+
         for (int i = 0; i < targets; i++)
         {
-            Vector3 direction = player.targetsInAttackRange[i].transform.position - player.transform.position;
-            
-            if(player.targetsInAttackRange[i].TryGetComponent<Rigidbody>(out Rigidbody rigidBody))
+
+            if (player.targetsInAttackRange[i].TryGetComponent<MonsterStateManager>(out MonsterStateManager monster))
             {
-                rigidBody.AddForce(direction.normalized * player.rbForce, ForceMode.VelocityChange);
-                
-                if (player.targetsInAttackRange[i].TryGetComponent<MonsterStateManager>(out MonsterStateManager monster))
-                {
-                    monster.isHit = true;
+                monster.isHit = true;
 
-                    GameManager.instance.DamageToEnemy(monster, player.playerStat.Damage(10));
+                player.DamageToEnemy(monster, player.playerStat.Damage(10));
 
-                    Debug.Log(player.playerStat.Damage(10));
+                Debug.Log(player.playerStat.Damage(10));
 
-                    monster.isHit = true;
+                monster.isHit = true;
 
-                    Vector3 numberPosition = monster.transform.position + new Vector3(0, 2, 0);
+                Vector3 numberPosition = monster.transform.position + new Vector3(0, 2, 0);
 
-                    DamageNumber damage = player.damageNumber.Spawn(numberPosition, player.playerStat.Damage(10));
+                DamageNumber damage = player.damageNumber.Spawn(numberPosition, player.playerStat.Damage(10));
 
-                    CameraShake.Instance.Shake(0.5f, 0.5f);
-                }
+                CameraShake.Instance.Shake(0.5f, 0.5f);
             }
-
         }
     }
 }

@@ -168,5 +168,12 @@ public class JWPlayerController : MonoBehaviour
     public void ToggleDamageTrigger() => damageTrigger = !damageTrigger;
     public void ToggleAnimTrigger() => animTrigger = !animTrigger;
     public void ToggleEffectTrigger() => effectTrigger = !effectTrigger;
+
+    public void DamageToEnemy(MonsterStateManager _monster, int damage)
+    {
+        MonsterStateManager monster = _monster;
+
+        monster.currentHp -= damage;
+    }
 }
 
