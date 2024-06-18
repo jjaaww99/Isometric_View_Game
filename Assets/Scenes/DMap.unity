@@ -5916,6 +5916,46 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1030972359, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972359, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972359, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972359, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99936616
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972359, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0010313
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972359, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.035350412
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972359, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0040685795
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972359, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.135
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972359, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 4.051
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030972359, guid: abc00000000014669708564932170506, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.462
+      objectReference: {fileID: 0}
     - target: {fileID: 5886854370316601575, guid: abc00000000014669708564932170506,
         type: 3}
       propertyPath: m_Enabled
@@ -14049,7 +14089,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &926349569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28835,11 +28875,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92f14abe59dc6dc418ced917ccb2f26f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameState: 0
   playerController: {fileID: 0}
   player: {fileID: 0}
-  monster: {fileID: 0}
   pool: {fileID: 0}
-  coin: {fileID: 2834288042120143155, guid: 75ddcfef44c061c4a935f811149a62ae, type: 3}
+  coinPool: {fileID: 0}
 --- !u!4 &1942133828
 Transform:
   m_ObjectHideFlags: 0
