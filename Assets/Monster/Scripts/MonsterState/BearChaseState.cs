@@ -4,11 +4,9 @@ using UnityEngine.UI;
 
 public class BearChaseState : MonsterChaseState
 {
-    private bool roar = true;
-
     public override void EnterState(MonsterStateManager monster)
     {
-       if(roar)
+       if(monster.roar)
             monster.StartCoroutine(Roar(monster));
        else
             base.EnterState(monster);
@@ -31,7 +29,7 @@ public class BearChaseState : MonsterChaseState
         monster.ani.SetTrigger("Roar");
         monster.nav.isStopped = true;
         yield return new WaitForSeconds(1.5f);
-        roar = false;
+        monster.roar = false;
         base.EnterState(monster);
     }
 
