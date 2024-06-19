@@ -94,6 +94,13 @@ public class SkillState : PlayerState
 
         for (int i = 0; i < targets; i++)
         {
+            Vector3 direction = player.targetsInAttackRange[i].transform.position - player.transform.position;
+
+            if (player.targetsInAttackRange[i].TryGetComponent<Rigidbody>(out Rigidbody rigid))
+            {
+                rigid.AddForce(direction.normalized * player.rbForce, ForceMode.VelocityChange);
+            }
+
 
             if (player.targetsInAttackRange[i].TryGetComponent<MonsterStateManager>(out MonsterStateManager monster))
             {
@@ -101,9 +108,9 @@ public class SkillState : PlayerState
 
                 player.DamageToEnemy(monster, player.playerStat.Damage(10));
 
-                    Vector3 numberPosition = monster.transform.position + new Vector3(0, 2, 0);
+                Vector3 numberPosition = monster.transform.position + new Vector3(0, 2, 0);
                     
-                    monster.isHit = true;
+                monster.isHit = true;
 
                 DamageNumber damage = player.damageNumber.Spawn(numberPosition, player.playerStat.Damage(10));
 
@@ -126,6 +133,13 @@ public class SkillState : PlayerState
 
         for (int i = 0; i < targets; i++)
         {
+            Vector3 direction = player.targetsInAttackRange[i].transform.position - player.transform.position;
+
+            if (player.targetsInAttackRange[i].TryGetComponent<Rigidbody>(out Rigidbody rigid))
+            {
+                rigid.AddForce(direction.normalized * player.rbForce, ForceMode.VelocityChange);
+            }
+
             if (player.targetsInAttackRange[i].TryGetComponent<MonsterStateManager>(out MonsterStateManager monster))
             {
                 monster.isHit = true;
