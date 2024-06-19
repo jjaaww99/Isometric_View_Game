@@ -4,8 +4,13 @@
 ## 🖥️프로젝트 소개
 디아블로를 참고하여 만든 디아블로 모작 게임입니다.
 
-## 🕰️개발 기간
-24년 5월 13일 ~ 24년 6월 19일
+## 🕰️개요
+개발기간 : 24년 5월 13일 ~ 24년 6월 19일
+
+개발 엔진 및 언어 : Unity & C#
+
+Unity 버전: 2020.3.19f1
+jira 링크 : (https://jjaaww99.atlassian.net/jira/software/projects/KAN/boards/1/timeline?shared=&atlOrigin=eyJpIjoiODUwYTg0MDZlMGExNDBjYWFmNGFlZjQ5ZjNjZjAyY2YiLCJwIjoiaiJ9)
 
 ### 🧑‍🤝‍🧑맴버구성
 -김장원 - 플레이어,
