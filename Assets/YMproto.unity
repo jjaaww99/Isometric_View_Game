@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   area: {fileID: 47585154}
-  startpoint: 36
+  startpoint: 35
   endpoint: 44
 --- !u!1 &53945853
 GameObject:
@@ -1958,7 +1958,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   area: {fileID: 510987191}
-  startpoint: 7
+  startpoint: 11
   endpoint: 15
 --- !u!1 &511769398
 GameObject:
@@ -2363,8 +2363,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   area: {fileID: 606095994}
-  startpoint: 20
-  endpoint: 28
+  startpoint: 21
+  endpoint: 27
 --- !u!1 &632445822
 GameObject:
   m_ObjectHideFlags: 0
@@ -2897,8 +2897,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   area: {fileID: 741178286}
-  startpoint: 15
-  endpoint: 19
+  startpoint: 16
+  endpoint: 20
 --- !u!1001 &776397727
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4209,8 +4209,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   area: {fileID: 1002079366}
-  startpoint: 1
-  endpoint: 6
+  startpoint: 7
+  endpoint: 10
 --- !u!1 &1002577403
 GameObject:
   m_ObjectHideFlags: 0
@@ -5819,6 +5819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointerPosition: {x: 0, y: 0, z: 0}
+  clickEffect: {fileID: 0}
   pointedObject: {fileID: 0}
   clickedObject: {fileID: 0}
   isPointerOnObject: 0
@@ -7958,8 +7959,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   area: {fileID: 1956265500}
-  startpoint: 29
-  endpoint: 35
+  startpoint: 28
+  endpoint: 34
 --- !u!1 &1965941131
 GameObject:
   m_ObjectHideFlags: 0
@@ -8406,6 +8407,9 @@ MonoBehaviour:
   strText: {fileID: 519058310}
   dexText: {fileID: 524905150}
   levelText: {fileID: 3985819609038573951}
+  deadUI: {fileID: 0}
+  toMainButton: {fileID: 0}
+  monster: {fileID: 0}
 --- !u!1 &2130211071
 GameObject:
   m_ObjectHideFlags: 0
