@@ -8,7 +8,7 @@ public class RotatingHammer : MonoBehaviour
     public Mesh[] meshs;
 
 
-    private void Awake()
+    private void OnEnable()
     {
         int randomIndex = Random.Range(0, meshs.Length - 1);
         MeshFilter filter = GetComponent<MeshFilter>();
