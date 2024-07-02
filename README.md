@@ -59,3 +59,9 @@ ex) 곰 : 플레이어 감지시 플레이어에게 표효
 **맵**
 
 사냥에만 집중할 수 있도록 좁은 길목과 넓은 지역을 번갈아 둠
+
+
+![0529anim4](https://github.com/jjaaww99/Isometric_View_Game/assets/157591426/73c7b63b-8e5b-4879-b661-657912059817)
+
+![0529anim5](https://github.com/jjaaww99/Isometric_View_Game/assets/157591426/9ec8e2a6-d169-4a51-8f5b-65940e73a039)
+![0529anim6](https://github.com/jjaaww99/Isometric_View_Game/assets/157591426/1d688940-1b75-4eab-a386-cbc9531707e4)
